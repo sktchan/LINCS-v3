@@ -5,14 +5,12 @@
 #SBATCH --error=out/rank_tf.err
 
 #SBATCH --nodes=1
-#SBATCH --ntasks=4
-#SBATCH --mem-per-gpu=32G
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=16
+#SBATCH --mem=256G
 
-#SBATCH --gres=gpu:V100:1
-#SBATCH --time=2-00:00:00
+#SBATCH --gres=gpu:L40S:1
+#SBATCH --time=1-00:00:00
 
-# Change to project directory
-cd /home/golem/scratch/chans/lincs
-
-# Run the rank transformer script
+cd /home/golem/scratch/chans/lincsv3
 julia scripts/rank_tf.jl
