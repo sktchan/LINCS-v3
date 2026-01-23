@@ -75,7 +75,7 @@ function log_info(train_indices, test_indices, profile_embeddings, n_epochs,
 
 end
 
-function log_params(gpu_info, dataset_note, mask_ratio, batch_size, n_epochs, 
+function log_tf_params(gpu_info, dataset_note, mask_ratio, batch_size, n_epochs, 
                     embed_dim, hidden_dim, n_heads, n_layers, lr, drop_prob, 
                     additional_notes, run_hours, run_minutes)
     params_txt = joinpath(save_dir, "params.txt")
@@ -84,13 +84,34 @@ function log_params(gpu_info, dataset_note, mask_ratio, batch_size, n_epochs,
         println(io, "########### $(gpu_info)")
         println(io, "dataset = $dataset_note")
         println(io, "masking_ratio = $mask_ratio")
-        println(io, "NO DYNAMIC MASKING")
         println(io, "batch_size = $batch_size")
         println(io, "n_epochs = $n_epochs")
         println(io, "embed_dim = $embed_dim")
         println(io, "hidden_dim = $hidden_dim")
         println(io, "n_heads = $n_heads")
         println(io, "n_layers = $n_layers")
+        println(io, "learning_rate = $lr")
+        println(io, "dropout_probability = $drop_prob")
+        println(io, "ADDITIONAL NOTES: $additional_notes")
+        println(io, "run_time = $(run_hours) hours and $(run_minutes) minutes")
+    end
+end
+
+function log_ae_params(gpu_info, dataset_note, mask_ratio, batch_size, n_epochs, 
+                    embed_dim, hidden_dim, n_heads, n_layers, lr, drop_prob, 
+                    additional_notes, run_hours, run_minutes)
+    params_txt = joinpath(save_dir, "params.txt")
+    open(params_txt, "w") do io
+        println(io, "PARAMETERS:")
+        println(io, "########### $(gpu_info)")
+        println(io, "dataset = $dataset_note")
+        println(io, "masking_ratio = $mask_ratio")
+        println(io, "batch_size = $batch_size")
+        println(io, "n_epochs = $n_epochs")
+        println(io, "latent_1 = $latent_1")
+        println(io, "latent_2 = $latent_2")
+        println(io, "latent_3 = $latent_3")
+        println(io, "embed_dim = $embed_dim")
         println(io, "learning_rate = $lr")
         println(io, "dropout_probability = $drop_prob")
         println(io, "ADDITIONAL NOTES: $additional_notes")

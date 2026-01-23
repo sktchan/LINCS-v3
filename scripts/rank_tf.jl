@@ -1,7 +1,8 @@
 using Pkg
 Pkg.activate("/home/golem/scratch/chans/lincs")
 
-using LincsProject, DataFrames, Dates, StatsBase, JLD2
+using DataFrames, Dates, StatsBase, JLD2
+using LincsProject
 using Flux, Random, ProgressBars, CUDA, Statistics, CairoMakie, LinearAlgebra
 
 include("../src/params.jl")
@@ -283,7 +284,6 @@ plot_prediction_error(all_original_ranks, all_prediction_errors, save_dir)
 
 avg_errors = plot_mean_prediction_error(all_original_ranks, all_prediction_errors, save_dir)
 cs, cp = plot_ranked_heatmap(all_trues, all_preds, save_dir, true)
-
 
 log_model(model, save_dir)
 embeddings = get_profile_embeddings(X, model)
