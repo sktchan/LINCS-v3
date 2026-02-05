@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#SBATCH --job-name=rank_tf
+#SBATCH --output=out/rank_tf.out
+#SBATCH --error=out/rank_tf.err
+
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=48
+#SBATCH --mem=900G
+
+#SBATCH --gres=gpu:L40S:1
+#SBATCH --time=0-8:00:00
+
+cd /home/golem/scratch/chans/lincsv3
+julia scripts/rank_tf.jl

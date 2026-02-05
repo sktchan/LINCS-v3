@@ -90,7 +90,8 @@ Flux.@functor Encoder
 function (enc::Encoder)(input::IntMatrix2DType)
     noised_indices, labels = enc.noise(input) 
     embedded = enc.embedding(noised_indices)
-    embedded_flat = Flux.flatten(embedded)
+    # embedded_flat = Flux.flatten(embedded)
+    embedded_flat = reshape(embedded, :, size(embedded, 3))
     compressed = enc.compress(embedded_flat)
     return compressed, labels
 end

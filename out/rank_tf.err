@@ -1,2757 +1,391 @@
-┌ Warning: Module BangBang with build ID fafbfcfd-3cd1-c45d-07ca-7538201cabb1 is missing from the cache.
-│ This may mean BangBang [198e06fe-97b7-11e9-32a5-e1d131e6ad66] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module FilePathsBase with build ID fafbfcfd-ee8f-9b62-eaea-e7978c7a6f03 is missing from the cache.
-│ This may mean FilePathsBase [48062228-2e41-5def-b9a4-89aafe57970f] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module Transducers with build ID fafbfcfd-e284-f059-3e22-1bdb170fd80e is missing from the cache.
-│ This may mean Transducers [28d57a85-8fef-5791-bfe6-a80928e7c999] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module Preferences with build ID fafbfcfd-5715-7f0b-dfbf-a3ffb3c14b07 is missing from the cache.
-│ This may mean Preferences [21216c6a-2e73-6563-6e65-726566657250] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module Preferences with build ID fafbfcfd-5715-7f0b-dfbf-a3ffb3c14b07 is missing from the cache.
-│ This may mean Preferences [21216c6a-2e73-6563-6e65-726566657250] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module LLVM with build ID fafbfcfd-6e84-b2e2-d6fc-fad6426ed9de is missing from the cache.
-│ This may mean LLVM [929cbde3-209d-540e-8aea-75f648917ca0] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module CUDA_Driver_jll with build ID ffffffff-ffff-ffff-8034-3c737d6e5953 is missing from the cache.
-│ This may mean CUDA_Driver_jll [4ee394cb-3365-5eb0-8335-949819d2adfc] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
   Activating project at `/home/golem/scratch/chans/lincs`
-Precompiling DataFrames...
-    569.9 ms  ✓ IteratorInterfaceExtensions
-    882.9 ms  ✓ DataValueInterfaces
-   1214.3 ms  ✓ LaTeXStrings
-   1133.1 ms  ✓ Reexport
-   1116.9 ms  ✓ InvertedIndices
-   1287.8 ms  ✓ Statistics
-   1278.1 ms  ✓ OrderedCollections
-   1233.8 ms  ✓ DataAPI
-   1407.6 ms  ✓ Compat
-   1603.0 ms  ✓ InlineStrings
-   1541.9 ms  ✓ Preferences
-   1829.0 ms  ✓ Crayons
-    843.5 ms  ✓ TableTraits
-   1923.6 ms  ✓ SentinelArrays
-    907.6 ms  ✓ Missings
-   1147.8 ms  ✓ PooledArrays
-    896.8 ms  ✓ Compat → CompatLinearAlgebraExt
-    786.0 ms  ✓ PrecompileTools
-    923.2 ms  ✓ Tables
-   1594.3 ms  ✓ StringManipulation
-   1770.7 ms  ✓ DataStructures
-    607.9 ms  ✓ SortingAlgorithms
-  13118.2 ms  ✓ PrettyTables
-  30943.5 ms  ✓ DataFrames
-  24 dependencies successfully precompiled in 49 seconds. 9 already precompiled.
-Precompiling StatsBase...
-    556.1 ms  ✓ PtrArrays
-    586.9 ms  ✓ StatsAPI
-    802.6 ms  ✓ Statistics → SparseArraysExt
-    773.5 ms  ✓ DocStringExtensions
-    729.8 ms  ✓ AliasTables
-   1297.2 ms  ✓ IrrationalConstants
-    658.7 ms  ✓ LogExpFunctions
-   2114.9 ms  ✓ StatsBase
-  8 dependencies successfully precompiled in 4 seconds. 24 already precompiled.
 Precompiling JLD2...
-    564.4 ms  ✓ Requires
-    695.0 ms  ✓ TranscodingStreams
-   1938.0 ms  ✓ MacroTools
-   3280.6 ms  ✓ FileIO
-  25867.6 ms  ✓ JLD2
-  5 dependencies successfully precompiled in 30 seconds. 27 already precompiled.
+┌ Warning: attempting to remove probably stale pidfile
+│   path = "/u/chans/.julia/compiled/v1.11/MacroTools/38lnR_8yeYH.ji.pidfile"
+└ @ FileWatching.Pidfile ~/.julia/juliaup/julia-1.11.7+0.x64.linux.gnu/share/julia/stdlib/v1.11/FileWatching/src/pidfile.jl:249
+┌ Warning: attempting to remove probably stale pidfile
+│   path = "/u/chans/.julia/compiled/v1.11/FileIO/6iKRU_8yeYH.ji.pidfile"
+└ @ FileWatching.Pidfile ~/.julia/juliaup/julia-1.11.7+0.x64.linux.gnu/share/julia/stdlib/v1.11/FileWatching/src/pidfile.jl:249
+   2519.4 ms  ✓ MacroTools
+   2828.1 ms  ✓ FileIO
+  22500.3 ms  ✓ JLD2
+  3 dependencies successfully precompiled in 26 seconds. 29 already precompiled.
 Precompiling LincsProject...
-    632.6 ms  ✓ WorkerUtilities
-    573.7 ms  ✓ LazilyInitializedFields
-    836.5 ms  ✓ CodecZlib
-   1157.0 ms  ✓ Adapt
-   1138.2 ms  ✓ ProgressBars
-   1090.9 ms  ✓ JLLWrappers
-   1082.5 ms  ✓ MPIPreferences
-   1186.5 ms  ✓ FilePathsBase
-    595.8 ms  ✓ ElasticArrays
-    708.1 ms  ✓ MicrosoftMPI_jll
-    757.2 ms  ✓ OpenSSL_jll
-   1755.3 ms  ✓ RegistryTools
-    973.8 ms  ✓ FilePathsBase → FilePathsBaseMmapExt
-   1129.8 ms  ✓ libaec_jll
-   1120.7 ms  ✓ Hwloc_jll
-   1810.5 ms  ✓ RegistryInstances
-   1171.6 ms  ✓ MPItrampoline_jll
-   1014.1 ms  ✓ OpenMPI_jll
-   1283.7 ms  ✓ MPICH_jll
-   1245.1 ms  ✓ LocalRegistry
-   1788.2 ms  ✓ HDF5_jll
-   6333.7 ms  ✓ HDF5
-  13082.9 ms  ✓ Parsers
-    686.2 ms  ✓ InlineStrings → ParsersExt
-   1371.8 ms  ✓ JSON
-    855.8 ms  ✓ WeakRefStrings
-   1227.8 ms  ✓ BenchmarkTools
-  10706.3 ms  ✓ CSV
-   2358.4 ms  ✓ LincsProject
-  29 dependencies successfully precompiled in 28 seconds. 58 already precompiled.
+    428.2 ms  ✓ WorkerUtilities
+    381.5 ms  ✓ LazilyInitializedFields
+    497.3 ms  ✓ CodecZlib
+    469.1 ms  ✓ Adapt
+    533.2 ms  ✓ ProgressBars
+    502.9 ms  ✓ JLLWrappers
+    576.9 ms  ✓ MPIPreferences
+    448.5 ms  ✓ ElasticArrays
+    862.1 ms  ✓ FilePathsBase
+    612.7 ms  ✓ Hwloc_jll
+    604.3 ms  ✓ MicrosoftMPI_jll
+    626.2 ms  ✓ libaec_jll
+    639.4 ms  ✓ OpenSSL_jll
+    540.5 ms  ✓ FilePathsBase → FilePathsBaseMmapExt
+   1050.8 ms  ✓ MPItrampoline_jll
+   1549.7 ms  ✓ RegistryTools
+   1463.7 ms  ✓ RegistryInstances
+    984.8 ms  ✓ OpenMPI_jll
+   1156.3 ms  ✓ MPICH_jll
+    975.7 ms  ✓ LocalRegistry
+   1535.1 ms  ✓ HDF5_jll
+   5252.4 ms  ✓ HDF5
+  11446.6 ms  ✓ Parsers
+    548.4 ms  ✓ InlineStrings → ParsersExt
+   1187.5 ms  ✓ JSON
+    708.2 ms  ✓ WeakRefStrings
+   1134.6 ms  ✓ BenchmarkTools
+  10028.0 ms  ✓ CSV
+   2257.6 ms  ✓ LincsProject
+  29 dependencies successfully precompiled in 26 seconds. 58 already precompiled.
 Precompiling AdaptSparseArraysExt...
-    603.1 ms  ✓ Adapt → AdaptSparseArraysExt
+    548.1 ms  ✓ Adapt → AdaptSparseArraysExt
   1 dependency successfully precompiled in 1 seconds. 6 already precompiled.
 Precompiling Flux...
-    706.4 ms  ✓ DefineSingletons
-   1554.2 ms  ✓ CEnum
-   1501.8 ms  ✓ ArgCheck
-   1760.9 ms  ✓ InverseFunctions
-   1746.9 ms  ✓ PrettyPrint
-   1720.3 ms  ✓ ShowCases
-   1671.7 ms  ✓ RealDot
-   1655.0 ms  ✓ CompositionsBase
-   1645.9 ms  ✓ HashArrayMappedTries
-   1613.0 ms  ✓ DelimitedFiles
-   1963.7 ms  ✓ AbstractFFTs
-   1754.1 ms  ✓ NaNMath
-   2067.1 ms  ✓ InitialValues
-   2262.0 ms  ✓ FillArrays
-   2311.3 ms  ✓ UnsafeAtomics
-    670.7 ms  ✓ ConstructionBase
-    879.3 ms  ✓ ProgressLogging
-   1384.2 ms  ✓ NameResolution
-   1550.4 ms  ✓ StaticArraysCore
-   1542.2 ms  ✓ InverseFunctions → InverseFunctionsTestExt
-   1534.4 ms  ✓ InverseFunctions → InverseFunctionsDatesExt
-   1527.1 ms  ✓ LogExpFunctions → LogExpFunctionsInverseFunctionsExt
-   1490.1 ms  ✓ CommonSubexpressions
-   1482.0 ms  ✓ GPUArraysCore
-   1885.3 ms  ✓ SuiteSparse
-   2428.1 ms  ✓ Functors
-   2078.2 ms  ✓ OpenSpecFun_jll
-   2335.9 ms  ✓ Baselet
-   2160.7 ms  ✓ ChainRulesCore
-   2141.6 ms  ✓ LLVMExtra_jll
-   1124.4 ms  ✓ ScopedValues
-   2276.6 ms  ✓ IRTools
-    668.9 ms  ✓ ContextVariablesX
-   1016.0 ms  ✓ FillArrays → FillArraysStatisticsExt
-   1387.2 ms  ✓ DiffResults
-   1343.7 ms  ✓ CompositionsBase → CompositionsBaseInverseFunctionsExt
-   1330.3 ms  ✓ ConstructionBase → ConstructionBaseLinearAlgebraExt
-   1911.9 ms  ✓ SimpleTraits
-   1504.0 ms  ✓ FillArrays → FillArraysSparseArraysExt
-   1454.2 ms  ✓ Atomix
-   1819.2 ms  ✓ SparseInverseSubset
-   1684.5 ms  ✓ ChainRulesCore → ChainRulesCoreSparseArraysExt
-   1952.3 ms  ✓ MLDataDevices
-   1675.7 ms  ✓ ZygoteRules
-   2078.9 ms  ✓ AbstractFFTs → AbstractFFTsTestExt
-    815.5 ms  ✓ FLoopsBase
-    615.8 ms  ✓ AbstractFFTs → AbstractFFTsChainRulesCoreExt
-    857.6 ms  ✓ MLDataDevices → MLDataDevicesChainRulesCoreExt
-   1762.9 ms  ✓ Optimisers
-   1080.2 ms  ✓ MLDataDevices → MLDataDevicesFillArraysExt
-   3162.8 ms  ✓ SpecialFunctions
-   1191.4 ms  ✓ MLDataDevices → MLDataDevicesSparseArraysExt
-   1473.3 ms  ✓ StructArrays
-   1582.0 ms  ✓ MLCore
-   1729.6 ms  ✓ Setfield
-   2118.8 ms  ✓ LogExpFunctions → LogExpFunctionsChainRulesCoreExt
-   1998.3 ms  ✓ Accessors
-    541.7 ms  ✓ StructArrays → StructArraysAdaptExt
-    778.4 ms  ✓ StructArrays → StructArraysGPUArraysCoreExt
-    908.4 ms  ✓ StructArrays → StructArraysSparseArraysExt
-   1154.7 ms  ✓ DiffRules
-   1020.8 ms  ✓ Accessors → StructArraysExt
-   1012.5 ms  ✓ Accessors → LinearAlgebraExt
-   1114.9 ms  ✓ Accessors → TestExt
-   1366.1 ms  ✓ SplittablesBase
-   1716.0 ms  ✓ SpecialFunctions → SpecialFunctionsChainRulesCoreExt
-   1238.9 ms  ✓ BangBang
-   6287.9 ms  ✓ StaticArrays
-   1119.3 ms  ✓ BangBang → BangBangStructArraysExt
-   1593.1 ms  ✓ BangBang → BangBangTablesExt
-   2247.6 ms  ✓ BangBang → BangBangChainRulesCoreExt
-   2206.2 ms  ✓ StaticArrays → StaticArraysStatisticsExt
-   2198.9 ms  ✓ Adapt → AdaptStaticArraysExt
-   2396.8 ms  ✓ BangBang → BangBangStaticArraysExt
-   2375.3 ms  ✓ MicroCollections
-   2383.1 ms  ✓ StaticArrays → StaticArraysChainRulesCoreExt
-   2358.2 ms  ✓ ConstructionBase → ConstructionBaseStaticArraysExt
-   2324.4 ms  ✓ StructArrays → StructArraysStaticArraysExt
-   2307.5 ms  ✓ Accessors → StaticArraysExt
-  13400.2 ms  ✓ MLStyle
-   7446.2 ms  ✓ LLVM
-   4305.9 ms  ✓ ForwardDiff
-   1320.2 ms  ✓ ForwardDiff → ForwardDiffStaticArraysExt
-   1771.7 ms  ✓ UnsafeAtomics → UnsafeAtomicsLLVM
-   2737.4 ms  ✓ Transducers
-   6769.0 ms  ✓ ChainRules
-   3249.4 ms  ✓ KernelAbstractions
-   2768.6 ms  ✓ GPUArrays
-   2957.1 ms  ✓ JuliaVariables
-    876.2 ms  ✓ Transducers → TransducersAdaptExt
-    993.2 ms  ✓ MLDataDevices → MLDataDevicesChainRulesExt
-    758.2 ms  ✓ KernelAbstractions → LinearAlgebraExt
-    983.8 ms  ✓ KernelAbstractions → SparseArraysExt
-   1128.3 ms  ✓ MLDataDevices → MLDataDevicesGPUArraysExt
-   3030.8 ms  ✓ FLoops
-   4333.0 ms  ✓ NNlib
-   1150.9 ms  ✓ NNlib → NNlibForwardDiffExt
-   1133.6 ms  ✓ OneHotArrays
-   1169.6 ms  ✓ NNlib → NNlibSpecialFunctionsExt
-    765.1 ms  ✓ MLDataDevices → MLDataDevicesOneHotArraysExt
-   5224.7 ms  ✓ MLUtils
-   1408.7 ms  ✓ MLDataDevices → MLDataDevicesMLUtilsExt
-  22640.7 ms  ✓ Zygote
-   1525.5 ms  ✓ MLDataDevices → MLDataDevicesZygoteExt
-   5349.6 ms  ✓ Flux
-  105 dependencies successfully precompiled in 47 seconds. 62 already precompiled.
+    604.4 ms  ✓ PrettyPrint
+    648.3 ms  ✓ CEnum
+    489.5 ms  ✓ RealDot
+    468.4 ms  ✓ CompositionsBase
+    613.7 ms  ✓ ArgCheck
+    484.6 ms  ✓ DefineSingletons
+    666.8 ms  ✓ InverseFunctions
+    502.0 ms  ✓ HashArrayMappedTries
+    681.4 ms  ✓ ShowCases
+    596.0 ms  ✓ NaNMath
+    593.9 ms  ✓ DelimitedFiles
+    862.2 ms  ✓ AbstractFFTs
+   1054.3 ms  ✓ InitialValues
+   1106.7 ms  ✓ FillArrays
+    435.3 ms  ✓ NameResolution
+    428.2 ms  ✓ StaticArraysCore
+    489.7 ms  ✓ ConstructionBase
+    487.8 ms  ✓ ProgressLogging
+    491.3 ms  ✓ CommonSubexpressions
+    466.8 ms  ✓ ContextVariablesX
+    545.6 ms  ✓ SuiteSparse
+    761.8 ms  ✓ SimpleTraits
+    851.8 ms  ✓ Functors
+    500.4 ms  ✓ InverseFunctions → InverseFunctionsDatesExt
+    460.7 ms  ✓ CompositionsBase → CompositionsBaseInverseFunctionsExt
+    670.9 ms  ✓ OpenSpecFun_jll
+    523.8 ms  ✓ LogExpFunctions → LogExpFunctionsInverseFunctionsExt
+    429.7 ms  ✓ ScopedValues
+    637.7 ms  ✓ InverseFunctions → InverseFunctionsTestExt
+    534.0 ms  ✓ GPUArraysCore
+   1097.4 ms  ✓ Baselet
+    641.6 ms  ✓ FLoopsBase
+   1992.8 ms  ✓ UnsafeAtomics
+    481.4 ms  ✓ FillArrays → FillArraysStatisticsExt
+   1237.5 ms  ✓ ChainRulesCore
+    440.3 ms  ✓ DiffResults
+    437.3 ms  ✓ ConstructionBase → ConstructionBaseLinearAlgebraExt
+    563.0 ms  ✓ SparseInverseSubset
+    624.5 ms  ✓ FillArrays → FillArraysSparseArraysExt
+   1346.4 ms  ✓ LLVMExtra_jll
+    887.1 ms  ✓ MLCore
+    580.1 ms  ✓ Atomix
+   1733.5 ms  ✓ IRTools
+    843.1 ms  ✓ MLDataDevices
+    483.6 ms  ✓ AbstractFFTs → AbstractFFTsChainRulesCoreExt
+    599.3 ms  ✓ ChainRulesCore → ChainRulesCoreSparseArraysExt
+    711.7 ms  ✓ ZygoteRules
+   1264.0 ms  ✓ AbstractFFTs → AbstractFFTsTestExt
+    981.5 ms  ✓ Optimisers
+    478.9 ms  ✓ MLDataDevices → MLDataDevicesFillArraysExt
+    529.5 ms  ✓ MLDataDevices → MLDataDevicesChainRulesCoreExt
+    810.1 ms  ✓ StructArrays
+    615.5 ms  ✓ MLDataDevices → MLDataDevicesSparseArraysExt
+   1276.4 ms  ✓ LogExpFunctions → LogExpFunctionsChainRulesCoreExt
+   1081.4 ms  ✓ Setfield
+    439.1 ms  ✓ StructArrays → StructArraysAdaptExt
+    441.1 ms  ✓ StructArrays → StructArraysGPUArraysCoreExt
+    599.7 ms  ✓ StructArrays → StructArraysSparseArraysExt
+   2467.0 ms  ✓ SpecialFunctions
+   1827.7 ms  ✓ Accessors
+    872.8 ms  ✓ SplittablesBase
+    532.4 ms  ✓ Accessors → StructArraysExt
+    523.4 ms  ✓ Accessors → LinearAlgebraExt
+    579.1 ms  ✓ Accessors → TestExt
+    657.0 ms  ✓ DiffRules
+    790.8 ms  ✓ BangBang
+   1629.9 ms  ✓ SpecialFunctions → SpecialFunctionsChainRulesCoreExt
+    511.4 ms  ✓ BangBang → BangBangChainRulesCoreExt
+    553.8 ms  ✓ BangBang → BangBangStructArraysExt
+    545.2 ms  ✓ BangBang → BangBangTablesExt
+    693.8 ms  ✓ MicroCollections
+   6048.0 ms  ✓ StaticArrays
+   3304.6 ms  ✓ ForwardDiff
+   5931.5 ms  ✓ LLVM
+    669.8 ms  ✓ ConstructionBase → ConstructionBaseStaticArraysExt
+    700.0 ms  ✓ StaticArrays → StaticArraysChainRulesCoreExt
+    681.8 ms  ✓ Adapt → AdaptStaticArraysExt
+    701.2 ms  ✓ StaticArrays → StaticArraysStatisticsExt
+    701.2 ms  ✓ StructArrays → StructArraysStaticArraysExt
+    702.1 ms  ✓ Accessors → StaticArraysExt
+    703.1 ms  ✓ BangBang → BangBangStaticArraysExt
+   2536.2 ms  ✓ Transducers
+    822.4 ms  ✓ ForwardDiff → ForwardDiffStaticArraysExt
+   5364.3 ms  ✓ ChainRules
+    677.6 ms  ✓ Transducers → TransducersAdaptExt
+    754.0 ms  ✓ MLDataDevices → MLDataDevicesChainRulesExt
+   1583.4 ms  ✓ UnsafeAtomics → UnsafeAtomicsLLVM
+   1890.3 ms  ✓ GPUArrays
+   3048.9 ms  ✓ KernelAbstractions
+   1312.6 ms  ✓ MLDataDevices → MLDataDevicesGPUArraysExt
+  11673.3 ms  ✓ MLStyle
+    671.8 ms  ✓ KernelAbstractions → LinearAlgebraExt
+    801.4 ms  ✓ KernelAbstractions → SparseArraysExt
+   2080.5 ms  ✓ JuliaVariables
+   3976.8 ms  ✓ NNlib
+   2644.4 ms  ✓ FLoops
+    814.0 ms  ✓ NNlib → NNlibSpecialFunctionsExt
+    871.0 ms  ✓ NNlib → NNlibForwardDiffExt
+    900.2 ms  ✓ OneHotArrays
+    675.9 ms  ✓ MLDataDevices → MLDataDevicesOneHotArraysExt
+   4778.6 ms  ✓ MLUtils
+   1326.8 ms  ✓ MLDataDevices → MLDataDevicesMLUtilsExt
+  21812.9 ms  ✓ Zygote
+   1356.1 ms  ✓ MLDataDevices → MLDataDevicesZygoteExt
+   4928.8 ms  ✓ Flux
+  105 dependencies successfully precompiled in 39 seconds. 62 already precompiled.
 Precompiling BangBangDataFramesExt...
-    Statistics Being precompiled by another machine (hostname: kraken.iric.ca, pid: 2071215, pidfile: /u/chans/.julia/compiled/v1.11/Statistics/ERcPL_8yeYH.ji.pidfile)
-    Preferences Being precompiled by another machine (hostname: kraken.iric.ca, pid: 2071215, pidfile: /u/chans/.julia/compiled/v1.11/Preferences/pWSk8_8yeYH.ji.pidfile)
-    Compat Being precompiled by another machine (hostname: kraken.iric.ca, pid: 2071215, pidfile: /u/chans/.julia/compiled/v1.11/Compat/GSFWK_8yeYH.ji.pidfile)
-    568.2 ms  ✓ DataAPI
-    613.5 ms  ✓ Reexport
-    PooledArrays Being precompiled by another machine (hostname: kraken.iric.ca, pid: 2071215, pidfile: /u/chans/.julia/compiled/v1.11/PooledArrays/vi11X_8yeYH.ji.pidfile)
-    Missings Being precompiled by another machine (hostname: kraken.iric.ca, pid: 2071215, pidfile: /u/chans/.julia/compiled/v1.11/Missings/wLfgT_8yeYH.ji.pidfile)
-   2356.6 ms  ✓ LaTeXStrings
-    685.6 ms  ✓ DataValueInterfaces
-    781.8 ms  ✓ InvertedIndices
-   2514.9 ms  ✓ IteratorInterfaceExtensions
-    860.8 ms  ✓ OrderedCollections
-    872.1 ms  ✓ InlineStrings
-   2563.4 ms  ✓ Statistics
-   1395.3 ms  ✓ Crayons
-    750.4 ms  ? TableTraits
-   2211.2 ms  ✓ MacroTools
-  10710.4 ms  ✓ Compat
-  10870.3 ms  ✓ Preferences
-  10692.2 ms  ✓ Missings
-  10696.9 ms  ✓ PooledArrays
-    634.4 ms  ? Compat → CompatLinearAlgebraExt
-    637.1 ms  ? PrecompileTools
-    625.2 ms  ? DataStructures
-    865.8 ms  ? StringManipulation
-    636.7 ms  ? SortingAlgorithms
-Info Given BangBangDataFramesExt was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module BangBang with build ID fafbfcfd-3cd1-c45d-07ca-7538201cabb1 is missing from the cache.
-[0K│ This may mean BangBang [198e06fe-97b7-11e9-32a5-e1d131e6ad66] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    613.0 ms  ? BangBang → BangBangDataFramesExt
-  15 dependencies successfully precompiled in 16 seconds. 24 already precompiled.
-  21 dependencies precompiled but different versions are currently loaded. Restart julia to access the new versions. Otherwise, loading dependents of these packages may trigger further precompilation to work with the unexpected versions.
-  7 dependencies failed but may be precompilable after restarting julia
-  9 dependencies had output during precompilation:
-┌ Compat → CompatLinearAlgebraExt
-│  ┌ Warning: Module Compat with build ID fafbfcfd-4023-6bb5-43c7-e893ac09e750 is missing from the cache.
-│  │ This may mean Compat [34da2185-b29b-5c13-b0c7-acf172513d20] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ PrecompileTools
-│  ┌ Warning: Module Preferences with build ID fafbfcfd-5715-7f0b-dfbf-a3ffb3c14b07 is missing from the cache.
-│  │ This may mean Preferences [21216c6a-2e73-6563-6e65-726566657250] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ StringManipulation
-│  ┌ Warning: Module PrecompileTools with build ID fafbfcfd-55e5-1906-8f7b-a52bb157ea25 is missing from the cache.
-│  │ This may mean PrecompileTools [aea7be01-6a6a-4083-8856-8a6e6704d82a] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ BangBang → BangBangDataFramesExt
-│  [Output was shown above]
-└  
-┌ SortingAlgorithms
-│  ┌ Warning: Module DataStructures with build ID fafbfcfd-1c45-48c6-8302-1a3c5a1097ca is missing from the cache.
-│  │ This may mean DataStructures [864edb3b-99cc-5e75-8d2d-829cb0a9cfe8] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ DataStructures
-│  ┌ Warning: Module Compat with build ID fafbfcfd-4023-6bb5-43c7-e893ac09e750 is missing from the cache.
-│  │ This may mean Compat [34da2185-b29b-5c13-b0c7-acf172513d20] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ TableTraits
-│  ┌ Warning: Module IteratorInterfaceExtensions with build ID fafbfcfd-eb70-b579-6441-357f4aa725db is missing from the cache.
-│  │ This may mean IteratorInterfaceExtensions [82899510-4779-5014-852e-03e436cf321d] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Missings
-│  ┌ Warning: Module DataAPI with build ID fafbfcfd-1fa5-87de-ea99-52b89440bf9b is missing from the cache.
-│  │ This may mean DataAPI [9a962f9c-6df0-11e9-0e5d-c546b8b5ee8a] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ PooledArrays
-│  ┌ Warning: Module DataAPI with build ID fafbfcfd-1fa5-87de-ea99-52b89440bf9b is missing from the cache.
-│  │ This may mean DataAPI [9a962f9c-6df0-11e9-0e5d-c546b8b5ee8a] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
+   1505.1 ms  ✓ BangBang → BangBangDataFramesExt
+  1 dependency successfully precompiled in 2 seconds. 45 already precompiled.
 Precompiling FilePathsBaseTestExt...
-    575.2 ms  ? Compat → CompatLinearAlgebraExt
-    879.4 ms  ✓ FilePathsBase
-Info Given FilePathsBaseTestExt was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module FilePathsBase with build ID fafbfcfd-ee8f-9b62-eaea-e7978c7a6f03 is missing from the cache.
-[0K│ This may mean FilePathsBase [48062228-2e41-5def-b9a4-89aafe57970f] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    603.9 ms  ? FilePathsBase → FilePathsBaseTestExt
-  1 dependency successfully precompiled in 2 seconds. 12 already precompiled.
-  2 dependencies precompiled but different versions are currently loaded. Restart julia to access the new versions. Otherwise, loading dependents of these packages may trigger further precompilation to work with the unexpected versions.
-  2 dependencies failed but may be precompilable after restarting julia
-  2 dependencies had output during precompilation:
-┌ Compat → CompatLinearAlgebraExt
-│  ┌ Warning: Module Compat with build ID fafbfcfd-4023-6bb5-43c7-e893ac09e750 is missing from the cache.
-│  │ This may mean Compat [34da2185-b29b-5c13-b0c7-acf172513d20] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ FilePathsBase → FilePathsBaseTestExt
-│  [Output was shown above]
-└  
+    957.2 ms  ✓ FilePathsBase → FilePathsBaseTestExt
+  1 dependency successfully precompiled in 1 seconds. 14 already precompiled.
 Precompiling TransducersDataFramesExt...
-    PrecompileTools Being precompiled by another machine (hostname: kraken.iric.ca, pid: 2073592, pidfile: /u/chans/.julia/compiled/v1.11/PrecompileTools/AQ9Mk_8yeYH.ji.pidfile)
-    670.1 ms  ✓ IteratorInterfaceExtensions
-   1190.6 ms  ✓ Reexport
-   1379.3 ms  ✓ LaTeXStrings
-   1216.7 ms  ✓ Requires
-   1209.0 ms  ✓ DataValueInterfaces
-   1166.5 ms  ✓ DataAPI
-   1095.3 ms  ? Compat → CompatLinearAlgebraExt
-    711.0 ms  ? TableTraits
-   1321.7 ms  ✓ Crayons
-   1358.3 ms  ✓ SentinelArrays
-    648.2 ms  ? Tables
-    654.9 ms  ? PooledArrays
-   2046.4 ms  ✓ MacroTools
-    749.9 ms  ? Missings
-    745.9 ms  ? DataStructures
-    585.1 ms  ? SortingAlgorithms
-  10665.7 ms  ✓ PrecompileTools
-    861.5 ms  ? StringManipulation
-    PrettyTables Being precompiled by another machine (hostname: kraken.iric.ca, pid: 2073734, pidfile: /u/chans/.julia/compiled/v1.11/PrettyTables/kRdcL_8yeYH.ji.pidfile)
-  20669.1 ms  ✓ PrettyTables
-Info Given TransducersDataFramesExt was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module Transducers with build ID fafbfcfd-e284-f059-3e22-1bdb170fd80e is missing from the cache.
-[0K│ This may mean Transducers [28d57a85-8fef-5791-bfe6-a80928e7c999] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    649.6 ms  ? BangBang → BangBangDataFramesExt
-    646.1 ms  ? Transducers → TransducersDataFramesExt
-  11 dependencies successfully precompiled in 33 seconds. 41 already precompiled.
-  20 dependencies precompiled but different versions are currently loaded. Restart julia to access the new versions. Otherwise, loading dependents of these packages may trigger further precompilation to work with the unexpected versions.
-  10 dependencies failed but may be precompilable after restarting julia
-  12 dependencies had output during precompilation:
-┌ Compat → CompatLinearAlgebraExt
-│  ┌ Warning: Module Compat with build ID fafbfcfd-4023-6bb5-43c7-e893ac09e750 is missing from the cache.
-│  │ This may mean Compat [34da2185-b29b-5c13-b0c7-acf172513d20] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ StringManipulation
-│  ┌ Warning: Module PrecompileTools with build ID fafbfcfd-55e5-1906-8f7b-a52bb157ea25 is missing from the cache.
-│  │ This may mean PrecompileTools [aea7be01-6a6a-4083-8856-8a6e6704d82a] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ DataStructures
-│  ┌ Warning: Module Compat with build ID fafbfcfd-4023-6bb5-43c7-e893ac09e750 is missing from the cache.
-│  │ This may mean Compat [34da2185-b29b-5c13-b0c7-acf172513d20] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ PooledArrays
-│  ┌ Warning: Module DataAPI with build ID fafbfcfd-1fa5-87de-ea99-52b89440bf9b is missing from the cache.
-│  │ This may mean DataAPI [9a962f9c-6df0-11e9-0e5d-c546b8b5ee8a] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ PrecompileTools
-│  ┌ Warning: Module Preferences with build ID fafbfcfd-5715-7f0b-dfbf-a3ffb3c14b07 is missing from the cache.
-│  │ This may mean Preferences [21216c6a-2e73-6563-6e65-726566657250] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ SortingAlgorithms
-│  ┌ Warning: Module DataStructures with build ID fafbfcfd-1c45-48c6-8302-1a3c5a1097ca is missing from the cache.
-│  │ This may mean DataStructures [864edb3b-99cc-5e75-8d2d-829cb0a9cfe8] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ TableTraits
-│  ┌ Warning: Module IteratorInterfaceExtensions with build ID fafbfcfd-eb70-b579-6441-357f4aa725db is missing from the cache.
-│  │ This may mean IteratorInterfaceExtensions [82899510-4779-5014-852e-03e436cf321d] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Missings
-│  ┌ Warning: Module DataAPI with build ID fafbfcfd-1fa5-87de-ea99-52b89440bf9b is missing from the cache.
-│  │ This may mean DataAPI [9a962f9c-6df0-11e9-0e5d-c546b8b5ee8a] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Transducers → TransducersDataFramesExt
-│  [Output was shown above]
-└  
-┌ BangBang → BangBangDataFramesExt
-│  ┌ Warning: Module BangBang with build ID fafbfcfd-3cd1-c45d-07ca-7538201cabb1 is missing from the cache.
-│  │ This may mean BangBang [198e06fe-97b7-11e9-32a5-e1d131e6ad66] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ PrettyTables
-│  ┌ Warning: Module Reexport with build ID fafbfcfd-6ea4-e9d5-1501-d66fd8833cfa is missing from the cache.
-│  │ This may mean Reexport [189a3867-3050-52da-a836-e630ba90ab69] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Tables
-│  ┌ Warning: Module DataValueInterfaces with build ID fafbfcfd-97f6-371a-c6a6-5a2cb27704c6 is missing from the cache.
-│  │ This may mean DataValueInterfaces [e2d170a0-9d28-54be-80f0-106bbe20a464] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
+   1221.8 ms  ✓ Transducers → TransducersDataFramesExt
+  1 dependency successfully precompiled in 2 seconds. 61 already precompiled.
 Precompiling CUDA...
-   1591.7 ms  ✓ Reexport
-   2160.5 ms  ✓ DataValueInterfaces
-   2008.9 ms  ✓ InvertedIndices
-   2641.9 ms  ✓ IteratorInterfaceExtensions
-   2674.8 ms  ✓ LLVMLoopInfo
-   2888.3 ms  ✓ LaTeXStrings
-   2881.6 ms  ✓ ExprTools
-   2121.7 ms  ✓ Adapt
-   2007.4 ms  ✓ DataAPI
-   3011.4 ms  ✓ Statistics
-   2641.7 ms  ✓ InlineStrings
-   2269.8 ms  ✓ Scratch
-   3135.8 ms  ✓ RandomNumbers
-   2517.1 ms  ✓ Crayons
-   2777.5 ms  ✓ CUDA_Runtime_Discovery
-   2420.9 ms  ✓ SentinelArrays
-    745.6 ms  ✓ Compat
-   1013.5 ms  ✓ BFloat16s
-   1006.0 ms  ? TableTraits
-   1398.7 ms  ✓ Preferences
-    890.4 ms  ? Missings
-    959.5 ms  ? PooledArrays
-    963.0 ms  ? FixedPointNumbers
-   1253.2 ms  ✓ Random123
-    697.3 ms  ? Compat → CompatLinearAlgebraExt
-    661.1 ms  ? Tables
-    664.5 ms  ? JLLWrappers
-    656.9 ms  ? PrecompileTools
-   2175.2 ms  ✓ TimerOutputs
-   1182.6 ms  ? ColorTypes
-    881.1 ms  ? DataStructures
-    663.1 ms  ? NVTX_jll
-    667.2 ms  ? demumble_jll
-    697.0 ms  ? JuliaNVTXCallbacks_jll
-    846.9 ms  ? CUDA_Driver_jll
-   1032.2 ms  ? LLVM → BFloat16sExt
-   1175.8 ms  ? StringManipulation
-    653.0 ms  ? SortingAlgorithms
-    886.8 ms  ? Colors
-    636.9 ms  ? PrettyTables
-   1080.1 ms  ? NVTX
-   1954.9 ms  ? CUDA_Runtime_jll
-  10999.8 ms  ? GPUCompiler
-Info Given CUDA was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module Preferences with build ID fafbfcfd-5715-7f0b-dfbf-a3ffb3c14b07 is missing from the cache.
-[0K│ This may mean Preferences [21216c6a-2e73-6563-6e65-726566657250] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-   1123.8 ms  ? CUDA
-   1379.0 ms  ? Atomix → AtomixCUDAExt
-  21 dependencies successfully precompiled in 19 seconds. 53 already precompiled.
-  24 dependencies precompiled but different versions are currently loaded. Restart julia to access the new versions. Otherwise, loading dependents of these packages may trigger further precompilation to work with the unexpected versions.
-  24 dependencies failed but may be precompilable after restarting julia
-  24 dependencies had output during precompilation:
-┌ Compat → CompatLinearAlgebraExt
-│  ┌ Warning: Module Compat with build ID fafbfcfd-4023-6bb5-43c7-e893ac09e750 is missing from the cache.
-│  │ This may mean Compat [34da2185-b29b-5c13-b0c7-acf172513d20] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ StringManipulation
-│  ┌ Warning: Module PrecompileTools with build ID fafbfcfd-55e5-1906-8f7b-a52bb157ea25 is missing from the cache.
-│  │ This may mean PrecompileTools [aea7be01-6a6a-4083-8856-8a6e6704d82a] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Atomix → AtomixCUDAExt
-│  ┌ Warning: Module Preferences with build ID fafbfcfd-5715-7f0b-dfbf-a3ffb3c14b07 is missing from the cache.
-│  │ This may mean Preferences [21216c6a-2e73-6563-6e65-726566657250] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ DataStructures
-│  ┌ Warning: Module Compat with build ID fafbfcfd-4023-6bb5-43c7-e893ac09e750 is missing from the cache.
-│  │ This may mean Compat [34da2185-b29b-5c13-b0c7-acf172513d20] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ ColorTypes
-│  ┌ Warning: Module Statistics with build ID fafbfcfd-8766-6a1d-ab98-d62b501fd16f is missing from the cache.
-│  │ This may mean Statistics [10745b16-79ce-11e8-11f9-7d13ad32a3b2] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ PooledArrays
-│  ┌ Warning: Module DataAPI with build ID fafbfcfd-1fa5-87de-ea99-52b89440bf9b is missing from the cache.
-│  │ This may mean DataAPI [9a962f9c-6df0-11e9-0e5d-c546b8b5ee8a] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ LLVM → BFloat16sExt
-│  ┌ Warning: Module Preferences with build ID fafbfcfd-5715-7f0b-dfbf-a3ffb3c14b07 is missing from the cache.
-│  │ This may mean Preferences [21216c6a-2e73-6563-6e65-726566657250] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ FixedPointNumbers
-│  ┌ Warning: Module Statistics with build ID fafbfcfd-8766-6a1d-ab98-d62b501fd16f is missing from the cache.
-│  │ This may mean Statistics [10745b16-79ce-11e8-11f9-7d13ad32a3b2] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ PrecompileTools
-│  ┌ Warning: Module Preferences with build ID fafbfcfd-5715-7f0b-dfbf-a3ffb3c14b07 is missing from the cache.
-│  │ This may mean Preferences [21216c6a-2e73-6563-6e65-726566657250] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ JuliaNVTXCallbacks_jll
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ SortingAlgorithms
-│  ┌ Warning: Module DataStructures with build ID fafbfcfd-1c45-48c6-8302-1a3c5a1097ca is missing from the cache.
-│  │ This may mean DataStructures [864edb3b-99cc-5e75-8d2d-829cb0a9cfe8] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ TableTraits
-│  ┌ Warning: Module IteratorInterfaceExtensions with build ID fafbfcfd-eb70-b579-6441-357f4aa725db is missing from the cache.
-│  │ This may mean IteratorInterfaceExtensions [82899510-4779-5014-852e-03e436cf321d] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ demumble_jll
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ NVTX
-│  ┌ Warning: Module Statistics with build ID fafbfcfd-8766-6a1d-ab98-d62b501fd16f is missing from the cache.
-│  │ This may mean Statistics [10745b16-79ce-11e8-11f9-7d13ad32a3b2] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Missings
-│  ┌ Warning: Module DataAPI with build ID fafbfcfd-1fa5-87de-ea99-52b89440bf9b is missing from the cache.
-│  │ This may mean DataAPI [9a962f9c-6df0-11e9-0e5d-c546b8b5ee8a] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ CUDA_Driver_jll
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ PrettyTables
-│  ┌ Warning: Module Reexport with build ID fafbfcfd-6ea4-e9d5-1501-d66fd8833cfa is missing from the cache.
-│  │ This may mean Reexport [189a3867-3050-52da-a836-e630ba90ab69] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ JLLWrappers
-│  ┌ Warning: Module Preferences with build ID fafbfcfd-5715-7f0b-dfbf-a3ffb3c14b07 is missing from the cache.
-│  │ This may mean Preferences [21216c6a-2e73-6563-6e65-726566657250] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ NVTX_jll
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ CUDA_Runtime_jll
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Colors
-│  ┌ Warning: Module Statistics with build ID fafbfcfd-8766-6a1d-ab98-d62b501fd16f is missing from the cache.
-│  │ This may mean Statistics [10745b16-79ce-11e8-11f9-7d13ad32a3b2] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Tables
-│  ┌ Warning: Module DataValueInterfaces with build ID fafbfcfd-97f6-371a-c6a6-5a2cb27704c6 is missing from the cache.
-│  │ This may mean DataValueInterfaces [e2d170a0-9d28-54be-80f0-106bbe20a464] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ CUDA
-│  [Output was shown above]
-└  
-┌ GPUCompiler
-│  ┌ Warning: Module Preferences with build ID fafbfcfd-5715-7f0b-dfbf-a3ffb3c14b07 is missing from the cache.
-│  │ This may mean Preferences [21216c6a-2e73-6563-6e65-726566657250] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-Precompiling GPUCompiler...
-    632.1 ms  ? PrecompileTools
-    647.6 ms  ? JLLWrappers
-Info Given GPUCompiler was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module Preferences with build ID fafbfcfd-5715-7f0b-dfbf-a3ffb3c14b07 is missing from the cache.
-[0K│ This may mean Preferences [21216c6a-2e73-6563-6e65-726566657250] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    890.5 ms  ? GPUCompiler
-Precompiling BFloat16sExt...
-    649.2 ms  ? JLLWrappers
-Info Given BFloat16sExt was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module LLVM with build ID fafbfcfd-6e84-b2e2-d6fc-fad6426ed9de is missing from the cache.
-[0K│ This may mean LLVM [929cbde3-209d-540e-8aea-75f648917ca0] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    657.6 ms  ? LLVM → BFloat16sExt
-Precompiling CUDA_Driver_jll...
-    649.2 ms  ? JLLWrappers
-Info Given CUDA_Driver_jll was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-[0K│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    630.6 ms  ? CUDA_Driver_jll
-Precompiling CUDA_Runtime_jll...
-    618.6 ms  ? JLLWrappers
-    632.7 ms  ? CUDA_Driver_jll
-Info Given CUDA_Runtime_jll was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module CUDA_Driver_jll with build ID ffffffff-ffff-ffff-8034-3c737d6e5953 is missing from the cache.
-[0K│ This may mean CUDA_Driver_jll [4ee394cb-3365-5eb0-8335-949819d2adfc] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-[0K┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-[0K│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-   1275.9 ms  ? CUDA_Runtime_jll
-Precompiling NVTX...
-    422.9 ms  ✓ Reexport
-    707.7 ms  ✓ Statistics
-    658.4 ms  ? JLLWrappers
-    579.7 ms  ? FixedPointNumbers
-    579.9 ms  ? NVTX_jll
-    569.8 ms  ? JuliaNVTXCallbacks_jll
-    778.3 ms  ? ColorTypes
-    775.2 ms  ? Colors
-Info Given NVTX was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module Statistics with build ID fafbfcfd-8766-6a1d-ab98-d62b501fd16f is missing from the cache.
-[0K│ This may mean Statistics [10745b16-79ce-11e8-11f9-7d13ad32a3b2] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    973.0 ms  ? NVTX
-┌ Warning: Module Statistics with build ID fafbfcfd-8766-6a1d-ab98-d62b501fd16f is missing from the cache.
-│ This may mean Statistics [10745b16-79ce-11e8-11f9-7d13ad32a3b2] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module Statistics with build ID fafbfcfd-8766-6a1d-ab98-d62b501fd16f is missing from the cache.
-│ This may mean Statistics [10745b16-79ce-11e8-11f9-7d13ad32a3b2] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module Statistics with build ID fafbfcfd-8766-6a1d-ab98-d62b501fd16f is missing from the cache.
-│ This may mean Statistics [10745b16-79ce-11e8-11f9-7d13ad32a3b2] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module FixedPointNumbers with build ID ffffffff-ffff-ffff-2d2b-1cf70d3669f1 is missing from the cache.
-│ This may mean FixedPointNumbers [53c48c17-4a7d-5ca2-90c5-79b7896eea93] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module Zygote with build ID fafbfcfd-9ae0-06f8-ff9a-f70395a2fa7d is missing from the cache.
-│ This may mean Zygote [e88e6eb3-aa80-5325-afca-941959d7151f] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module CUDA with build ID ffffffff-ffff-ffff-a210-25fe0957e7ba is missing from the cache.
-│ This may mean CUDA [052768ef-5323-5732-b1bb-66c8b64840ba] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module NNlib with build ID fafbfcfd-6bf0-563b-c6eb-11de80abe129 is missing from the cache.
-│ This may mean NNlib [872c559c-99b0-510c-b3b7-b6c96a88d5cd] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module Adapt with build ID fafbfcfd-3c24-275f-0c78-a60131b0a834 is missing from the cache.
-│ This may mean Adapt [79e6a3ab-5dfb-504d-930d-738a2a938a0e] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-  2 dependencies successfully precompiled in 4 seconds. 24 already precompiled.
-  3 dependencies precompiled but different versions are currently loaded. Restart julia to access the new versions. Otherwise, loading dependents of these packages may trigger further precompilation to work with the unexpected versions.
-  7 dependencies failed but may be precompilable after restarting julia
-  7 dependencies had output during precompilation:
-┌ FixedPointNumbers
-│  ┌ Warning: Module Statistics with build ID fafbfcfd-8766-6a1d-ab98-d62b501fd16f is missing from the cache.
-│  │ This may mean Statistics [10745b16-79ce-11e8-11f9-7d13ad32a3b2] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ JuliaNVTXCallbacks_jll
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Colors
-│  ┌ Warning: Module Statistics with build ID fafbfcfd-8766-6a1d-ab98-d62b501fd16f is missing from the cache.
-│  │ This may mean Statistics [10745b16-79ce-11e8-11f9-7d13ad32a3b2] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ JLLWrappers
-│  ┌ Warning: Module Preferences with build ID fafbfcfd-5715-7f0b-dfbf-a3ffb3c14b07 is missing from the cache.
-│  │ This may mean Preferences [21216c6a-2e73-6563-6e65-726566657250] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ NVTX_jll
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ ColorTypes
-│  ┌ Warning: Module Statistics with build ID fafbfcfd-8766-6a1d-ab98-d62b501fd16f is missing from the cache.
-│  │ This may mean Statistics [10745b16-79ce-11e8-11f9-7d13ad32a3b2] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ NVTX
-│  [Output was shown above]
-└  
-Precompiling Colors...
-    568.7 ms  ? FixedPointNumbers
-    777.9 ms  ? ColorTypes
-Info Given Colors was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module Statistics with build ID fafbfcfd-8766-6a1d-ab98-d62b501fd16f is missing from the cache.
-[0K│ This may mean Statistics [10745b16-79ce-11e8-11f9-7d13ad32a3b2] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    788.6 ms  ? Colors
-Precompiling FixedPointNumbers...
-Info Given FixedPointNumbers was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module Statistics with build ID fafbfcfd-8766-6a1d-ab98-d62b501fd16f is missing from the cache.
-[0K│ This may mean Statistics [10745b16-79ce-11e8-11f9-7d13ad32a3b2] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    568.5 ms  ? FixedPointNumbers
-Precompiling ColorTypes...
-    580.2 ms  ? FixedPointNumbers
-Info Given ColorTypes was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module FixedPointNumbers with build ID ffffffff-ffff-ffff-2d2b-1cf70d3669f1 is missing from the cache.
-[0K│ This may mean FixedPointNumbers [53c48c17-4a7d-5ca2-90c5-79b7896eea93] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    569.9 ms  ? ColorTypes
+    405.5 ms  ✓ LLVMLoopInfo
+    423.0 ms  ✓ ExprTools
+    443.2 ms  ✓ Scratch
+    574.4 ms  ✓ BFloat16s
+    562.9 ms  ✓ NVTX_jll
+    576.8 ms  ✓ demumble_jll
+    568.8 ms  ✓ JuliaNVTXCallbacks_jll
+   1006.1 ms  ✓ RandomNumbers
+   1083.8 ms  ✓ CUDA_Runtime_Discovery
+   1356.1 ms  ✓ CUDA_Driver_jll
+   1047.5 ms  ✓ LLVM → BFloat16sExt
+    900.1 ms  ✓ Random123
+   1932.5 ms  ✓ FixedPointNumbers
+   1738.8 ms  ✓ TimerOutputs
+   1418.0 ms  ✓ ColorTypes
+   2172.6 ms  ✓ CUDA_Runtime_jll
+   3449.3 ms  ✓ Colors
+   1100.9 ms  ✓ NVTX
+  14430.0 ms  ✓ GPUCompiler
+  37040.7 ms  ✓ CUDA
+   3923.7 ms  ✓ Atomix → AtomixCUDAExt
+  21 dependencies successfully precompiled in 58 seconds. 77 already precompiled.
 Precompiling ZygoteColorsExt...
-    788.4 ms  ✓ IteratorInterfaceExtensions
-    744.5 ms  ✓ DataValueInterfaces
-    604.0 ms  ✓ DataAPI
-    677.5 ms  ✓ Compat
-    736.9 ms  ? FixedPointNumbers
-    855.7 ms  ✓ Preferences
-    640.8 ms  ? TableTraits
-    639.5 ms  ? Compat → CompatLinearAlgebraExt
-    642.7 ms  ? ColorTypes
-    629.3 ms  ? PrecompileTools
-    646.1 ms  ? JLLWrappers
-    620.4 ms  ? Tables
-    602.9 ms  ? Colors
-Info Given ZygoteColorsExt was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module Zygote with build ID fafbfcfd-9ae0-06f8-ff9a-f70395a2fa7d is missing from the cache.
-[0K│ This may mean Zygote [e88e6eb3-aa80-5325-afca-941959d7151f] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    596.9 ms  ? Zygote → ZygoteColorsExt
-  5 dependencies successfully precompiled in 3 seconds. 77 already precompiled.
-  13 dependencies precompiled but different versions are currently loaded. Restart julia to access the new versions. Otherwise, loading dependents of these packages may trigger further precompilation to work with the unexpected versions.
-  9 dependencies failed but may be precompilable after restarting julia
-  9 dependencies had output during precompilation:
-┌ Compat → CompatLinearAlgebraExt
-│  ┌ Warning: Module Compat with build ID fafbfcfd-4023-6bb5-43c7-e893ac09e750 is missing from the cache.
-│  │ This may mean Compat [34da2185-b29b-5c13-b0c7-acf172513d20] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ FixedPointNumbers
-│  ┌ Warning: Module Statistics with build ID fafbfcfd-8766-6a1d-ab98-d62b501fd16f is missing from the cache.
-│  │ This may mean Statistics [10745b16-79ce-11e8-11f9-7d13ad32a3b2] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ PrecompileTools
-│  ┌ Warning: Module Preferences with build ID fafbfcfd-5715-7f0b-dfbf-a3ffb3c14b07 is missing from the cache.
-│  │ This may mean Preferences [21216c6a-2e73-6563-6e65-726566657250] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Zygote → ZygoteColorsExt
-│  [Output was shown above]
-└  
-┌ Colors
-│  ┌ Warning: Module FixedPointNumbers with build ID ffffffff-ffff-ffff-2d2b-1cf70d3669f1 is missing from the cache.
-│  │ This may mean FixedPointNumbers [53c48c17-4a7d-5ca2-90c5-79b7896eea93] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ JLLWrappers
-│  ┌ Warning: Module Preferences with build ID fafbfcfd-5715-7f0b-dfbf-a3ffb3c14b07 is missing from the cache.
-│  │ This may mean Preferences [21216c6a-2e73-6563-6e65-726566657250] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ TableTraits
-│  ┌ Warning: Module IteratorInterfaceExtensions with build ID fafbfcfd-eb70-b579-6441-357f4aa725db is missing from the cache.
-│  │ This may mean IteratorInterfaceExtensions [82899510-4779-5014-852e-03e436cf321d] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ ColorTypes
-│  ┌ Warning: Module FixedPointNumbers with build ID ffffffff-ffff-ffff-2d2b-1cf70d3669f1 is missing from the cache.
-│  │ This may mean FixedPointNumbers [53c48c17-4a7d-5ca2-90c5-79b7896eea93] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Tables
-│  ┌ Warning: Module DataValueInterfaces with build ID fafbfcfd-97f6-371a-c6a6-5a2cb27704c6 is missing from the cache.
-│  │ This may mean DataValueInterfaces [e2d170a0-9d28-54be-80f0-106bbe20a464] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-Precompiling NVTX_jll...
-    654.9 ms  ? JLLWrappers
-Info Given NVTX_jll was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-[0K│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    624.8 ms  ? NVTX_jll
-Precompiling JuliaNVTXCallbacks_jll...
-    650.3 ms  ? JLLWrappers
-Info Given JuliaNVTXCallbacks_jll was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-[0K│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    646.5 ms  ? JuliaNVTXCallbacks_jll
-Precompiling demumble_jll...
-    786.1 ms  ✓ Preferences
-    651.1 ms  ? JLLWrappers
-Info Given demumble_jll was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-[0K│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    632.5 ms  ? demumble_jll
-  1 dependency successfully precompiled in 2 seconds. 4 already precompiled.
-  2 dependencies precompiled but different versions are currently loaded. Restart julia to access the new versions. Otherwise, loading dependents of these packages may trigger further precompilation to work with the unexpected versions.
-  2 dependencies failed but may be precompilable after restarting julia
-  2 dependencies had output during precompilation:
-┌ JLLWrappers
-│  ┌ Warning: Module Preferences with build ID fafbfcfd-5715-7f0b-dfbf-a3ffb3c14b07 is missing from the cache.
-│  │ This may mean Preferences [21216c6a-2e73-6563-6e65-726566657250] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ demumble_jll
-│  [Output was shown above]
-└  
-Precompiling AtomixCUDAExt...
-   1510.9 ms  ✓ IteratorInterfaceExtensions
-   1571.2 ms  ✓ DataValueInterfaces
-   1564.6 ms  ✓ Reexport
-   2416.2 ms  ✓ LaTeXStrings
-   2091.3 ms  ✓ InvertedIndices
-   2846.9 ms  ✓ Statistics
-   2789.0 ms  ✓ InlineStrings
-   2645.1 ms  ✓ DataAPI
-   2827.3 ms  ✓ OrderedCollections
-   2308.3 ms  ✓ Compat
-   2754.6 ms  ✓ Crayons
-   2326.3 ms  ✓ Preferences
-   2510.9 ms  ✓ SentinelArrays
-   1267.2 ms  ? TableTraits
-    801.6 ms  ? PooledArrays
-    961.1 ms  ? FixedPointNumbers
-    868.5 ms  ? PrecompileTools
-    954.2 ms  ? Compat → CompatLinearAlgebraExt
-    978.2 ms  ? Missings
-    973.9 ms  ? JLLWrappers
-   1074.4 ms  ? Tables
-    859.8 ms  ? ColorTypes
-    952.4 ms  ? NVTX_jll
-    964.0 ms  ? CUDA_Driver_jll
-   1057.7 ms  ? DataStructures
-   1001.1 ms  ? JuliaNVTXCallbacks_jll
-   1050.5 ms  ? demumble_jll
-   1364.9 ms  ? StringManipulation
-   1381.9 ms  ? LLVM → BFloat16sExt
-   1211.9 ms  ? GPUCompiler
-    823.4 ms  ? Colors
-    735.7 ms  ? SortingAlgorithms
-    692.9 ms  ? PrettyTables
-    DataFrames Being precompiled by another machine (hostname: kraken.iric.ca, pid: 2071215, pidfile: /u/chans/.julia/compiled/v1.11/DataFrames/AR9oZ_8yeYH.ji.pidfile)
-    638.9 ms  ? NVTX
-   1343.7 ms  ? CUDA_Runtime_jll
-  80763.3 ms  ✓ DataFrames
-    630.0 ms  ? CUDA
-Info Given AtomixCUDAExt was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module CUDA with build ID ffffffff-ffff-ffff-a210-25fe0957e7ba is missing from the cache.
-[0K│ This may mean CUDA [052768ef-5323-5732-b1bb-66c8b64840ba] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    674.8 ms  ? Atomix → AtomixCUDAExt
-  14 dependencies successfully precompiled in 89 seconds. 60 already precompiled.
-  37 dependencies precompiled but different versions are currently loaded. Restart julia to access the new versions. Otherwise, loading dependents of these packages may trigger further precompilation to work with the unexpected versions.
-  24 dependencies failed but may be precompilable after restarting julia
-  25 dependencies had output during precompilation:
-┌ Compat → CompatLinearAlgebraExt
-│  ┌ Warning: Module Compat with build ID fafbfcfd-4023-6bb5-43c7-e893ac09e750 is missing from the cache.
-│  │ This may mean Compat [34da2185-b29b-5c13-b0c7-acf172513d20] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ StringManipulation
-│  ┌ Warning: Module PrecompileTools with build ID fafbfcfd-55e5-1906-8f7b-a52bb157ea25 is missing from the cache.
-│  │ This may mean PrecompileTools [aea7be01-6a6a-4083-8856-8a6e6704d82a] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Atomix → AtomixCUDAExt
-│  [Output was shown above]
-└  
-┌ DataStructures
-│  ┌ Warning: Module Compat with build ID fafbfcfd-4023-6bb5-43c7-e893ac09e750 is missing from the cache.
-│  │ This may mean Compat [34da2185-b29b-5c13-b0c7-acf172513d20] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ DataFrames
-│  ┌ Warning: Module Statistics with build ID fafbfcfd-8766-6a1d-ab98-d62b501fd16f is missing from the cache.
-│  │ This may mean Statistics [10745b16-79ce-11e8-11f9-7d13ad32a3b2] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ ColorTypes
-│  ┌ Warning: Module FixedPointNumbers with build ID ffffffff-ffff-ffff-2d2b-1cf70d3669f1 is missing from the cache.
-│  │ This may mean FixedPointNumbers [53c48c17-4a7d-5ca2-90c5-79b7896eea93] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ PooledArrays
-│  ┌ Warning: Module DataAPI with build ID fafbfcfd-1fa5-87de-ea99-52b89440bf9b is missing from the cache.
-│  │ This may mean DataAPI [9a962f9c-6df0-11e9-0e5d-c546b8b5ee8a] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ LLVM → BFloat16sExt
-│  ┌ Warning: Module LLVM with build ID fafbfcfd-6e84-b2e2-d6fc-fad6426ed9de is missing from the cache.
-│  │ This may mean LLVM [929cbde3-209d-540e-8aea-75f648917ca0] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ FixedPointNumbers
-│  ┌ Warning: Module Statistics with build ID fafbfcfd-8766-6a1d-ab98-d62b501fd16f is missing from the cache.
-│  │ This may mean Statistics [10745b16-79ce-11e8-11f9-7d13ad32a3b2] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ PrecompileTools
-│  ┌ Warning: Module Preferences with build ID fafbfcfd-5715-7f0b-dfbf-a3ffb3c14b07 is missing from the cache.
-│  │ This may mean Preferences [21216c6a-2e73-6563-6e65-726566657250] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ JuliaNVTXCallbacks_jll
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ SortingAlgorithms
-│  ┌ Warning: Module DataStructures with build ID fafbfcfd-1c45-48c6-8302-1a3c5a1097ca is missing from the cache.
-│  │ This may mean DataStructures [864edb3b-99cc-5e75-8d2d-829cb0a9cfe8] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ TableTraits
-│  ┌ Warning: Module IteratorInterfaceExtensions with build ID fafbfcfd-eb70-b579-6441-357f4aa725db is missing from the cache.
-│  │ This may mean IteratorInterfaceExtensions [82899510-4779-5014-852e-03e436cf321d] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ demumble_jll
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ NVTX
-│  ┌ Warning: Module Colors with build ID ffffffff-ffff-ffff-d795-1a80f12d68f4 is missing from the cache.
-│  │ This may mean Colors [5ae59095-9a9b-59fe-a467-6f913c188581] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Missings
-│  ┌ Warning: Module DataAPI with build ID fafbfcfd-1fa5-87de-ea99-52b89440bf9b is missing from the cache.
-│  │ This may mean DataAPI [9a962f9c-6df0-11e9-0e5d-c546b8b5ee8a] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ CUDA_Driver_jll
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ PrettyTables
-│  ┌ Warning: Module Reexport with build ID fafbfcfd-6ea4-e9d5-1501-d66fd8833cfa is missing from the cache.
-│  │ This may mean Reexport [189a3867-3050-52da-a836-e630ba90ab69] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ JLLWrappers
-│  ┌ Warning: Module Preferences with build ID fafbfcfd-5715-7f0b-dfbf-a3ffb3c14b07 is missing from the cache.
-│  │ This may mean Preferences [21216c6a-2e73-6563-6e65-726566657250] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ NVTX_jll
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ CUDA_Runtime_jll
-│  ┌ Warning: Module CUDA_Driver_jll with build ID ffffffff-ffff-ffff-8034-3c737d6e5953 is missing from the cache.
-│  │ This may mean CUDA_Driver_jll [4ee394cb-3365-5eb0-8335-949819d2adfc] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Colors
-│  ┌ Warning: Module FixedPointNumbers with build ID ffffffff-ffff-ffff-2d2b-1cf70d3669f1 is missing from the cache.
-│  │ This may mean FixedPointNumbers [53c48c17-4a7d-5ca2-90c5-79b7896eea93] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Tables
-│  ┌ Warning: Module DataValueInterfaces with build ID fafbfcfd-97f6-371a-c6a6-5a2cb27704c6 is missing from the cache.
-│  │ This may mean DataValueInterfaces [e2d170a0-9d28-54be-80f0-106bbe20a464] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ CUDA
-│  ┌ Warning: Module GPUCompiler with build ID ffffffff-ffff-ffff-09f1-f98bcf4907c0 is missing from the cache.
-│  │ This may mean GPUCompiler [61eb1bfa-7361-4325-ad38-22787b887f55] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ GPUCompiler
-│  ┌ Warning: Module LLVM with build ID fafbfcfd-6e84-b2e2-d6fc-fad6426ed9de is missing from the cache.
-│  │ This may mean LLVM [929cbde3-209d-540e-8aea-75f648917ca0] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
+   1380.6 ms  ✓ Zygote → ZygoteColorsExt
+  1 dependency successfully precompiled in 2 seconds. 90 already precompiled.
 Precompiling NNlibCUDAExt...
-   2237.6 ms  ✓ DataValueInterfaces
-   2232.3 ms  ✓ Reexport
-   2656.0 ms  ✓ InvertedIndices
-   3625.9 ms  ✓ LaTeXStrings
-   3615.1 ms  ✓ IteratorInterfaceExtensions
-   3687.9 ms  ✓ OrderedCollections
-   3680.6 ms  ✓ Requires
-   3295.6 ms  ✓ DataAPI
-   4482.5 ms  ✓ Statistics
-   3985.7 ms  ✓ InlineStrings
-   2854.9 ms  ✓ Preferences
-   2846.6 ms  ✓ Compat
-   3854.6 ms  ✓ Crayons
-   3144.8 ms  ✓ SentinelArrays
-   4522.7 ms  ✓ MacroTools
-    673.8 ms  ? TableTraits
-    652.1 ms  ? Missings
-    666.6 ms  ? PooledArrays
-    648.9 ms  ? FixedPointNumbers
-    644.1 ms  ? PrecompileTools
-    709.7 ms  ? JLLWrappers
-    682.7 ms  ? Compat → CompatLinearAlgebraExt
-    649.0 ms  ? Tables
-    645.9 ms  ? CUDA_Driver_jll
-    738.3 ms  ? ColorTypes
-    651.8 ms  ? NVTX_jll
-    653.7 ms  ? demumble_jll
-    639.6 ms  ? DataStructures
-    672.3 ms  ? LLVM → BFloat16sExt
-    776.4 ms  ? JuliaNVTXCallbacks_jll
-    876.2 ms  ? StringManipulation
-    854.8 ms  ? GPUCompiler
-    626.6 ms  ? Colors
-    630.0 ms  ? SortingAlgorithms
-    633.2 ms  ? PrettyTables
-    597.7 ms  ? NVTX
-   1283.9 ms  ? CUDA_Runtime_jll
-    581.5 ms  ? DataFrames
-    577.5 ms  ? CUDA
-Info Given NNlibCUDAExt was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module NNlib with build ID fafbfcfd-6bf0-563b-c6eb-11de80abe129 is missing from the cache.
-[0K│ This may mean NNlib [872c559c-99b0-510c-b3b7-b6c96a88d5cd] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    588.7 ms  ? CUDA → ChainRulesCoreExt
-    615.0 ms  ? Atomix → AtomixCUDAExt
-    593.5 ms  ? NNlib → NNlibCUDAExt
-  15 dependencies successfully precompiled in 10 seconds. 65 already precompiled.
-  40 dependencies precompiled but different versions are currently loaded. Restart julia to access the new versions. Otherwise, loading dependents of these packages may trigger further precompilation to work with the unexpected versions.
-  27 dependencies failed but may be precompilable after restarting julia
-  27 dependencies had output during precompilation:
-┌ Compat → CompatLinearAlgebraExt
-│  ┌ Warning: Module Compat with build ID fafbfcfd-4023-6bb5-43c7-e893ac09e750 is missing from the cache.
-│  │ This may mean Compat [34da2185-b29b-5c13-b0c7-acf172513d20] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ NNlib → NNlibCUDAExt
-│  [Output was shown above]
-└  
-┌ StringManipulation
-│  ┌ Warning: Module PrecompileTools with build ID fafbfcfd-55e5-1906-8f7b-a52bb157ea25 is missing from the cache.
-│  │ This may mean PrecompileTools [aea7be01-6a6a-4083-8856-8a6e6704d82a] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Atomix → AtomixCUDAExt
-│  ┌ Warning: Module CUDA with build ID ffffffff-ffff-ffff-a210-25fe0957e7ba is missing from the cache.
-│  │ This may mean CUDA [052768ef-5323-5732-b1bb-66c8b64840ba] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ DataStructures
-│  ┌ Warning: Module Compat with build ID fafbfcfd-4023-6bb5-43c7-e893ac09e750 is missing from the cache.
-│  │ This may mean Compat [34da2185-b29b-5c13-b0c7-acf172513d20] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ DataFrames
-│  ┌ Warning: Module Statistics with build ID fafbfcfd-8766-6a1d-ab98-d62b501fd16f is missing from the cache.
-│  │ This may mean Statistics [10745b16-79ce-11e8-11f9-7d13ad32a3b2] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ ColorTypes
-│  ┌ Warning: Module FixedPointNumbers with build ID ffffffff-ffff-ffff-2d2b-1cf70d3669f1 is missing from the cache.
-│  │ This may mean FixedPointNumbers [53c48c17-4a7d-5ca2-90c5-79b7896eea93] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ PooledArrays
-│  ┌ Warning: Module DataAPI with build ID fafbfcfd-1fa5-87de-ea99-52b89440bf9b is missing from the cache.
-│  │ This may mean DataAPI [9a962f9c-6df0-11e9-0e5d-c546b8b5ee8a] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ LLVM → BFloat16sExt
-│  ┌ Warning: Module LLVM with build ID fafbfcfd-6e84-b2e2-d6fc-fad6426ed9de is missing from the cache.
-│  │ This may mean LLVM [929cbde3-209d-540e-8aea-75f648917ca0] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ CUDA → ChainRulesCoreExt
-│  ┌ Warning: Module CUDA with build ID ffffffff-ffff-ffff-a210-25fe0957e7ba is missing from the cache.
-│  │ This may mean CUDA [052768ef-5323-5732-b1bb-66c8b64840ba] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ FixedPointNumbers
-│  ┌ Warning: Module Statistics with build ID fafbfcfd-8766-6a1d-ab98-d62b501fd16f is missing from the cache.
-│  │ This may mean Statistics [10745b16-79ce-11e8-11f9-7d13ad32a3b2] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ PrecompileTools
-│  ┌ Warning: Module Preferences with build ID fafbfcfd-5715-7f0b-dfbf-a3ffb3c14b07 is missing from the cache.
-│  │ This may mean Preferences [21216c6a-2e73-6563-6e65-726566657250] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ JuliaNVTXCallbacks_jll
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ SortingAlgorithms
-│  ┌ Warning: Module DataStructures with build ID fafbfcfd-1c45-48c6-8302-1a3c5a1097ca is missing from the cache.
-│  │ This may mean DataStructures [864edb3b-99cc-5e75-8d2d-829cb0a9cfe8] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ TableTraits
-│  ┌ Warning: Module IteratorInterfaceExtensions with build ID fafbfcfd-eb70-b579-6441-357f4aa725db is missing from the cache.
-│  │ This may mean IteratorInterfaceExtensions [82899510-4779-5014-852e-03e436cf321d] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ demumble_jll
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ NVTX
-│  ┌ Warning: Module Colors with build ID ffffffff-ffff-ffff-d795-1a80f12d68f4 is missing from the cache.
-│  │ This may mean Colors [5ae59095-9a9b-59fe-a467-6f913c188581] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Missings
-│  ┌ Warning: Module DataAPI with build ID fafbfcfd-1fa5-87de-ea99-52b89440bf9b is missing from the cache.
-│  │ This may mean DataAPI [9a962f9c-6df0-11e9-0e5d-c546b8b5ee8a] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ CUDA_Driver_jll
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ PrettyTables
-│  ┌ Warning: Module Reexport with build ID fafbfcfd-6ea4-e9d5-1501-d66fd8833cfa is missing from the cache.
-│  │ This may mean Reexport [189a3867-3050-52da-a836-e630ba90ab69] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ JLLWrappers
-│  ┌ Warning: Module Preferences with build ID fafbfcfd-5715-7f0b-dfbf-a3ffb3c14b07 is missing from the cache.
-│  │ This may mean Preferences [21216c6a-2e73-6563-6e65-726566657250] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ NVTX_jll
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ CUDA_Runtime_jll
-│  ┌ Warning: Module CUDA_Driver_jll with build ID ffffffff-ffff-ffff-8034-3c737d6e5953 is missing from the cache.
-│  │ This may mean CUDA_Driver_jll [4ee394cb-3365-5eb0-8335-949819d2adfc] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Colors
-│  ┌ Warning: Module FixedPointNumbers with build ID ffffffff-ffff-ffff-2d2b-1cf70d3669f1 is missing from the cache.
-│  │ This may mean FixedPointNumbers [53c48c17-4a7d-5ca2-90c5-79b7896eea93] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Tables
-│  ┌ Warning: Module DataValueInterfaces with build ID fafbfcfd-97f6-371a-c6a6-5a2cb27704c6 is missing from the cache.
-│  │ This may mean DataValueInterfaces [e2d170a0-9d28-54be-80f0-106bbe20a464] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ CUDA
-│  ┌ Warning: Module GPUCompiler with build ID ffffffff-ffff-ffff-09f1-f98bcf4907c0 is missing from the cache.
-│  │ This may mean GPUCompiler [61eb1bfa-7361-4325-ad38-22787b887f55] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ GPUCompiler
-│  ┌ Warning: Module LLVM with build ID fafbfcfd-6e84-b2e2-d6fc-fad6426ed9de is missing from the cache.
-│  │ This may mean LLVM [929cbde3-209d-540e-8aea-75f648917ca0] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
+   3579.9 ms  ✓ CUDA → ChainRulesCoreExt
+   3893.3 ms  ✓ NNlib → NNlibCUDAExt
+  2 dependencies successfully precompiled in 5 seconds. 105 already precompiled.
 Precompiling MLDataDevicesCUDAExt...
-    676.2 ms  ? TableTraits
-    645.3 ms  ? FixedPointNumbers
-    681.9 ms  ? Missings
-    654.0 ms  ? PooledArrays
-    665.3 ms  ? JLLWrappers
-    691.0 ms  ? Compat → CompatLinearAlgebraExt
-    710.4 ms  ? PrecompileTools
-    654.1 ms  ? Tables
-    650.1 ms  ? ColorTypes
-    650.4 ms  ? CUDA_Driver_jll
-    643.4 ms  ? JuliaNVTXCallbacks_jll
-    640.1 ms  ? DataStructures
-    671.4 ms  ? LLVM → BFloat16sExt
-    663.0 ms  ? GPUCompiler
-    904.8 ms  ? demumble_jll
-    924.8 ms  ? NVTX_jll
-    892.5 ms  ? StringManipulation
-    627.6 ms  ? Colors
-    633.1 ms  ? SortingAlgorithms
-    595.1 ms  ? PrettyTables
-    591.4 ms  ? NVTX
-   1249.3 ms  ? CUDA_Runtime_jll
-    584.1 ms  ? DataFrames
-    587.3 ms  ? CUDA
-Info Given MLDataDevicesCUDAExt was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module Adapt with build ID fafbfcfd-3c24-275f-0c78-a60131b0a834 is missing from the cache.
-[0K│ This may mean Adapt [79e6a3ab-5dfb-504d-930d-738a2a938a0e] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    575.9 ms  ? MLDataDevices → MLDataDevicesCUDAExt
-    608.3 ms  ? Atomix → AtomixCUDAExt
+   3556.9 ms  ✓ MLDataDevices → MLDataDevicesCUDAExt
+  1 dependency successfully precompiled in 4 seconds. 102 already precompiled.
 Precompiling FluxCUDAExt...
-    784.2 ms  ? TableTraits
-    650.5 ms  ? Missings
-    641.3 ms  ? FixedPointNumbers
-    663.3 ms  ? PooledArrays
-    649.9 ms  ? JLLWrappers
-    701.5 ms  ? Compat → CompatLinearAlgebraExt
-    711.9 ms  ? PrecompileTools
-    660.2 ms  ? Tables
-    723.3 ms  ? ColorTypes
-    646.2 ms  ? NVTX_jll
-    648.5 ms  ? demumble_jll
-    656.3 ms  ? JuliaNVTXCallbacks_jll
-    664.9 ms  ? LLVM → BFloat16sExt
-    643.3 ms  ? DataStructures
-    668.4 ms  ? GPUCompiler
-    814.0 ms  ? CUDA_Driver_jll
-   1028.6 ms  ? StringManipulation
-    638.2 ms  ? Colors
-    642.2 ms  ? SortingAlgorithms
-    613.1 ms  ? PrettyTables
-    623.8 ms  ? NVTX
-    636.4 ms  ? Zygote → ZygoteColorsExt
-   1273.8 ms  ? CUDA_Runtime_jll
-    599.3 ms  ? DataFrames
-┌ Warning: Module CUDA with build ID ffffffff-ffff-ffff-a210-25fe0957e7ba is missing from the cache.
-│ This may mean CUDA [052768ef-5323-5732-b1bb-66c8b64840ba] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module CUDA_Runtime_jll with build ID ffffffff-ffff-ffff-cda7-ed660ca1d88a is missing from the cache.
-│ This may mean CUDA_Runtime_jll [76a88914-d11a-5bdc-97e0-2f5a05c973a2] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module NNlib with build ID fafbfcfd-6bf0-563b-c6eb-11de80abe129 is missing from the cache.
-│ This may mean NNlib [872c559c-99b0-510c-b3b7-b6c96a88d5cd] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-    588.5 ms  ? Transducers → TransducersDataFramesExt
-    576.7 ms  ? CUDA
-    662.7 ms  ? BangBang → BangBangDataFramesExt
-    488.2 ms  ✓ Flux → FluxCUDAExt
-    667.2 ms  ? CUDA → SpecialFunctionsExt
-    646.7 ms  ? MLDataDevices → MLDataDevicesCUDAExt
-    657.6 ms  ? CUDA → ChainRulesCoreExt
-    686.1 ms  ? Atomix → AtomixCUDAExt
-    660.9 ms  ? NNlib → NNlibCUDAExt
-  1 dependency successfully precompiled in 5 seconds. 172 already precompiled.
-  30 dependencies precompiled but different versions are currently loaded. Restart julia to access the new versions. Otherwise, loading dependents of these packages may trigger further precompilation to work with the unexpected versions.
-  32 dependencies failed but may be precompilable after restarting julia
-  32 dependencies had output during precompilation:
-┌ Compat → CompatLinearAlgebraExt
-│  ┌ Warning: Module Compat with build ID fafbfcfd-4023-6bb5-43c7-e893ac09e750 is missing from the cache.
-│  │ This may mean Compat [34da2185-b29b-5c13-b0c7-acf172513d20] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ NNlib → NNlibCUDAExt
-│  ┌ Warning: Module NNlib with build ID fafbfcfd-6bf0-563b-c6eb-11de80abe129 is missing from the cache.
-│  │ This may mean NNlib [872c559c-99b0-510c-b3b7-b6c96a88d5cd] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ StringManipulation
-│  ┌ Warning: Module PrecompileTools with build ID fafbfcfd-55e5-1906-8f7b-a52bb157ea25 is missing from the cache.
-│  │ This may mean PrecompileTools [aea7be01-6a6a-4083-8856-8a6e6704d82a] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Atomix → AtomixCUDAExt
-│  ┌ Warning: Module CUDA with build ID ffffffff-ffff-ffff-a210-25fe0957e7ba is missing from the cache.
-│  │ This may mean CUDA [052768ef-5323-5732-b1bb-66c8b64840ba] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ DataStructures
-│  ┌ Warning: Module Compat with build ID fafbfcfd-4023-6bb5-43c7-e893ac09e750 is missing from the cache.
-│  │ This may mean Compat [34da2185-b29b-5c13-b0c7-acf172513d20] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ DataFrames
-│  ┌ Warning: Module Statistics with build ID fafbfcfd-8766-6a1d-ab98-d62b501fd16f is missing from the cache.
-│  │ This may mean Statistics [10745b16-79ce-11e8-11f9-7d13ad32a3b2] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ ColorTypes
-│  ┌ Warning: Module FixedPointNumbers with build ID ffffffff-ffff-ffff-2d2b-1cf70d3669f1 is missing from the cache.
-│  │ This may mean FixedPointNumbers [53c48c17-4a7d-5ca2-90c5-79b7896eea93] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ PooledArrays
-│  ┌ Warning: Module DataAPI with build ID fafbfcfd-1fa5-87de-ea99-52b89440bf9b is missing from the cache.
-│  │ This may mean DataAPI [9a962f9c-6df0-11e9-0e5d-c546b8b5ee8a] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ LLVM → BFloat16sExt
-│  ┌ Warning: Module LLVM with build ID fafbfcfd-6e84-b2e2-d6fc-fad6426ed9de is missing from the cache.
-│  │ This may mean LLVM [929cbde3-209d-540e-8aea-75f648917ca0] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ CUDA → ChainRulesCoreExt
-│  ┌ Warning: Module CUDA with build ID ffffffff-ffff-ffff-a210-25fe0957e7ba is missing from the cache.
-│  │ This may mean CUDA [052768ef-5323-5732-b1bb-66c8b64840ba] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ FixedPointNumbers
-│  ┌ Warning: Module Statistics with build ID fafbfcfd-8766-6a1d-ab98-d62b501fd16f is missing from the cache.
-│  │ This may mean Statistics [10745b16-79ce-11e8-11f9-7d13ad32a3b2] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ PrecompileTools
-│  ┌ Warning: Module Preferences with build ID fafbfcfd-5715-7f0b-dfbf-a3ffb3c14b07 is missing from the cache.
-│  │ This may mean Preferences [21216c6a-2e73-6563-6e65-726566657250] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ JuliaNVTXCallbacks_jll
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ SortingAlgorithms
-│  ┌ Warning: Module DataStructures with build ID fafbfcfd-1c45-48c6-8302-1a3c5a1097ca is missing from the cache.
-│  │ This may mean DataStructures [864edb3b-99cc-5e75-8d2d-829cb0a9cfe8] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ TableTraits
-│  ┌ Warning: Module IteratorInterfaceExtensions with build ID fafbfcfd-eb70-b579-6441-357f4aa725db is missing from the cache.
-│  │ This may mean IteratorInterfaceExtensions [82899510-4779-5014-852e-03e436cf321d] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ demumble_jll
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ NVTX
-│  ┌ Warning: Module Colors with build ID ffffffff-ffff-ffff-d795-1a80f12d68f4 is missing from the cache.
-│  │ This may mean Colors [5ae59095-9a9b-59fe-a467-6f913c188581] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Missings
-│  ┌ Warning: Module DataAPI with build ID fafbfcfd-1fa5-87de-ea99-52b89440bf9b is missing from the cache.
-│  │ This may mean DataAPI [9a962f9c-6df0-11e9-0e5d-c546b8b5ee8a] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ CUDA_Driver_jll
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Transducers → TransducersDataFramesExt
-│  ┌ Warning: Module Transducers with build ID fafbfcfd-e284-f059-3e22-1bdb170fd80e is missing from the cache.
-│  │ This may mean Transducers [28d57a85-8fef-5791-bfe6-a80928e7c999] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Zygote → ZygoteColorsExt
-│  ┌ Warning: Module Zygote with build ID fafbfcfd-9ae0-06f8-ff9a-f70395a2fa7d is missing from the cache.
-│  │ This may mean Zygote [e88e6eb3-aa80-5325-afca-941959d7151f] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ BangBang → BangBangDataFramesExt
-│  ┌ Warning: Module BangBang with build ID fafbfcfd-3cd1-c45d-07ca-7538201cabb1 is missing from the cache.
-│  │ This may mean BangBang [198e06fe-97b7-11e9-32a5-e1d131e6ad66] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ PrettyTables
-│  ┌ Warning: Module Reexport with build ID fafbfcfd-6ea4-e9d5-1501-d66fd8833cfa is missing from the cache.
-│  │ This may mean Reexport [189a3867-3050-52da-a836-e630ba90ab69] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ JLLWrappers
-│  ┌ Warning: Module Preferences with build ID fafbfcfd-5715-7f0b-dfbf-a3ffb3c14b07 is missing from the cache.
-│  │ This may mean Preferences [21216c6a-2e73-6563-6e65-726566657250] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ CUDA → SpecialFunctionsExt
-│  ┌ Warning: Module CUDA with build ID ffffffff-ffff-ffff-a210-25fe0957e7ba is missing from the cache.
-│  │ This may mean CUDA [052768ef-5323-5732-b1bb-66c8b64840ba] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ NVTX_jll
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ CUDA_Runtime_jll
-│  ┌ Warning: Module CUDA_Driver_jll with build ID ffffffff-ffff-ffff-8034-3c737d6e5953 is missing from the cache.
-│  │ This may mean CUDA_Driver_jll [4ee394cb-3365-5eb0-8335-949819d2adfc] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ MLDataDevices → MLDataDevicesCUDAExt
-│  ┌ Warning: Module Adapt with build ID fafbfcfd-3c24-275f-0c78-a60131b0a834 is missing from the cache.
-│  │ This may mean Adapt [79e6a3ab-5dfb-504d-930d-738a2a938a0e] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Colors
-│  ┌ Warning: Module FixedPointNumbers with build ID ffffffff-ffff-ffff-2d2b-1cf70d3669f1 is missing from the cache.
-│  │ This may mean FixedPointNumbers [53c48c17-4a7d-5ca2-90c5-79b7896eea93] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Tables
-│  ┌ Warning: Module DataValueInterfaces with build ID fafbfcfd-97f6-371a-c6a6-5a2cb27704c6 is missing from the cache.
-│  │ This may mean DataValueInterfaces [e2d170a0-9d28-54be-80f0-106bbe20a464] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ CUDA
-│  ┌ Warning: Module GPUCompiler with build ID ffffffff-ffff-ffff-09f1-f98bcf4907c0 is missing from the cache.
-│  │ This may mean GPUCompiler [61eb1bfa-7361-4325-ad38-22787b887f55] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ GPUCompiler
-│  ┌ Warning: Module LLVM with build ID fafbfcfd-6e84-b2e2-d6fc-fad6426ed9de is missing from the cache.
-│  │ This may mean LLVM [929cbde3-209d-540e-8aea-75f648917ca0] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
+    352.3 ms  ✓ Flux → FluxCUDAExt
+   3707.2 ms  ✓ CUDA → SpecialFunctionsExt
+  2 dependencies successfully precompiled in 5 seconds. 203 already precompiled.
 Precompiling cuDNN...
-    747.8 ms  ? TableTraits
-    645.7 ms  ? FixedPointNumbers
-    670.4 ms  ? Missings
-    665.3 ms  ? PooledArrays
-    640.6 ms  ? Compat → CompatLinearAlgebraExt
-    673.2 ms  ? JLLWrappers
-    713.5 ms  ? PrecompileTools
-    658.0 ms  ? ColorTypes
-    649.1 ms  ? JuliaNVTXCallbacks_jll
-    931.5 ms  ? Tables
-    691.9 ms  ? GPUCompiler
-    959.9 ms  ? DataStructures
-    961.4 ms  ? CUDA_Driver_jll
-    954.0 ms  ? NVTX_jll
-    912.4 ms  ? LLVM → BFloat16sExt
-    892.2 ms  ? StringManipulation
-    958.7 ms  ? demumble_jll
-    640.7 ms  ? Colors
-    652.4 ms  ? SortingAlgorithms
-    635.1 ms  ? PrettyTables
-    672.7 ms  ? NVTX
-    638.0 ms  ? DataFrames
-   1338.4 ms  ? CUDA_Runtime_jll
-    631.1 ms  ? CUDA
-   1124.8 ms  ? CUDNN_jll
-    681.3 ms  ? Atomix → AtomixCUDAExt
-Info Given cuDNN was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module CUDA with build ID ffffffff-ffff-ffff-a210-25fe0957e7ba is missing from the cache.
-[0K│ This may mean CUDA [052768ef-5323-5732-b1bb-66c8b64840ba] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    647.5 ms  ? cuDNN
-Precompiling CUDNN_jll...
-    643.9 ms  ? JLLWrappers
-    623.8 ms  ? CUDA_Driver_jll
-   1283.1 ms  ? CUDA_Runtime_jll
-Info Given CUDNN_jll was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module CUDA_Runtime_jll with build ID ffffffff-ffff-ffff-cda7-ed660ca1d88a is missing from the cache.
-[0K│ This may mean CUDA_Runtime_jll [76a88914-d11a-5bdc-97e0-2f5a05c973a2] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-[0K┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-[0K│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-   1108.3 ms  ? CUDNN_jll
+   1593.1 ms  ✓ CUDNN_jll
+   6261.9 ms  ✓ cuDNN
+  2 dependencies successfully precompiled in 8 seconds. 98 already precompiled.
 Precompiling NNlibCUDACUDNNExt...
-    JLLWrappers Being precompiled by another machine (hostname: kraken.iric.ca, pid: 2071215, pidfile: /u/chans/.julia/compiled/v1.11/JLLWrappers/7Zgw7_8yeYH.ji.pidfile)
-    768.4 ms  ✓ Requires
-    805.3 ms  ? FixedPointNumbers
-    950.4 ms  ? TableTraits
-    912.9 ms  ? Missings
-    777.7 ms  ✓ Compat
-    920.4 ms  ? PooledArrays
-    919.1 ms  ? PrecompileTools
-    646.6 ms  ? Compat → CompatLinearAlgebraExt
-    940.6 ms  ? ColorTypes
-    947.1 ms  ? Tables
-   1009.5 ms  ? StringManipulation
-   2619.4 ms  ✓ MacroTools
-    941.2 ms  ? DataStructures
-    818.2 ms  ? Colors
-    652.0 ms  ? PrettyTables
-    647.4 ms  ? SortingAlgorithms
-    633.5 ms  ? DataFrames
-  10842.0 ms  ✓ JLLWrappers
-    622.4 ms  ? CUDA_Driver_jll
-    632.1 ms  ? NVTX_jll
-    626.4 ms  ? demumble_jll
-    616.7 ms  ? JuliaNVTXCallbacks_jll
-    637.2 ms  ? LLVM → BFloat16sExt
-    633.8 ms  ? GPUCompiler
-    594.3 ms  ? NVTX
-   1189.5 ms  ? CUDA_Runtime_jll
-    578.3 ms  ? CUDA
-   1018.7 ms  ? CUDNN_jll
-    594.9 ms  ? CUDA → ChainRulesCoreExt
-    598.5 ms  ? NNlib → NNlibCUDAExt
-    629.5 ms  ? Atomix → AtomixCUDAExt
-    590.2 ms  ? cuDNN
-Info Given NNlibCUDACUDNNExt was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module NNlib with build ID fafbfcfd-6bf0-563b-c6eb-11de80abe129 is missing from the cache.
-[0K│ This may mean NNlib [872c559c-99b0-510c-b3b7-b6c96a88d5cd] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    585.8 ms  ? NNlib → NNlibCUDACUDNNExt
-  4 dependencies successfully precompiled in 16 seconds. 77 already precompiled.
-  31 dependencies precompiled but different versions are currently loaded. Restart julia to access the new versions. Otherwise, loading dependents of these packages may trigger further precompilation to work with the unexpected versions.
-  29 dependencies failed but may be precompilable after restarting julia
-  30 dependencies had output during precompilation:
-┌ Compat → CompatLinearAlgebraExt
-│  ┌ Warning: Module Compat with build ID fafbfcfd-4023-6bb5-43c7-e893ac09e750 is missing from the cache.
-│  │ This may mean Compat [34da2185-b29b-5c13-b0c7-acf172513d20] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ CUDNN_jll
-│  ┌ Warning: Module CUDA_Runtime_jll with build ID ffffffff-ffff-ffff-cda7-ed660ca1d88a is missing from the cache.
-│  │ This may mean CUDA_Runtime_jll [76a88914-d11a-5bdc-97e0-2f5a05c973a2] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ NNlib → NNlibCUDAExt
-│  ┌ Warning: Module NNlib with build ID fafbfcfd-6bf0-563b-c6eb-11de80abe129 is missing from the cache.
-│  │ This may mean NNlib [872c559c-99b0-510c-b3b7-b6c96a88d5cd] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ StringManipulation
-│  ┌ Warning: Module PrecompileTools with build ID fafbfcfd-55e5-1906-8f7b-a52bb157ea25 is missing from the cache.
-│  │ This may mean PrecompileTools [aea7be01-6a6a-4083-8856-8a6e6704d82a] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Atomix → AtomixCUDAExt
-│  ┌ Warning: Module CUDA with build ID ffffffff-ffff-ffff-a210-25fe0957e7ba is missing from the cache.
-│  │ This may mean CUDA [052768ef-5323-5732-b1bb-66c8b64840ba] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ DataStructures
-│  ┌ Warning: Module Compat with build ID fafbfcfd-4023-6bb5-43c7-e893ac09e750 is missing from the cache.
-│  │ This may mean Compat [34da2185-b29b-5c13-b0c7-acf172513d20] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ DataFrames
-│  ┌ Warning: Module Statistics with build ID fafbfcfd-8766-6a1d-ab98-d62b501fd16f is missing from the cache.
-│  │ This may mean Statistics [10745b16-79ce-11e8-11f9-7d13ad32a3b2] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ ColorTypes
-│  ┌ Warning: Module FixedPointNumbers with build ID ffffffff-ffff-ffff-2d2b-1cf70d3669f1 is missing from the cache.
-│  │ This may mean FixedPointNumbers [53c48c17-4a7d-5ca2-90c5-79b7896eea93] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ PooledArrays
-│  ┌ Warning: Module DataAPI with build ID fafbfcfd-1fa5-87de-ea99-52b89440bf9b is missing from the cache.
-│  │ This may mean DataAPI [9a962f9c-6df0-11e9-0e5d-c546b8b5ee8a] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ LLVM → BFloat16sExt
-│  ┌ Warning: Module LLVM with build ID fafbfcfd-6e84-b2e2-d6fc-fad6426ed9de is missing from the cache.
-│  │ This may mean LLVM [929cbde3-209d-540e-8aea-75f648917ca0] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ CUDA → ChainRulesCoreExt
-│  ┌ Warning: Module CUDA with build ID ffffffff-ffff-ffff-a210-25fe0957e7ba is missing from the cache.
-│  │ This may mean CUDA [052768ef-5323-5732-b1bb-66c8b64840ba] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ cuDNN
-│  ┌ Warning: Module CUDA with build ID ffffffff-ffff-ffff-a210-25fe0957e7ba is missing from the cache.
-│  │ This may mean CUDA [052768ef-5323-5732-b1bb-66c8b64840ba] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ FixedPointNumbers
-│  ┌ Warning: Module Statistics with build ID fafbfcfd-8766-6a1d-ab98-d62b501fd16f is missing from the cache.
-│  │ This may mean Statistics [10745b16-79ce-11e8-11f9-7d13ad32a3b2] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ PrecompileTools
-│  ┌ Warning: Module Preferences with build ID fafbfcfd-5715-7f0b-dfbf-a3ffb3c14b07 is missing from the cache.
-│  │ This may mean Preferences [21216c6a-2e73-6563-6e65-726566657250] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ JuliaNVTXCallbacks_jll
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ SortingAlgorithms
-│  ┌ Warning: Module DataStructures with build ID fafbfcfd-1c45-48c6-8302-1a3c5a1097ca is missing from the cache.
-│  │ This may mean DataStructures [864edb3b-99cc-5e75-8d2d-829cb0a9cfe8] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ TableTraits
-│  ┌ Warning: Module IteratorInterfaceExtensions with build ID fafbfcfd-eb70-b579-6441-357f4aa725db is missing from the cache.
-│  │ This may mean IteratorInterfaceExtensions [82899510-4779-5014-852e-03e436cf321d] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ demumble_jll
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ NVTX
-│  ┌ Warning: Module Colors with build ID ffffffff-ffff-ffff-d795-1a80f12d68f4 is missing from the cache.
-│  │ This may mean Colors [5ae59095-9a9b-59fe-a467-6f913c188581] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Missings
-│  ┌ Warning: Module DataAPI with build ID fafbfcfd-1fa5-87de-ea99-52b89440bf9b is missing from the cache.
-│  │ This may mean DataAPI [9a962f9c-6df0-11e9-0e5d-c546b8b5ee8a] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ NNlib → NNlibCUDACUDNNExt
-│  [Output was shown above]
-└  
-┌ CUDA_Driver_jll
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ PrettyTables
-│  ┌ Warning: Module Reexport with build ID fafbfcfd-6ea4-e9d5-1501-d66fd8833cfa is missing from the cache.
-│  │ This may mean Reexport [189a3867-3050-52da-a836-e630ba90ab69] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ JLLWrappers
-│  ┌ Warning: Module Preferences with build ID fafbfcfd-5715-7f0b-dfbf-a3ffb3c14b07 is missing from the cache.
-│  │ This may mean Preferences [21216c6a-2e73-6563-6e65-726566657250] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ NVTX_jll
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ CUDA_Runtime_jll
-│  ┌ Warning: Module CUDA_Driver_jll with build ID ffffffff-ffff-ffff-8034-3c737d6e5953 is missing from the cache.
-│  │ This may mean CUDA_Driver_jll [4ee394cb-3365-5eb0-8335-949819d2adfc] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Colors
-│  ┌ Warning: Module FixedPointNumbers with build ID ffffffff-ffff-ffff-2d2b-1cf70d3669f1 is missing from the cache.
-│  │ This may mean FixedPointNumbers [53c48c17-4a7d-5ca2-90c5-79b7896eea93] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Tables
-│  ┌ Warning: Module DataValueInterfaces with build ID fafbfcfd-97f6-371a-c6a6-5a2cb27704c6 is missing from the cache.
-│  │ This may mean DataValueInterfaces [e2d170a0-9d28-54be-80f0-106bbe20a464] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ CUDA
-│  ┌ Warning: Module GPUCompiler with build ID ffffffff-ffff-ffff-09f1-f98bcf4907c0 is missing from the cache.
-│  │ This may mean GPUCompiler [61eb1bfa-7361-4325-ad38-22787b887f55] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ GPUCompiler
-│  ┌ Warning: Module LLVM with build ID fafbfcfd-6e84-b2e2-d6fc-fad6426ed9de is missing from the cache.
-│  │ This may mean LLVM [929cbde3-209d-540e-8aea-75f648917ca0] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
+   4038.8 ms  ✓ NNlib → NNlibCUDACUDNNExt
+  1 dependency successfully precompiled in 5 seconds. 109 already precompiled.
 Precompiling MLDataDevicescuDNNExt...
-    629.5 ms  ? TableTraits
-    622.1 ms  ? FixedPointNumbers
-    644.8 ms  ? Missings
-    637.3 ms  ? PooledArrays
-    635.6 ms  ? Compat → CompatLinearAlgebraExt
-    791.9 ms  ✓ Preferences
-    644.1 ms  ? Tables
-    637.7 ms  ? ColorTypes
-    650.6 ms  ? DataStructures
-    649.5 ms  ? PrecompileTools
-    659.3 ms  ? JLLWrappers
-    656.2 ms  ? Colors
-    738.9 ms  ? SortingAlgorithms
-    643.5 ms  ? demumble_jll
-    644.3 ms  ? JuliaNVTXCallbacks_jll
-    686.3 ms  ? CUDA_Driver_jll
-    691.6 ms  ? LLVM → BFloat16sExt
-    766.5 ms  ? NVTX_jll
-    878.4 ms  ? StringManipulation
-    841.2 ms  ? GPUCompiler
-    604.0 ms  ? NVTX
-    594.8 ms  ? PrettyTables
-   1220.1 ms  ? CUDA_Runtime_jll
-    584.7 ms  ? DataFrames
-    574.9 ms  ? CUDA
-   1028.3 ms  ? CUDNN_jll
-    588.5 ms  ? MLDataDevices → MLDataDevicesCUDAExt
-    621.8 ms  ? Atomix → AtomixCUDAExt
-    594.3 ms  ? cuDNN
-Info Given MLDataDevicescuDNNExt was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module CUDA with build ID ffffffff-ffff-ffff-a210-25fe0957e7ba is missing from the cache.
-[0K│ This may mean CUDA [052768ef-5323-5732-b1bb-66c8b64840ba] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    593.6 ms  ? MLDataDevices → MLDataDevicescuDNNExt
-┌ Warning: Module CUDA with build ID ffffffff-ffff-ffff-a210-25fe0957e7ba is missing from the cache.
-│ This may mean CUDA [052768ef-5323-5732-b1bb-66c8b64840ba] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module Flux with build ID fafbfcfd-e3a6-5624-a539-1a3824e13374 is missing from the cache.
-│ This may mean Flux [587475ba-b771-5e3f-ad9e-33799f191a9c] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module CUDA with build ID ffffffff-ffff-ffff-a210-25fe0957e7ba is missing from the cache.
-│ This may mean CUDA [052768ef-5323-5732-b1bb-66c8b64840ba] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module CUDA with build ID ffffffff-ffff-ffff-a210-25fe0957e7ba is missing from the cache.
-│ This may mean CUDA [052768ef-5323-5732-b1bb-66c8b64840ba] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module MacroTools with build ID fafbfcfd-4675-75cf-aeab-4cd4f1feef97 is missing from the cache.
-│ This may mean MacroTools [1914dd2f-81c6-5fcd-8719-6d5c9610ff09] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module MacroTools with build ID fafbfcfd-4675-75cf-aeab-4cd4f1feef97 is missing from the cache.
-│ This may mean MacroTools [1914dd2f-81c6-5fcd-8719-6d5c9610ff09] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module MacroTools with build ID fafbfcfd-4675-75cf-aeab-4cd4f1feef97 is missing from the cache.
-│ This may mean MacroTools [1914dd2f-81c6-5fcd-8719-6d5c9610ff09] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module TranscodingStreams with build ID fafbfcfd-8203-7e9c-4aba-91ada79a75df is missing from the cache.
-│ This may mean TranscodingStreams [3bb67fe8-82b1-5028-8e26-92a6c54297fa] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module TranscodingStreams with build ID fafbfcfd-8203-7e9c-4aba-91ada79a75df is missing from the cache.
-│ This may mean TranscodingStreams [3bb67fe8-82b1-5028-8e26-92a6c54297fa] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module PrecompileTools with build ID fafbfcfd-55e5-1906-8f7b-a52bb157ea25 is missing from the cache.
-│ This may mean PrecompileTools [aea7be01-6a6a-4083-8856-8a6e6704d82a] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module ColorTypes with build ID ffffffff-ffff-ffff-ab38-fb0a27d4a249 is missing from the cache.
-│ This may mean ColorTypes [3da002f7-5984-5a60-b8a6-cbb66c0b333f] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module ColorVectorSpace with build ID ffffffff-ffff-ffff-04ea-222d6c91893c is missing from the cache.
-│ This may mean ColorVectorSpace [c3611d14-8923-5661-9e6a-0046d554d3a4] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module StaticArrays with build ID fafbfcfd-6959-0091-b6a0-50ce699dec08 is missing from the cache.
-│ This may mean StaticArrays [90137ffa-7385-5640-81b9-e52037218182] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module DataAPI with build ID fafbfcfd-1fa5-87de-ea99-52b89440bf9b is missing from the cache.
-│ This may mean DataAPI [9a962f9c-6df0-11e9-0e5d-c546b8b5ee8a] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module ColorTypes with build ID ffffffff-ffff-ffff-ab38-fb0a27d4a249 is missing from the cache.
-│ This may mean ColorTypes [3da002f7-5984-5a60-b8a6-cbb66c0b333f] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module PrecompileTools with build ID fafbfcfd-55e5-1906-8f7b-a52bb157ea25 is missing from the cache.
-│ This may mean PrecompileTools [aea7be01-6a6a-4083-8856-8a6e6704d82a] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module Colors with build ID ffffffff-ffff-ffff-d795-1a80f12d68f4 is missing from the cache.
-│ This may mean Colors [5ae59095-9a9b-59fe-a467-6f913c188581] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module Colors with build ID ffffffff-ffff-ffff-d795-1a80f12d68f4 is missing from the cache.
-│ This may mean Colors [5ae59095-9a9b-59fe-a467-6f913c188581] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module Parsers with build ID fafbfcfd-31df-d214-6562-907e1635012b is missing from the cache.
-│ This may mean Parsers [69de0a69-1ddd-5017-9359-2bf0b02dc9f0] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module GeometryBasics with build ID ffffffff-ffff-ffff-4a0d-7bd9cc49c4bc is missing from the cache.
-│ This may mean GeometryBasics [5c1252a2-5f33-56bf-86c9-59e7332b4326] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module Statistics with build ID fafbfcfd-8766-6a1d-ab98-d62b501fd16f is missing from the cache.
-│ This may mean Statistics [10745b16-79ce-11e8-11f9-7d13ad32a3b2] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module GeometryBasics with build ID ffffffff-ffff-ffff-4a0d-7bd9cc49c4bc is missing from the cache.
-│ This may mean GeometryBasics [5c1252a2-5f33-56bf-86c9-59e7332b4326] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module Accessors with build ID fafbfcfd-a87d-d22c-644d-d8932e00c751 is missing from the cache.
-│ This may mean Accessors [7d9f7c33-5ae7-4f3b-8dc6-eff91059b697] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module Statistics with build ID fafbfcfd-8766-6a1d-ab98-d62b501fd16f is missing from the cache.
-│ This may mean Statistics [10745b16-79ce-11e8-11f9-7d13ad32a3b2] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module Adapt with build ID fafbfcfd-3c24-275f-0c78-a60131b0a834 is missing from the cache.
-│ This may mean Adapt [79e6a3ab-5dfb-504d-930d-738a2a938a0e] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module ColorTypes with build ID ffffffff-ffff-ffff-ab38-fb0a27d4a249 is missing from the cache.
-│ This may mean ColorTypes [3da002f7-5984-5a60-b8a6-cbb66c0b333f] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module Accessors with build ID fafbfcfd-a87d-d22c-644d-d8932e00c751 is missing from the cache.
-│ This may mean Accessors [7d9f7c33-5ae7-4f3b-8dc6-eff91059b697] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module InverseFunctions with build ID fafbfcfd-7aca-00ac-0f69-b411ccf2c948 is missing from the cache.
-│ This may mean InverseFunctions [3587e190-3f89-42d0-90ee-14403ec27112] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module ConstructionBase with build ID fafbfcfd-6b3a-a4dd-7530-02de6123219a is missing from the cache.
-│ This may mean ConstructionBase [187b0558-2788-49d3-abe0-74a17ed4e7c9] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module StatsBase with build ID fafbfcfd-61a8-fe4b-d17a-fbe40c3d2fed is missing from the cache.
-│ This may mean StatsBase [2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module Reexport with build ID fafbfcfd-6ea4-e9d5-1501-d66fd8833cfa is missing from the cache.
-│ This may mean Reexport [189a3867-3050-52da-a836-e630ba90ab69] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module SpecialFunctions with build ID fafbfcfd-3385-8837-42ad-512bc4e067e3 is missing from the cache.
-│ This may mean SpecialFunctions [276daf66-3868-5448-9aa4-cd146d93841b] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-  1 dependency successfully precompiled in 6 seconds. 76 already precompiled.
-  29 dependencies precompiled but different versions are currently loaded. Restart julia to access the new versions. Otherwise, loading dependents of these packages may trigger further precompilation to work with the unexpected versions.
-  29 dependencies failed but may be precompilable after restarting julia
-  29 dependencies had output during precompilation:
-┌ Compat → CompatLinearAlgebraExt
-│  ┌ Warning: Module Compat with build ID fafbfcfd-4023-6bb5-43c7-e893ac09e750 is missing from the cache.
-│  │ This may mean Compat [34da2185-b29b-5c13-b0c7-acf172513d20] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ CUDNN_jll
-│  ┌ Warning: Module CUDA_Runtime_jll with build ID ffffffff-ffff-ffff-cda7-ed660ca1d88a is missing from the cache.
-│  │ This may mean CUDA_Runtime_jll [76a88914-d11a-5bdc-97e0-2f5a05c973a2] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ StringManipulation
-│  ┌ Warning: Module PrecompileTools with build ID fafbfcfd-55e5-1906-8f7b-a52bb157ea25 is missing from the cache.
-│  │ This may mean PrecompileTools [aea7be01-6a6a-4083-8856-8a6e6704d82a] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Atomix → AtomixCUDAExt
-│  ┌ Warning: Module CUDA with build ID ffffffff-ffff-ffff-a210-25fe0957e7ba is missing from the cache.
-│  │ This may mean CUDA [052768ef-5323-5732-b1bb-66c8b64840ba] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ DataStructures
-│  ┌ Warning: Module Compat with build ID fafbfcfd-4023-6bb5-43c7-e893ac09e750 is missing from the cache.
-│  │ This may mean Compat [34da2185-b29b-5c13-b0c7-acf172513d20] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ DataFrames
-│  ┌ Warning: Module Statistics with build ID fafbfcfd-8766-6a1d-ab98-d62b501fd16f is missing from the cache.
-│  │ This may mean Statistics [10745b16-79ce-11e8-11f9-7d13ad32a3b2] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ ColorTypes
-│  ┌ Warning: Module FixedPointNumbers with build ID ffffffff-ffff-ffff-2d2b-1cf70d3669f1 is missing from the cache.
-│  │ This may mean FixedPointNumbers [53c48c17-4a7d-5ca2-90c5-79b7896eea93] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ PooledArrays
-│  ┌ Warning: Module DataAPI with build ID fafbfcfd-1fa5-87de-ea99-52b89440bf9b is missing from the cache.
-│  │ This may mean DataAPI [9a962f9c-6df0-11e9-0e5d-c546b8b5ee8a] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ LLVM → BFloat16sExt
-│  ┌ Warning: Module LLVM with build ID fafbfcfd-6e84-b2e2-d6fc-fad6426ed9de is missing from the cache.
-│  │ This may mean LLVM [929cbde3-209d-540e-8aea-75f648917ca0] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ cuDNN
-│  ┌ Warning: Module CUDA with build ID ffffffff-ffff-ffff-a210-25fe0957e7ba is missing from the cache.
-│  │ This may mean CUDA [052768ef-5323-5732-b1bb-66c8b64840ba] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ FixedPointNumbers
-│  ┌ Warning: Module Statistics with build ID fafbfcfd-8766-6a1d-ab98-d62b501fd16f is missing from the cache.
-│  │ This may mean Statistics [10745b16-79ce-11e8-11f9-7d13ad32a3b2] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ PrecompileTools
-│  ┌ Warning: Module Preferences with build ID fafbfcfd-5715-7f0b-dfbf-a3ffb3c14b07 is missing from the cache.
-│  │ This may mean Preferences [21216c6a-2e73-6563-6e65-726566657250] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ JuliaNVTXCallbacks_jll
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ SortingAlgorithms
-│  ┌ Warning: Module DataStructures with build ID fafbfcfd-1c45-48c6-8302-1a3c5a1097ca is missing from the cache.
-│  │ This may mean DataStructures [864edb3b-99cc-5e75-8d2d-829cb0a9cfe8] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ TableTraits
-│  ┌ Warning: Module IteratorInterfaceExtensions with build ID fafbfcfd-eb70-b579-6441-357f4aa725db is missing from the cache.
-│  │ This may mean IteratorInterfaceExtensions [82899510-4779-5014-852e-03e436cf321d] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ demumble_jll
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ NVTX
-│  ┌ Warning: Module Colors with build ID ffffffff-ffff-ffff-d795-1a80f12d68f4 is missing from the cache.
-│  │ This may mean Colors [5ae59095-9a9b-59fe-a467-6f913c188581] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Missings
-│  ┌ Warning: Module DataAPI with build ID fafbfcfd-1fa5-87de-ea99-52b89440bf9b is missing from the cache.
-│  │ This may mean DataAPI [9a962f9c-6df0-11e9-0e5d-c546b8b5ee8a] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ CUDA_Driver_jll
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ PrettyTables
-│  ┌ Warning: Module Reexport with build ID fafbfcfd-6ea4-e9d5-1501-d66fd8833cfa is missing from the cache.
-│  │ This may mean Reexport [189a3867-3050-52da-a836-e630ba90ab69] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ JLLWrappers
-│  ┌ Warning: Module Preferences with build ID fafbfcfd-5715-7f0b-dfbf-a3ffb3c14b07 is missing from the cache.
-│  │ This may mean Preferences [21216c6a-2e73-6563-6e65-726566657250] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ MLDataDevices → MLDataDevicescuDNNExt
-│  [Output was shown above]
-└  
-┌ NVTX_jll
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ CUDA_Runtime_jll
-│  ┌ Warning: Module CUDA_Driver_jll with build ID ffffffff-ffff-ffff-8034-3c737d6e5953 is missing from the cache.
-│  │ This may mean CUDA_Driver_jll [4ee394cb-3365-5eb0-8335-949819d2adfc] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ MLDataDevices → MLDataDevicesCUDAExt
-│  ┌ Warning: Module Adapt with build ID fafbfcfd-3c24-275f-0c78-a60131b0a834 is missing from the cache.
-│  │ This may mean Adapt [79e6a3ab-5dfb-504d-930d-738a2a938a0e] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Colors
-│  ┌ Warning: Module FixedPointNumbers with build ID ffffffff-ffff-ffff-2d2b-1cf70d3669f1 is missing from the cache.
-│  │ This may mean FixedPointNumbers [53c48c17-4a7d-5ca2-90c5-79b7896eea93] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Tables
-│  ┌ Warning: Module DataValueInterfaces with build ID fafbfcfd-97f6-371a-c6a6-5a2cb27704c6 is missing from the cache.
-│  │ This may mean DataValueInterfaces [e2d170a0-9d28-54be-80f0-106bbe20a464] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ CUDA
-│  ┌ Warning: Module GPUCompiler with build ID ffffffff-ffff-ffff-09f1-f98bcf4907c0 is missing from the cache.
-│  │ This may mean GPUCompiler [61eb1bfa-7361-4325-ad38-22787b887f55] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ GPUCompiler
-│  ┌ Warning: Module LLVM with build ID fafbfcfd-6e84-b2e2-d6fc-fad6426ed9de is missing from the cache.
-│  │ This may mean LLVM [929cbde3-209d-540e-8aea-75f648917ca0] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
+   3678.9 ms  ✓ MLDataDevices → MLDataDevicescuDNNExt
+  1 dependency successfully precompiled in 4 seconds. 105 already precompiled.
 Precompiling FluxCUDAcuDNNExt...
-    921.0 ms  ? TableTraits
-    697.6 ms  ? Missings
-    669.5 ms  ? PooledArrays
-    814.7 ms  ? FixedPointNumbers
-    674.1 ms  ? JLLWrappers
-    858.2 ms  ? PrecompileTools
-    850.3 ms  ? Compat → CompatLinearAlgebraExt
-    884.6 ms  ? ColorTypes
-   1040.5 ms  ? Tables
-    940.8 ms  ? CUDA_Driver_jll
-    934.3 ms  ? demumble_jll
-    966.2 ms  ? NVTX_jll
-    970.6 ms  ? JuliaNVTXCallbacks_jll
-    937.3 ms  ? LLVM → BFloat16sExt
-   1022.7 ms  ? StringManipulation
-   1015.4 ms  ? DataStructures
-   1042.9 ms  ? GPUCompiler
-    741.4 ms  ? Colors
-    646.6 ms  ? PrettyTables
-    659.6 ms  ? SortingAlgorithms
-    643.3 ms  ? NVTX
-    670.9 ms  ? Zygote → ZygoteColorsExt
-   1299.0 ms  ? CUDA_Runtime_jll
-    635.4 ms  ? DataFrames
-    662.6 ms  ? BangBang → BangBangDataFramesExt
-    636.8 ms  ? CUDA
-    711.7 ms  ? Transducers → TransducersDataFramesExt
-   1160.4 ms  ? CUDNN_jll
-    718.1 ms  ? CUDA → SpecialFunctionsExt
-    727.8 ms  ? Atomix → AtomixCUDAExt
-    694.9 ms  ? NNlib → NNlibCUDAExt
-    852.3 ms  ? MLDataDevices → MLDataDevicesCUDAExt
-    906.0 ms  ? CUDA → ChainRulesCoreExt
-    647.2 ms  ? cuDNN
-Info Given FluxCUDAcuDNNExt was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module Flux with build ID fafbfcfd-e3a6-5624-a539-1a3824e13374 is missing from the cache.
-[0K│ This may mean Flux [587475ba-b771-5e3f-ad9e-33799f191a9c] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    657.8 ms  ? MLDataDevices → MLDataDevicescuDNNExt
-    658.9 ms  ? NNlib → NNlibCUDACUDNNExt
-    649.4 ms  ? Flux → FluxCUDAcuDNNExt
-Precompiling SpecialFunctionsExt...
-    689.6 ms  ? Missings
-    953.6 ms  ? TableTraits
-    942.0 ms  ? FixedPointNumbers
-    922.1 ms  ? PooledArrays
-    880.6 ms  ? JLLWrappers
-    873.8 ms  ? PrecompileTools
-   1030.1 ms  ? Compat → CompatLinearAlgebraExt
-    677.2 ms  ? GPUCompiler
-    964.7 ms  ? ColorTypes
-   1062.7 ms  ? Tables
-    962.7 ms  ? CUDA_Driver_jll
-    965.1 ms  ? NVTX_jll
-    961.4 ms  ? demumble_jll
-    991.8 ms  ? JuliaNVTXCallbacks_jll
-   1010.9 ms  ? DataStructures
-   1377.3 ms  ? StringManipulation
-   1373.9 ms  ? LLVM → BFloat16sExt
-    647.1 ms  ? Colors
-    855.9 ms  ? SortingAlgorithms
-    636.2 ms  ? NVTX
-    840.1 ms  ? PrettyTables
-   1325.6 ms  ? CUDA_Runtime_jll
-    631.6 ms  ? DataFrames
-    630.5 ms  ? CUDA
-Info Given SpecialFunctionsExt was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module CUDA with build ID ffffffff-ffff-ffff-a210-25fe0957e7ba is missing from the cache.
-[0K│ This may mean CUDA [052768ef-5323-5732-b1bb-66c8b64840ba] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    625.6 ms  ? CUDA → SpecialFunctionsExt
-    656.9 ms  ? Atomix → AtomixCUDAExt
-Precompiling ChainRulesCoreExt...
-    638.8 ms  ? TableTraits
-    639.1 ms  ? PooledArrays
-    638.7 ms  ? PrecompileTools
-    673.9 ms  ? JLLWrappers
-    710.8 ms  ? Compat → CompatLinearAlgebraExt
-    899.8 ms  ? FixedPointNumbers
-    952.5 ms  ? Missings
-    658.4 ms  ? Tables
-    641.9 ms  ? CUDA_Driver_jll
-    651.0 ms  ? NVTX_jll
-    643.2 ms  ? demumble_jll
-    642.0 ms  ? JuliaNVTXCallbacks_jll
-    668.7 ms  ? LLVM → BFloat16sExt
-    648.8 ms  ? DataStructures
-    641.8 ms  ? ColorTypes
-    770.4 ms  ? GPUCompiler
-    991.9 ms  ? StringManipulation
-    643.1 ms  ? SortingAlgorithms
-    643.3 ms  ? Colors
-    628.8 ms  ? PrettyTables
-   1309.2 ms  ? CUDA_Runtime_jll
-    639.7 ms  ? NVTX
-    629.0 ms  ? DataFrames
-    635.3 ms  ? CUDA
-Info Given ChainRulesCoreExt was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module CUDA with build ID ffffffff-ffff-ffff-a210-25fe0957e7ba is missing from the cache.
-[0K│ This may mean CUDA [052768ef-5323-5732-b1bb-66c8b64840ba] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    645.6 ms  ? CUDA → ChainRulesCoreExt
-    668.3 ms  ? Atomix → AtomixCUDAExt
-Precompiling FreeType2_jll...
-    786.4 ms  ✓ Preferences
-    658.4 ms  ? JLLWrappers
-    627.2 ms  ? Bzip2_jll
-Info Given FreeType2_jll was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-[0K│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    630.2 ms  ? FreeType2_jll
-  1 dependency successfully precompiled in 3 seconds. 5 already precompiled.
-  2 dependencies precompiled but different versions are currently loaded. Restart julia to access the new versions. Otherwise, loading dependents of these packages may trigger further precompilation to work with the unexpected versions.
-  3 dependencies failed but may be precompilable after restarting julia
-  3 dependencies had output during precompilation:
-┌ JLLWrappers
-│  ┌ Warning: Module Preferences with build ID fafbfcfd-5715-7f0b-dfbf-a3ffb3c14b07 is missing from the cache.
-│  │ This may mean Preferences [21216c6a-2e73-6563-6e65-726566657250] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Bzip2_jll
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ FreeType2_jll
-│  [Output was shown above]
-└  
-Precompiling Bzip2_jll...
-    651.0 ms  ? JLLWrappers
-Info Given Bzip2_jll was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-[0K│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    628.3 ms  ? Bzip2_jll
-Precompiling SpecialFunctionsExt...
-    698.6 ms  ? FixedPointNumbers
-   1028.1 ms  ? TableTraits
-    855.4 ms  ? Missings
-    943.6 ms  ? PooledArrays
-    963.0 ms  ? JLLWrappers
-    979.1 ms  ? Compat → CompatLinearAlgebraExt
-   1155.1 ms  ? PrecompileTools
-    838.1 ms  ? ColorTypes
-    891.9 ms  ? Tables
-    971.8 ms  ? CUDA_Driver_jll
-    963.3 ms  ? NVTX_jll
-    954.2 ms  ? demumble_jll
-    970.3 ms  ? JuliaNVTXCallbacks_jll
-    970.0 ms  ? LLVM → BFloat16sExt
-    662.5 ms  ? GPUCompiler
-   1047.6 ms  ? DataStructures
-    878.6 ms  ? Colors
-   1130.9 ms  ? StringManipulation
-    658.7 ms  ? SortingAlgorithms
-    658.7 ms  ? NVTX
-    642.3 ms  ? PrettyTables
-   1321.9 ms  ? CUDA_Runtime_jll
-    636.3 ms  ? DataFrames
-    649.6 ms  ? CUDA
-Info Given SpecialFunctionsExt was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module CUDA with build ID ffffffff-ffff-ffff-a210-25fe0957e7ba is missing from the cache.
-[0K│ This may mean CUDA [052768ef-5323-5732-b1bb-66c8b64840ba] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    652.1 ms  ? CUDA → SpecialFunctionsExt
-    678.3 ms  ? Atomix → AtomixCUDAExt
-Precompiling StyledStringsExt...
-    574.1 ms  ? FixedPointNumbers
-    572.8 ms  ? ColorTypes
-Info Given StyledStringsExt was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module ColorTypes with build ID ffffffff-ffff-ffff-ab38-fb0a27d4a249 is missing from the cache.
-[0K│ This may mean ColorTypes [3da002f7-5984-5a60-b8a6-cbb66c0b333f] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    583.8 ms  ? ColorTypes → StyledStringsExt
-Precompiling Libiconv_jll...
-    781.9 ms  ✓ Preferences
-    JLLWrappers Being precompiled by another machine (hostname: kraken.iric.ca, pid: 2071215, pidfile: /u/chans/.julia/compiled/v1.11/JLLWrappers/7Zgw7_8yeYH.ji.pidfile)
-  10674.4 ms  ✓ JLLWrappers
-Info Given Libiconv_jll was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-[0K│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    625.0 ms  ? Libiconv_jll
-  2 dependencies successfully precompiled in 12 seconds. 4 already precompiled.
-  2 dependencies precompiled but different versions are currently loaded. Restart julia to access the new versions. Otherwise, loading dependents of these packages may trigger further precompilation to work with the unexpected versions.
-  1 dependencies failed but may be precompilable after restarting julia
-  2 dependencies had output during precompilation:
-┌ Libiconv_jll
-│  [Output was shown above]
-└  
-┌ JLLWrappers
-│  ┌ Warning: Module Preferences with build ID fafbfcfd-5715-7f0b-dfbf-a3ffb3c14b07 is missing from the cache.
-│  │ This may mean Preferences [21216c6a-2e73-6563-6e65-726566657250] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-Precompiling XML2_jll...
-    776.7 ms  ✓ Preferences
-    581.1 ms  ? JLLWrappers
-    561.9 ms  ? Libiconv_jll
-Info Given XML2_jll was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-[0K│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    562.3 ms  ? XML2_jll
-  1 dependency successfully precompiled in 3 seconds. 5 already precompiled.
-  3 dependencies precompiled but different versions are currently loaded. Restart julia to access the new versions. Otherwise, loading dependents of these packages may trigger further precompilation to work with the unexpected versions.
-  3 dependencies failed but may be precompilable after restarting julia
-  3 dependencies had output during precompilation:
-┌ Libiconv_jll
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ JLLWrappers
-│  ┌ Warning: Module Preferences with build ID fafbfcfd-5715-7f0b-dfbf-a3ffb3c14b07 is missing from the cache.
-│  │ This may mean Preferences [21216c6a-2e73-6563-6e65-726566657250] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ XML2_jll
-│  [Output was shown above]
-└  
-Precompiling JSON...
-    886.6 ms  ✓ Preferences
-    637.5 ms  ? PrecompileTools
-   1526.7 ms  ? Parsers
-Info Given JSON was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module Parsers with build ID fafbfcfd-31df-d214-6562-907e1635012b is missing from the cache.
-[0K│ This may mean Parsers [69de0a69-1ddd-5017-9359-2bf0b02dc9f0] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    820.4 ms  ? JSON
-  1 dependency successfully precompiled in 4 seconds. 6 already precompiled.
-  3 dependencies precompiled but different versions are currently loaded. Restart julia to access the new versions. Otherwise, loading dependents of these packages may trigger further precompilation to work with the unexpected versions.
-  3 dependencies failed but may be precompilable after restarting julia
-  3 dependencies had output during precompilation:
-┌ PrecompileTools
-│  ┌ Warning: Module Preferences with build ID fafbfcfd-5715-7f0b-dfbf-a3ffb3c14b07 is missing from the cache.
-│  │ This may mean Preferences [21216c6a-2e73-6563-6e65-726566657250] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ JSON
-│  [Output was shown above]
-└  
-┌ Parsers
-│  ┌ Warning: Module PrecompileTools with build ID fafbfcfd-55e5-1906-8f7b-a52bb157ea25 is missing from the cache.
-│  │ This may mean PrecompileTools [aea7be01-6a6a-4083-8856-8a6e6704d82a] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-Precompiling OffsetArrays...
-   1021.5 ms  ✓ OffsetArrays
-  1 dependency successfully precompiled in 1 seconds
-Precompiling OffsetArraysAdaptExt...
-    578.5 ms  ✓ Requires
-    551.2 ms  ✓ Adapt
-Info Given OffsetArraysAdaptExt was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module Adapt with build ID fafbfcfd-3c24-275f-0c78-a60131b0a834 is missing from the cache.
-[0K│ This may mean Adapt [79e6a3ab-5dfb-504d-930d-738a2a938a0e] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    684.2 ms  ? OffsetArrays → OffsetArraysAdaptExt
-  2 dependencies successfully precompiled in 2 seconds. 2 already precompiled.
-  2 dependencies precompiled but different versions are currently loaded. Restart julia to access the new versions. Otherwise, loading dependents of these packages may trigger further precompilation to work with the unexpected versions.
-  1 dependencies failed but may be precompilable after restarting julia
-  1 dependency had output during precompilation:
-┌ OffsetArrays → OffsetArraysAdaptExt
-│  [Output was shown above]
-└  
-Precompiling Distributions...
-   1410.3 ms  ✓ PtrArrays
-   1174.7 ms  ✓ DataAPI
-   1895.6 ms  ✓ StatsAPI
-   2155.4 ms  ✓ Statistics
-   2903.0 ms  ✓ OrderedCollections
-   2314.6 ms  ✓ PDMats
-   2789.7 ms  ✓ IrrationalConstants
-   1860.0 ms  ✓ Preferences
-   1852.1 ms  ✓ Compat
-   1837.5 ms  ✓ DocStringExtensions
-   1482.9 ms  ? AliasTables
-   1472.0 ms  ? Missings
-    641.3 ms  ✓ FillArrays → FillArraysPDMatsExt
-    633.8 ms  ? JLLWrappers
-    627.0 ms  ? Compat → CompatLinearAlgebraExt
-    619.9 ms  ? LogExpFunctions
-    599.6 ms  ? Rmath_jll
-    598.3 ms  ? DataStructures
-    599.9 ms  ? HypergeometricFunctions
-    600.9 ms  ? SortingAlgorithms
-    594.0 ms  ? QuadGK
-    800.7 ms  ? Rmath
-    579.6 ms  ? StatsFuns
-Info Given Distributions was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module StatsBase with build ID fafbfcfd-61a8-fe4b-d17a-fbe40c3d2fed is missing from the cache.
-[0K│ This may mean StatsBase [2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    587.9 ms  ? Distributions
-  11 dependencies successfully precompiled in 7 seconds. 27 already precompiled.
-  16 dependencies precompiled but different versions are currently loaded. Restart julia to access the new versions. Otherwise, loading dependents of these packages may trigger further precompilation to work with the unexpected versions.
-  13 dependencies failed but may be precompilable after restarting julia
-  13 dependencies had output during precompilation:
-┌ Compat → CompatLinearAlgebraExt
-│  ┌ Warning: Module Compat with build ID fafbfcfd-4023-6bb5-43c7-e893ac09e750 is missing from the cache.
-│  │ This may mean Compat [34da2185-b29b-5c13-b0c7-acf172513d20] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ DataStructures
-│  ┌ Warning: Module Compat with build ID fafbfcfd-4023-6bb5-43c7-e893ac09e750 is missing from the cache.
-│  │ This may mean Compat [34da2185-b29b-5c13-b0c7-acf172513d20] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ SortingAlgorithms
-│  ┌ Warning: Module DataStructures with build ID fafbfcfd-1c45-48c6-8302-1a3c5a1097ca is missing from the cache.
-│  │ This may mean DataStructures [864edb3b-99cc-5e75-8d2d-829cb0a9cfe8] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Distributions
-│  [Output was shown above]
-└  
-┌ Missings
-│  ┌ Warning: Module DataAPI with build ID fafbfcfd-1fa5-87de-ea99-52b89440bf9b is missing from the cache.
-│  │ This may mean DataAPI [9a962f9c-6df0-11e9-0e5d-c546b8b5ee8a] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Rmath
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ JLLWrappers
-│  ┌ Warning: Module Preferences with build ID fafbfcfd-5715-7f0b-dfbf-a3ffb3c14b07 is missing from the cache.
-│  │ This may mean Preferences [21216c6a-2e73-6563-6e65-726566657250] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ HypergeometricFunctions
-│  ┌ Warning: Module SpecialFunctions with build ID fafbfcfd-3385-8837-42ad-512bc4e067e3 is missing from the cache.
-│  │ This may mean SpecialFunctions [276daf66-3868-5448-9aa4-cd146d93841b] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ QuadGK
-│  ┌ Warning: Module DataStructures with build ID fafbfcfd-1c45-48c6-8302-1a3c5a1097ca is missing from the cache.
-│  │ This may mean DataStructures [864edb3b-99cc-5e75-8d2d-829cb0a9cfe8] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ StatsFuns
-│  ┌ Warning: Module Reexport with build ID fafbfcfd-6ea4-e9d5-1501-d66fd8833cfa is missing from the cache.
-│  │ This may mean Reexport [189a3867-3050-52da-a836-e630ba90ab69] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Rmath_jll
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ AliasTables
-│  ┌ Warning: Module PtrArrays with build ID fafbfcfd-a187-2721-3ab9-99c5504218f7 is missing from the cache.
-│  │ This may mean PtrArrays [43287f4e-b6f4-7ad1-bb20-aadabca52c3d] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ LogExpFunctions
-│  ┌ Warning: Module DocStringExtensions with build ID fafbfcfd-d7ec-7e31-e0c8-a4aac54c1b0c is missing from the cache.
-│  │ This may mean DocStringExtensions [ffbed154-4ef7-542d-bbb7-c09d3a79fcae] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-Precompiling StatsFuns...
-    580.3 ms  ? LogExpFunctions
-    599.9 ms  ? JLLWrappers
-    585.5 ms  ? Rmath_jll
-    588.8 ms  ? HypergeometricFunctions
-    872.5 ms  ? Rmath
-Info Given StatsFuns was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module Reexport with build ID fafbfcfd-6ea4-e9d5-1501-d66fd8833cfa is missing from the cache.
-[0K│ This may mean Reexport [189a3867-3050-52da-a836-e630ba90ab69] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    644.4 ms  ? StatsFuns
-Precompiling Rmath...
-    664.9 ms  ? JLLWrappers
-    635.5 ms  ? Rmath_jll
-Info Given Rmath was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-[0K│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    877.3 ms  ? Rmath
-Precompiling Rmath_jll...
-    662.4 ms  ? JLLWrappers
-Info Given Rmath_jll was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-[0K│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    638.7 ms  ? Rmath_jll
-Precompiling HypergeometricFunctions...
-    648.4 ms  ? LogExpFunctions
-    666.2 ms  ? JLLWrappers
-Info Given HypergeometricFunctions was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module SpecialFunctions with build ID fafbfcfd-3385-8837-42ad-512bc4e067e3 is missing from the cache.
-[0K│ This may mean SpecialFunctions [276daf66-3868-5448-9aa4-cd146d93841b] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    658.9 ms  ? HypergeometricFunctions
-Precompiling StatsFunsInverseFunctionsExt...
-    583.6 ms  ✓ InverseFunctions
-    654.8 ms  ? LogExpFunctions
-    676.9 ms  ? JLLWrappers
-    697.2 ms  ? InverseFunctions → InverseFunctionsDatesExt
-    647.1 ms  ? Rmath_jll
-    674.0 ms  ? LogExpFunctions → LogExpFunctionsInverseFunctionsExt
-    658.9 ms  ? HypergeometricFunctions
-    644.8 ms  ? Rmath
-    644.0 ms  ? StatsFuns
-Info Given StatsFunsInverseFunctionsExt was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module StatsFuns with build ID ffffffff-ffff-ffff-ab2e-271593a5ff1e is missing from the cache.
-[0K│ This may mean StatsFuns [4c63d2b9-4356-54db-8cca-17b64c39e42c] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    637.2 ms  ? StatsFuns → StatsFunsInverseFunctionsExt
-┌ Warning: Module StatsFuns with build ID ffffffff-ffff-ffff-ab2e-271593a5ff1e is missing from the cache.
-│ This may mean StatsFuns [4c63d2b9-4356-54db-8cca-17b64c39e42c] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module StatsFuns with build ID ffffffff-ffff-ffff-ab2e-271593a5ff1e is missing from the cache.
-│ This may mean StatsFuns [4c63d2b9-4356-54db-8cca-17b64c39e42c] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module DataStructures with build ID fafbfcfd-1c45-48c6-8302-1a3c5a1097ca is missing from the cache.
-│ This may mean DataStructures [864edb3b-99cc-5e75-8d2d-829cb0a9cfe8] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module Distributions with build ID ffffffff-ffff-ffff-cbb7-c5ebd159c0da is missing from the cache.
-│ This may mean Distributions [31c24e10-a181-5473-b8eb-7969acd0382f] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module Distributions with build ID ffffffff-ffff-ffff-cbb7-c5ebd159c0da is missing from the cache.
-│ This may mean Distributions [31c24e10-a181-5473-b8eb-7969acd0382f] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module DocStringExtensions with build ID fafbfcfd-d7ec-7e31-e0c8-a4aac54c1b0c is missing from the cache.
-│ This may mean DocStringExtensions [ffbed154-4ef7-542d-bbb7-c09d3a79fcae] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module StaticArrays with build ID fafbfcfd-6959-0091-b6a0-50ce699dec08 is missing from the cache.
-│ This may mean StaticArrays [90137ffa-7385-5640-81b9-e52037218182] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module FixedPointNumbers with build ID ffffffff-ffff-ffff-2d2b-1cf70d3669f1 is missing from the cache.
-│ This may mean FixedPointNumbers [53c48c17-4a7d-5ca2-90c5-79b7896eea93] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module Interpolations with build ID ffffffff-ffff-ffff-16ae-7f176759b3aa is missing from the cache.
-│ This may mean Interpolations [a98d9a8b-a2ab-59e6-89dd-64a1c18fca59] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module Reexport with build ID fafbfcfd-6ea4-e9d5-1501-d66fd8833cfa is missing from the cache.
-│ This may mean Reexport [189a3867-3050-52da-a836-e630ba90ab69] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module FFTW with build ID ffffffff-ffff-ffff-fe68-1b8b5a4f99e7 is missing from the cache.
-│ This may mean FFTW [7a1cc6ca-52ef-59f5-83cd-3a7055c09341] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module GeometryBasics with build ID ffffffff-ffff-ffff-4a0d-7bd9cc49c4bc is missing from the cache.
-│ This may mean GeometryBasics [5c1252a2-5f33-56bf-86c9-59e7332b4326] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module FileIO with build ID fafbfcfd-c454-d783-1c5a-a0f591ee68a2 is missing from the cache.
-│ This may mean FileIO [5789e2e9-d7fb-5bc7-8068-2c6fae9b9549] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module IntervalArithmetic with build ID ffffffff-ffff-ffff-dfa6-07a65f093d8d is missing from the cache.
-│ This may mean IntervalArithmetic [d1acc4aa-44c8-5952-acd4-ba5d80a2a253] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module IntervalArithmetic with build ID ffffffff-ffff-ffff-dfa6-07a65f093d8d is missing from the cache.
-│ This may mean IntervalArithmetic [d1acc4aa-44c8-5952-acd4-ba5d80a2a253] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module IntervalArithmetic with build ID ffffffff-ffff-ffff-dfa6-07a65f093d8d is missing from the cache.
-│ This may mean IntervalArithmetic [d1acc4aa-44c8-5952-acd4-ba5d80a2a253] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module Reexport with build ID fafbfcfd-6ea4-e9d5-1501-d66fd8833cfa is missing from the cache.
-│ This may mean Reexport [189a3867-3050-52da-a836-e630ba90ab69] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module Reexport with build ID fafbfcfd-6ea4-e9d5-1501-d66fd8833cfa is missing from the cache.
-│ This may mean Reexport [189a3867-3050-52da-a836-e630ba90ab69] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module ImageCore with build ID ffffffff-ffff-ffff-448c-6c096a3ecc66 is missing from the cache.
-│ This may mean ImageCore [a09fc81d-aa75-5fe9-8630-4744c3626534] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module Colors with build ID ffffffff-ffff-ffff-d795-1a80f12d68f4 is missing from the cache.
-│ This may mean Colors [5ae59095-9a9b-59fe-a467-6f913c188581] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module Cairo_jll with build ID ffffffff-ffff-ffff-4904-17c537f9b49c is missing from the cache.
-│ This may mean Cairo_jll [83423d85-b0ee-5818-9007-b63ccbeb887a] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-┌ Warning: Module Colors with build ID ffffffff-ffff-ffff-d795-1a80f12d68f4 is missing from the cache.
-│ This may mean Colors [5ae59095-9a9b-59fe-a467-6f913c188581] does not support precompilation but is imported by a module that does.
-└ @ Base loading.jl:2541
-  1 dependency successfully precompiled in 3 seconds. 18 already precompiled.
-  9 dependencies precompiled but different versions are currently loaded. Restart julia to access the new versions. Otherwise, loading dependents of these packages may trigger further precompilation to work with the unexpected versions.
-  9 dependencies failed but may be precompilable after restarting julia
-  9 dependencies had output during precompilation:
-┌ LogExpFunctions
-│  ┌ Warning: Module DocStringExtensions with build ID fafbfcfd-d7ec-7e31-e0c8-a4aac54c1b0c is missing from the cache.
-│  │ This may mean DocStringExtensions [ffbed154-4ef7-542d-bbb7-c09d3a79fcae] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Rmath
-│  ┌ Warning: Module Rmath_jll with build ID ffffffff-ffff-ffff-84a4-13a8d37bc149 is missing from the cache.
-│  │ This may mean Rmath_jll [f50d1b31-88e8-58de-be2c-1cc44531875f] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ JLLWrappers
-│  ┌ Warning: Module Preferences with build ID fafbfcfd-5715-7f0b-dfbf-a3ffb3c14b07 is missing from the cache.
-│  │ This may mean Preferences [21216c6a-2e73-6563-6e65-726566657250] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ HypergeometricFunctions
-│  ┌ Warning: Module SpecialFunctions with build ID fafbfcfd-3385-8837-42ad-512bc4e067e3 is missing from the cache.
-│  │ This may mean SpecialFunctions [276daf66-3868-5448-9aa4-cd146d93841b] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ InverseFunctions → InverseFunctionsDatesExt
-│  ┌ Warning: Module InverseFunctions with build ID fafbfcfd-7aca-00ac-0f69-b411ccf2c948 is missing from the cache.
-│  │ This may mean InverseFunctions [3587e190-3f89-42d0-90ee-14403ec27112] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ StatsFuns
-│  ┌ Warning: Module Reexport with build ID fafbfcfd-6ea4-e9d5-1501-d66fd8833cfa is missing from the cache.
-│  │ This may mean Reexport [189a3867-3050-52da-a836-e630ba90ab69] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ StatsFuns → StatsFunsInverseFunctionsExt
-│  [Output was shown above]
-└  
-┌ Rmath_jll
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ LogExpFunctions → LogExpFunctionsInverseFunctionsExt
-│  ┌ Warning: Module LogExpFunctions with build ID fafbfcfd-9735-c4e3-60d8-c7bc8e22ad9e is missing from the cache.
-│  │ This may mean LogExpFunctions [2ab3a3ac-af41-5b50-aa03-7779005ae688] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-Precompiling StatsFunsChainRulesCoreExt...
-    644.3 ms  ? Compat → CompatLinearAlgebraExt
-    691.9 ms  ? JLLWrappers
-    677.2 ms  ? LogExpFunctions
-    637.7 ms  ? Rmath_jll
-    647.9 ms  ? HypergeometricFunctions
-    643.7 ms  ? Rmath
-    636.2 ms  ? StatsFuns
-Info Given StatsFunsChainRulesCoreExt was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module StatsFuns with build ID ffffffff-ffff-ffff-ab2e-271593a5ff1e is missing from the cache.
-[0K│ This may mean StatsFuns [4c63d2b9-4356-54db-8cca-17b64c39e42c] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    645.5 ms  ? StatsFuns → StatsFunsChainRulesCoreExt
-Precompiling QuadGK...
-    649.2 ms  ? Compat → CompatLinearAlgebraExt
-    648.2 ms  ? DataStructures
-Info Given QuadGK was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module DataStructures with build ID fafbfcfd-1c45-48c6-8302-1a3c5a1097ca is missing from the cache.
-[0K│ This may mean DataStructures [864edb3b-99cc-5e75-8d2d-829cb0a9cfe8] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    645.0 ms  ? QuadGK
+   4881.3 ms  ✓ Flux → FluxCUDAcuDNNExt
+  1 dependency successfully precompiled in 6 seconds. 209 already precompiled.
+Precompiling CairoMakie...
+    689.2 ms  ✓ IntegerMathUtils
+    795.1 ms  ✓ MuladdMacro
+    775.6 ms  ✓ IndirectArrays
+    779.8 ms  ✓ PolygonOps
+    633.1 ms  ✓ EnumX
+    770.8 ms  ✓ Contour
+    785.5 ms  ✓ TensorCore
+    747.8 ms  ✓ TriplotBase
+    604.7 ms  ✓ RoundingEmulator
+    615.5 ms  ✓ IntervalSets
+    751.0 ms  ✓ Observables
+    860.9 ms  ✓ IterTools
+    795.1 ms  ✓ AbstractTrees
+   1184.6 ms  ✓ OffsetArrays
+    428.3 ms  ✓ Ratios
+    439.8 ms  ✓ LazyModules
+   1320.0 ms  ✓ Format
+    568.5 ms  ✓ Extents
+    516.5 ms  ✓ MappedArrays
+    485.4 ms  ✓ RelocatableFolders
+    639.4 ms  ✓ Primes
+    540.6 ms  ✓ ColorTypes → StyledStringsExt
+    670.5 ms  ✓ WoodburyMatrices
+    627.9 ms  ✓ Graphics
+    873.8 ms  ✓ PDMats
+    490.5 ms  ✓ Ratios → RatiosFixedPointNumbersExt
+    668.4 ms  ✓ Animations
+   1055.2 ms  ✓ SignedDistanceFields
+    620.9 ms  ✓ Libmount_jll
+    611.6 ms  ✓ Bzip2_jll
+    622.7 ms  ✓ LLVMOpenMP_jll
+    630.4 ms  ✓ Rmath_jll
+    659.9 ms  ✓ Xorg_libXau_jll
+    628.2 ms  ✓ libpng_jll
+    609.2 ms  ✓ libfdk_aac_jll
+    720.2 ms  ✓ Imath_jll
+    656.9 ms  ✓ Giflib_jll
+    658.7 ms  ✓ LAME_jll
+   1632.9 ms  ✓ AdaptivePredicates
+    626.3 ms  ✓ LERC_jll
+    604.7 ms  ✓ EarCut_jll
+    696.0 ms  ✓ Ogg_jll
+    778.1 ms  ✓ CRlibm_jll
+   2012.5 ms  ✓ ColorVectorSpace
+    857.6 ms  ✓ JpegTurbo_jll
+    775.2 ms  ✓ Xorg_libXdmcp_jll
+    766.5 ms  ✓ x265_jll
+    839.7 ms  ✓ FreeType2_jll
+   3191.7 ms  ✓ BaseDirs
+    989.4 ms  ✓ x264_jll
+   1887.0 ms  ✓ UnicodeFun
+    839.6 ms  ✓ libaom_jll
+    855.0 ms  ✓ Zstd_jll
+    801.4 ms  ✓ Expat_jll
+    793.5 ms  ✓ LZO_jll
+    760.0 ms  ✓ Opus_jll
+    742.1 ms  ✓ Xorg_xtrans_jll
+    631.2 ms  ✓ Libiconv_jll
+    705.6 ms  ✓ libvorbis_jll
+    653.3 ms  ✓ isoband_jll
+    660.2 ms  ✓ FriBidi_jll
+    817.1 ms  ✓ ColorVectorSpace → SpecialFunctionsExt
+    441.6 ms  ✓ IntervalSets → IntervalSetsRandomExt
+    469.8 ms  ✓ IntervalSets → IntervalSetsStatisticsExt
+    491.7 ms  ✓ Showoff
+    696.9 ms  ✓ FilePaths
+    496.0 ms  ✓ ConstructionBase → ConstructionBaseIntervalSetsExt
+    922.6 ms  ✓ libsixel_jll
+    718.5 ms  ✓ ColorBrewer
+    498.2 ms  ✓ OffsetArrays → OffsetArraysAdaptExt
+    498.8 ms  ✓ StackViews
+   1059.2 ms  ✓ QuadGK
+    513.2 ms  ✓ PaddedViews
+    781.3 ms  ✓ ComputePipeline
+   1130.1 ms  ✓ HypergeometricFunctions
+    598.2 ms  ✓ Graphite2_jll
+    663.7 ms  ✓ AxisAlgorithms
+    663.6 ms  ✓ FillArrays → FillArraysPDMatsExt
+    701.9 ms  ✓ XZ_jll
+    629.7 ms  ✓ Pixman_jll
+   1476.8 ms  ✓ QOI
+    602.3 ms  ✓ Libffi_jll
+    789.8 ms  ✓ OpenEXR_jll
+    873.7 ms  ✓ Rmath
+    660.8 ms  ✓ Libuuid_jll
+   1169.2 ms  ✓ FFTA
+    632.3 ms  ✓ OpenBLASConsistentFPCSR_jll
+    770.1 ms  ✓ CRlibm
+    716.9 ms  ✓ XML2_jll
+    527.4 ms  ✓ MosaicViews
+    558.7 ms  ✓ Isoband
+    866.6 ms  ✓ AxisArrays
+   1060.7 ms  ✓ FreeType
+   1064.3 ms  ✓ Libtiff_jll
+   1390.9 ms  ✓ Xorg_libxcb_jll
+    849.5 ms  ✓ Fontconfig_jll
+    698.4 ms  ✓ Gettext_jll
+    697.4 ms  ✓ Xorg_libX11_jll
+   1657.9 ms  ✓ StatsFuns
+   2013.4 ms  ✓ Interpolations
+   1926.1 ms  ✓ OpenEXR
+    844.9 ms  ✓ Glib_jll
+   4103.9 ms  ✓ ColorSchemes
+    716.5 ms  ✓ Xorg_libXext_jll
+    727.1 ms  ✓ Xorg_libXrender_jll
+    640.6 ms  ✓ StatsFuns → StatsFunsInverseFunctionsExt
+   2257.2 ms  ✓ IntervalArithmetic
+    557.5 ms  ✓ IntervalArithmetic → IntervalArithmeticIntervalSetsExt
+    678.5 ms  ✓ IntervalArithmetic → IntervalArithmeticSparseArraysExt
+    845.4 ms  ✓ Cairo_jll
+    891.4 ms  ✓ Libglvnd_jll
+    723.6 ms  ✓ IntervalArithmetic → IntervalArithmeticLinearAlgebraExt
+   1469.9 ms  ✓ StatsFuns → StatsFunsChainRulesCoreExt
+    796.7 ms  ✓ HarfBuzz_jll
+   1144.1 ms  ✓ libwebp_jll
+    739.1 ms  ✓ libass_jll
+    775.7 ms  ✓ Pango_jll
+   6234.2 ms  ✓ SIMD
+   1221.5 ms  ✓ FFMPEG_jll
+   1389.4 ms  ✓ Cairo
+   2958.2 ms  ✓ ExactPredicates
+   5243.2 ms  ✓ Distributions
+   1160.9 ms  ✓ Distributions → DistributionsChainRulesCoreExt
+   9183.0 ms  ✓ GeometryBasics
+   1091.0 ms  ✓ Packing
+   1552.8 ms  ✓ KernelDensity
+   7827.5 ms  ✓ PlotUtils
+   1538.6 ms  ✓ ShaderAbstractions
+   1972.9 ms  ✓ FreeTypeAbstraction
+   4393.9 ms  ✓ DelaunayTriangulation
+   5326.5 ms  ✓ GridLayoutBase
+   8928.4 ms  ✓ Automa
+  16363.9 ms  ✓ Unitful
+  14744.3 ms  ✓ ImageCore
+    831.6 ms  ✓ Unitful → ConstructionBaseUnitfulExt
+    806.2 ms  ✓ Unitful → InverseFunctionsUnitfulExt
+    817.3 ms  ✓ Unitful → NaNMathExt
+    781.4 ms  ✓ Unitful → PrintfExt
+   1129.1 ms  ✓ Interpolations → InterpolationsUnitfulExt
+   1966.2 ms  ✓ ImageBase
+   2439.6 ms  ✓ WebP
+   2820.0 ms  ✓ Sixel
+   3182.6 ms  ✓ PNGFiles
+   3186.9 ms  ✓ JpegTurbo
+   1805.9 ms  ✓ ImageAxes
+   1096.0 ms  ✓ ImageMetadata
+   6177.9 ms  ✓ MathTeXEngine
+   1719.9 ms  ✓ Netpbm
+  20466.4 ms  ✓ TiffImages
+   1034.9 ms  ✓ ImageIO
+ 116595.3 ms  ✓ Makie
+  45787.2 ms  ✓ CairoMakie
+  152 dependencies successfully precompiled in 196 seconds. 113 already precompiled.
+Precompiling UnitfulExt...
+    571.4 ms  ✓ Accessors → UnitfulExt
+  1 dependency successfully precompiled in 1 seconds. 16 already precompiled.
+Precompiling ForwardDiffExt...
+    709.4 ms  ✓ Unitful → ForwardDiffExt
+  1 dependency successfully precompiled in 1 seconds. 29 already precompiled.
 Precompiling DistributionsTestExt...
-    396.8 ms  ✓ DataAPI
-    850.7 ms  ✓ OrderedCollections
-    904.0 ms  ? AliasTables
-    554.3 ms  ✓ Compat
-    649.1 ms  ? LogExpFunctions
-    671.9 ms  ? JLLWrappers
-    672.9 ms  ? Missings
-    646.4 ms  ? Compat → CompatLinearAlgebraExt
-    650.6 ms  ? Rmath_jll
-    649.7 ms  ? HypergeometricFunctions
-    636.2 ms  ? DataStructures
-    647.4 ms  ? Rmath
-    651.6 ms  ? SortingAlgorithms
-    651.2 ms  ? QuadGK
-    639.9 ms  ? StatsFuns
-    604.6 ms  ? Distributions
-Info Given DistributionsTestExt was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module Distributions with build ID ffffffff-ffff-ffff-cbb7-c5ebd159c0da is missing from the cache.
-[0K│ This may mean Distributions [31c24e10-a181-5473-b8eb-7969acd0382f] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    584.8 ms  ? Distributions → DistributionsTestExt
-  3 dependencies successfully precompiled in 5 seconds. 37 already precompiled.
-  16 dependencies precompiled but different versions are currently loaded. Restart julia to access the new versions. Otherwise, loading dependents of these packages may trigger further precompilation to work with the unexpected versions.
-  14 dependencies failed but may be precompilable after restarting julia
-  14 dependencies had output during precompilation:
-┌ Compat → CompatLinearAlgebraExt
-│  ┌ Warning: Module Compat with build ID fafbfcfd-4023-6bb5-43c7-e893ac09e750 is missing from the cache.
-│  │ This may mean Compat [34da2185-b29b-5c13-b0c7-acf172513d20] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ DataStructures
-│  ┌ Warning: Module Compat with build ID fafbfcfd-4023-6bb5-43c7-e893ac09e750 is missing from the cache.
-│  │ This may mean Compat [34da2185-b29b-5c13-b0c7-acf172513d20] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ SortingAlgorithms
-│  ┌ Warning: Module DataStructures with build ID fafbfcfd-1c45-48c6-8302-1a3c5a1097ca is missing from the cache.
-│  │ This may mean DataStructures [864edb3b-99cc-5e75-8d2d-829cb0a9cfe8] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Distributions
-│  ┌ Warning: Module StatsBase with build ID fafbfcfd-61a8-fe4b-d17a-fbe40c3d2fed is missing from the cache.
-│  │ This may mean StatsBase [2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Distributions → DistributionsTestExt
-│  [Output was shown above]
-└  
-┌ Missings
-│  ┌ Warning: Module DataAPI with build ID fafbfcfd-1fa5-87de-ea99-52b89440bf9b is missing from the cache.
-│  │ This may mean DataAPI [9a962f9c-6df0-11e9-0e5d-c546b8b5ee8a] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Rmath
-│  ┌ Warning: Module Rmath_jll with build ID ffffffff-ffff-ffff-84a4-13a8d37bc149 is missing from the cache.
-│  │ This may mean Rmath_jll [f50d1b31-88e8-58de-be2c-1cc44531875f] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ JLLWrappers
-│  ┌ Warning: Module Preferences with build ID fafbfcfd-5715-7f0b-dfbf-a3ffb3c14b07 is missing from the cache.
-│  │ This may mean Preferences [21216c6a-2e73-6563-6e65-726566657250] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ HypergeometricFunctions
-│  ┌ Warning: Module SpecialFunctions with build ID fafbfcfd-3385-8837-42ad-512bc4e067e3 is missing from the cache.
-│  │ This may mean SpecialFunctions [276daf66-3868-5448-9aa4-cd146d93841b] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ QuadGK
-│  ┌ Warning: Module DataStructures with build ID fafbfcfd-1c45-48c6-8302-1a3c5a1097ca is missing from the cache.
-│  │ This may mean DataStructures [864edb3b-99cc-5e75-8d2d-829cb0a9cfe8] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ StatsFuns
-│  ┌ Warning: Module Reexport with build ID fafbfcfd-6ea4-e9d5-1501-d66fd8833cfa is missing from the cache.
-│  │ This may mean Reexport [189a3867-3050-52da-a836-e630ba90ab69] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ Rmath_jll
-│  ┌ Warning: Module JLLWrappers with build ID fafbfcfd-53d2-2758-fb4f-8d5d5ef5a7f8 is missing from the cache.
-│  │ This may mean JLLWrappers [692b3bcd-3c85-4b1f-b108-f13ce0eb3210] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ AliasTables
-│  ┌ Warning: Module PtrArrays with build ID fafbfcfd-a187-2721-3ab9-99c5504218f7 is missing from the cache.
-│  │ This may mean PtrArrays [43287f4e-b6f4-7ad1-bb20-aadabca52c3d] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-┌ LogExpFunctions
-│  ┌ Warning: Module DocStringExtensions with build ID fafbfcfd-d7ec-7e31-e0c8-a4aac54c1b0c is missing from the cache.
-│  │ This may mean DocStringExtensions [ffbed154-4ef7-542d-bbb7-c09d3a79fcae] does not support precompilation but is imported by a module that does.
-│  └ @ Base loading.jl:2541
-└  
-Precompiling DistributionsChainRulesCoreExt...
-    629.5 ms  ? AliasTables
-    652.9 ms  ? Missings
-    635.1 ms  ? Compat → CompatLinearAlgebraExt
-    668.4 ms  ? JLLWrappers
-    650.0 ms  ? LogExpFunctions
-    595.6 ms  ? DataStructures
-    596.4 ms  ? Rmath_jll
-    595.5 ms  ? HypergeometricFunctions
-    600.5 ms  ? QuadGK
-    616.9 ms  ? SortingAlgorithms
-    610.4 ms  ? Rmath
-    590.8 ms  ? StatsFuns
-    586.0 ms  ? StatsFuns → StatsFunsChainRulesCoreExt
-    585.8 ms  ? Distributions
-Info Given DistributionsChainRulesCoreExt was explicitly requested, output will be shown live [0K
-[0K┌ Warning: Module Distributions with build ID ffffffff-ffff-ffff-cbb7-c5ebd159c0da is missing from the cache.
-[0K│ This may mean Distributions [31c24e10-a181-5473-b8eb-7969acd0382f] does not support precompilation but is imported by a module that does.
-[0K└ @ Base loading.jl:2541
-    598.6 ms  ? Distributions → DistributionsChainRulesCoreExt
+   1030.2 ms  ✓ Distributions → DistributionsTestExt
+  1 dependency successfully precompiled in 2 seconds. 53 already precompiled.
+Precompiling InterpolationsForwardDiffExt...
+    928.1 ms  ✓ Interpolations → InterpolationsForwardDiffExt
+  1 dependency successfully precompiled in 1 seconds. 53 already precompiled.
+Precompiling IntervalArithmeticForwardDiffExt...
+    481.7 ms  ✓ IntervalArithmetic → IntervalArithmeticDiffRulesExt
+    609.1 ms  ✓ IntervalArithmetic → IntervalArithmeticForwardDiffExt
+  2 dependencies successfully precompiled in 1 seconds. 45 already precompiled.
+Precompiling IntervalSetsExt...
+    501.9 ms  ✓ Accessors → IntervalSetsExt
+  1 dependency successfully precompiled in 1 seconds. 15 already precompiled.
   Activating project at `/home/golem/scratch/chans/lincs`
   Activating project at `/home/golem/scratch/chans/lincs`
   Activating project at `/home/golem/scratch/chans/lincs`
 0.0%┣                                                ┫ 0/1 [00:03<00:-3, -3s/it]
-[1A100.0%┣███████████████████████████████████████┫ 1/1 [05:27:44<Inf:Inf, InfGs/it]
-[1A100.0%┣███████████████████████████████████████┫ 1/1 [05:27:44<Inf:Inf, InfGs/it]
+[1A100.0%┣███████████████████████████████████████┫ 1/1 [06:07:28<Inf:Inf, InfGs/it]
+[1A100.0%┣███████████████████████████████████████┫ 1/1 [06:07:28<Inf:Inf, InfGs/it]
