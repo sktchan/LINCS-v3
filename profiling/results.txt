@@ -1,0 +1,527 @@
+ ** NVTX Range Summary (nvtx_sum):
+
+ Time (%)  Total Time (ns)  Instances      Avg (ns)           Med (ns)          Min (ns)         Max (ns)        StdDev (ns)      Style           Range        
+ --------  ---------------  ---------  -----------------  -----------------  ---------------  ---------------  ----------------  -------  ---------------------
+     32.3  154,071,248,802          1  154,071,248,802.0  154,071,248,802.0  154,071,248,802  154,071,248,802               0.0  PushPop  :train               
+     29.5  140,533,688,328         20    7,026,684,416.4    1,301,481,440.5      391,971,018  116,515,887,052  25,771,938,735.0  PushPop  :gradient calc       
+      9.8   46,501,234,824         45    1,033,360,773.9       88,814,101.0       34,726,950   28,871,400,577   4,265,733,316.0  PushPop  :loss-fwd            
+      5.2   24,999,218,330         45      555,538,185.1       88,138,497.0       34,025,336    7,533,711,493   1,142,952,837.2  PushPop  :m-transformer       
+      4.6   21,722,463,375        180      120,680,352.1        1,494,258.0          820,374    5,973,598,408     495,040,242.1  PushPop  :tf-attn             
+      4.5   21,468,673,076         45      477,081,623.9          234,578.0          153,979   21,335,397,481   3,180,084,347.7  PushPop  :m-embedding         
+      2.9   13,929,899,636          1   13,929,899,636.0   13,929,899,636.0   13,929,899,636   13,929,899,636               0.0  PushPop  :data rank           
+      1.8    8,679,153,799          1    8,679,153,799.0    8,679,153,799.0    8,679,153,799    8,679,153,799               0.0  PushPop  :test                
+      1.6    7,842,882,129         45      174,286,269.5       24,083,894.0        1,006,602    5,874,380,401     869,621,860.5  PushPop  :loss-find masks     
+      1.5    6,938,246,349         20      346,912,317.4       81,142,671.0       78,502,579    5,122,068,056   1,125,663,404.6  PushPop  :recalc loss         
+      1.3    6,400,876,750         20      320,043,837.5        8,155,215.0        7,994,895    6,245,105,019   1,394,614,700.7  PushPop  :update              
+      1.2    5,800,765,615          1    5,800,765,615.0    5,800,765,615.0    5,800,765,615    5,800,765,615               0.0  PushPop  :data load           
+      1.2    5,643,047,899          5    1,128,609,579.8        7,223,865.0        6,576,979    5,614,582,331   2,507,735,026.1  PushPop  :onecold             
+      0.9    4,422,780,973         45       98,284,021.6          659,236.0          257,838    4,319,321,699     643,632,880.0  PushPop  :loss-crossentropy   
+      0.6    2,887,746,363        180       16,043,035.3          380,897.5          196,126    1,262,865,415     123,283,737.2  PushPop  :tf-mlp              
+      0.4    2,104,831,808          5      420,966,361.6      261,570,856.0      191,986,740    1,126,792,248     395,732,899.3  PushPop  :get ranks/errors    
+      0.2      823,860,429         45       18,308,009.5           67,825.0           49,720      810,691,884     120,815,636.6  PushPop  :loss-onehotbatch    
+      0.1      479,182,198          1      479,182,198.0      479,182,198.0      479,182,198      479,182,198               0.0  PushPop  :split/mask          
+      0.1      448,547,928          5       89,709,585.6       96,165,899.0       59,445,776      110,550,352      19,315,803.5  PushPop  :loss calc           
+      0.1      429,380,241          5       85,876,048.2          180,251.0          153,570      428,691,047     191,639,410.6  PushPop  :find indices        
+      0.1      326,808,284        180        1,815,601.6          439,796.0          286,944      232,959,989      17,328,409.3  PushPop  :tf-drop/norm        
+      0.0      160,193,040         25        6,407,721.6          312,410.0          225,002      151,536,782      30,235,459.0  PushPop  :cpu to gpu          
+      0.0       59,934,239        180          332,968.0           60,536.0           48,822       46,812,074       3,485,032.2  PushPop  :tf-reshape bkw/resid
+      0.0       44,970,833          5        8,994,166.6        2,255,444.0        1,803,277       31,171,515      12,617,256.6  PushPop  :gpu to cpu          
+      0.0       32,565,668         45          723,681.5          704,962.0          440,893        2,226,150         334,038.1  PushPop  :m-classifier        
+      0.0          246,841        180            1,371.3              964.5              575           30,131           3,090.0  PushPop  :tf-reshape fwd      
+      0.0           94,014         45            2,089.2              823.0              556           28,571           5,715.5  PushPop  :loss-reshape        
+
+Processing [out/nsight/rtf_report.sqlite] with [/opt/nvidia/nsight-systems/2024.5.1/host-linux-x64/reports/osrt_sum.py]... 
+
+ ** OS Runtime Summary (osrt_sum):
+
+ Time (%)  Total Time (ns)  Num Calls      Avg (ns)         Med (ns)      Min (ns)     Max (ns)        StdDev (ns)              Name         
+ --------  ---------------  ---------  ----------------  ---------------  --------  ---------------  ----------------  ----------------------
+     33.5  214,163,486,457         17  12,597,852,144.5  2,981,756,029.0    45,662  176,777,605,710  42,384,493,202.4  sem_wait              
+     32.8  209,545,132,804      2,104      99,593,694.3    100,152,049.5    46,436      111,506,948       7,136,007.5  poll                  
+     32.0  204,916,585,427        508     403,379,105.2     72,519,275.0   119,282   15,526,419,013   1,550,428,657.9  pthread_cond_wait     
+      1.5    9,457,917,403      1,706       5,543,914.1          2,042.5     1,000      806,766,794      29,833,930.5  epoll_pwait           
+      0.1      749,138,479      3,845         194,834.5        212,127.0     4,741        2,973,733         101,221.2  open64                
+      0.1      322,679,039     32,876           9,815.0          5,491.0     1,003      126,901,034         699,995.3  read                  
+      0.0      224,408,565      2,284          98,252.4         32,064.0     1,017       22,076,301         830,966.2  ioctl                 
+      0.0      126,922,887     12,089          10,499.0          7,512.0     1,163          107,061           7,921.7  pwrite64              
+      0.0       35,495,048        301         117,923.7         23,068.0     2,505       12,033,552         961,929.8  fopen                 
+      0.0       19,886,439        135         147,307.0         16,483.0     2,114        4,811,107         467,740.8  open                  
+      0.0       14,111,955      2,150           6,563.7          2,780.5     1,008          143,090          11,989.6  fread                 
+      0.0       13,418,676      1,305          10,282.5         10,173.0     1,316           93,575           7,701.7  mprotect              
+      0.0        9,392,847        508          18,489.9          4,208.5     1,002          181,231          36,073.2  write                 
+      0.0        4,534,423         21         215,924.9         11,200.0     3,806        4,267,958         928,454.8  munmap                
+      0.0        4,510,414         36         125,289.3        112,278.0    55,541          257,572          51,808.4  pthread_create        
+      0.0        4,453,800        100          44,538.0         13,589.0     1,484        1,603,330         199,838.7  mmap64                
+      0.0        4,040,042        435           9,287.5          6,956.0     1,087           38,225           6,157.3  fwrite                
+      0.0        2,756,496        585           4,712.0          4,731.0     1,002           14,805           1,894.7  pthread_cond_signal   
+      0.0        2,602,449        291           8,943.1          7,989.0     1,655           45,557           4,916.3  fclose                
+      0.0        1,993,760         81          24,614.3         22,647.0    18,655           38,136           4,592.9  waitpid               
+      0.0        1,306,510         64          20,414.2         11,758.0     1,777          307,250          39,983.0  mmap                  
+      0.0        1,178,387         10         117,838.7         73,919.0    20,555          638,004         184,564.6  sem_timedwait         
+      0.0          974,957         91          10,713.8         10,177.0     2,328           26,347           3,381.1  pipe2                 
+      0.0          789,009        245           3,220.4          2,941.0     1,377           21,537           2,510.7  epoll_ctl             
+      0.0          678,435          1         678,435.0        678,435.0   678,435          678,435               0.0  pthread_join          
+      0.0          627,826        164           3,828.2          3,829.0     1,006           10,332           2,592.4  sigaction             
+      0.0          422,710        218           1,939.0          1,773.5     1,004           11,131             843.9  fcntl                 
+      0.0          283,170          7          40,452.9         37,514.0    22,892           70,033          17,837.3  pthread_rwlock_wrlock 
+      0.0          254,761          7          36,394.4         36,013.0    28,187           42,708           5,362.2  pthread_rwlock_rdlock 
+      0.0          221,662        103           2,152.1          2,066.0     1,008           13,836           1,506.7  signal                
+      0.0          118,377         85           1,392.7          1,329.0     1,002            4,323             376.6  dup2                  
+      0.0          101,848          3          33,949.3         11,391.0    10,937           79,520          39,466.0  fgets                 
+      0.0           82,270          3          27,423.3         26,306.0    20,468           35,496           7,576.0  socket                
+      0.0           41,617          7           5,945.3          1,110.0     1,002           20,173           7,329.6  pthread_cond_broadcast
+      0.0            7,984          2           3,992.0          3,992.0     3,491            4,493             708.5  fopen64               
+      0.0            4,784          2           2,392.0          2,392.0     2,100            2,684             413.0  pthread_barrier_wait  
+      0.0            3,862          1           3,862.0          3,862.0     3,862            3,862               0.0  bind                  
+      0.0            3,154          3           1,051.3          1,042.0     1,011            1,101              45.7  dup                   
+      0.0            2,263          2           1,131.5          1,131.5     1,068            1,195              89.8  fflush                
+      0.0            1,333          1           1,333.0          1,333.0     1,333            1,333               0.0  listen                
+      0.0            1,240          1           1,240.0          1,240.0     1,240            1,240               0.0  dup3                  
+      0.0            1,116          1           1,116.0          1,116.0     1,116            1,116               0.0  pthread_mutex_trylock 
+
+Processing [out/nsight/rtf_report.sqlite] with [/opt/nvidia/nsight-systems/2024.5.1/host-linux-x64/reports/cuda_api_sum.py]... 
+
+ ** CUDA API Summary (cuda_api_sum):
+
+ Time (%)  Total Time (ns)  Num Calls    Avg (ns)      Med (ns)    Min (ns)    Max (ns)    StdDev (ns)                  Name               
+ --------  ---------------  ---------  ------------  ------------  ---------  -----------  ------------  ----------------------------------
+     36.5    4,214,782,094         80  52,684,776.2  55,833,369.5     86,256   61,212,785  13,514,805.8  cudaMemcpyAsync                   
+     32.3    3,728,812,404      1,180   3,160,010.5       4,147.5      1,025   90,401,119  10,839,959.4  cuStreamSynchronize               
+     21.9    2,526,385,465        505   5,002,743.5      44,019.0     10,996  129,448,120  24,374,380.0  cuMemcpyDtoHAsync_v2              
+      3.9      451,997,164        126   3,587,279.1      40,229.0      3,801   22,970,281   8,146,783.8  cuMemcpyHtoDAsync_v2              
+      1.4      162,501,922     14,546      11,171.6       3,305.0      1,044    9,848,990     112,753.5  cuMemAllocFromPoolAsync           
+      1.3      144,377,674     14,854       9,719.8       8,088.0      3,056      113,561       6,626.6  cuLaunchKernel                    
+      0.9      100,178,779    622,280         161.0         151.0         67      116,193         297.8  cuCtxGetId                        
+      0.6       66,937,397      3,275      20,438.9       9,072.0      4,634   23,480,474     413,482.3  cudaLaunchKernel                  
+      0.3       39,967,495         80     499,593.7     216,423.0     83,154   22,995,181   2,549,550.7  cuModuleLoadDataEx                
+      0.3       38,549,192     14,438       2,670.0       2,230.0      1,113       32,574       2,078.2  cuMemFreeAsync                    
+      0.2       28,121,997    158,456         177.5         164.0         75       23,981         247.9  cuStreamGetCaptureInfo            
+      0.1        8,610,457        121      71,160.8      34,303.0     13,162    1,535,039     222,952.0  cuMemGetInfo_v2                   
+      0.0        5,219,279         80      65,241.0      62,342.0     15,324      309,872      38,467.5  cuModuleUnload                    
+      0.0        4,789,519          2   2,394,759.5   2,394,759.5      1,631    4,787,888   3,384,394.8  cudaFree                          
+      0.0        3,652,648        144      25,365.6      15,495.0     10,685      120,030      22,148.8  cuCtxSynchronize                  
+      0.0        2,153,251          1   2,153,251.0   2,153,251.0  2,153,251    2,153,251           0.0  cuLibraryUnload                   
+      0.0        1,708,014        172       9,930.3       6,096.5      2,094       56,645       9,632.0  cuMemsetD32Async                  
+      0.0        1,093,000          1   1,093,000.0   1,093,000.0  1,093,000    1,093,000           0.0  cuMemHostAlloc                    
+      0.0          725,389         80       9,067.4       8,465.0      5,689       19,839       2,299.7  cudaStreamSynchronize             
+      0.0          653,852        400       1,634.6         490.5        275       12,791       1,943.4  cudaStreamGetCaptureInfo_v2_v11030
+      0.0          603,770         81       7,454.0       7,168.0      4,619       17,597       1,639.1  cudaEventRecord                   
+      0.0          449,898      1,634         275.3         222.0        106       12,723         541.3  cuGetProcAddress_v2               
+      0.0          426,935          4     106,733.8      70,176.5      7,060      279,522     126,810.3  cudaMalloc                        
+      0.0          422,327         16      26,395.4       4,191.5      3,682      311,442      76,468.2  cudaStreamCreateWithFlags         
+      0.0          125,869        242         520.1         327.5        170        3,496         408.0  cuMemPoolGetAttribute             
+      0.0          106,746          1     106,746.0     106,746.0    106,746      106,746           0.0  cuStreamDestroy_v2                
+      0.0          102,689          1     102,689.0     102,689.0    102,689      102,689           0.0  cuMemPoolCreate                   
+      0.0           51,205          1      51,205.0      51,205.0     51,205       51,205           0.0  cuMemcpyDtoDAsync_v2              
+      0.0           35,167         19       1,850.9         849.0        789       15,610       3,393.3  cudaEventCreateWithFlags          
+      0.0           21,646          1      21,646.0      21,646.0     21,646       21,646           0.0  cudaMemsetAsync                   
+      0.0           21,004          1      21,004.0      21,004.0     21,004       21,004           0.0  cuStreamCreate                    
+      0.0           20,271          1      20,271.0      20,271.0     20,271       20,271           0.0  cudaHostAlloc                     
+      0.0           18,874          5       3,774.8       3,334.0      2,875        5,567       1,054.9  cuInit                            
+      0.0           10,935          5       2,187.0       2,278.0      1,498        2,860         498.5  cuCtxSetCurrent                   
+      0.0            3,636          1       3,636.0       3,636.0      3,636        3,636           0.0  cudaEventQuery                    
+      0.0            2,120          2       1,060.0       1,060.0        639        1,481         595.4  cudaGetDriverEntryPoint_v11030    
+      0.0            1,009          4         252.3         233.0        210          333          56.6  cuModuleGetLoadingMode            
+      0.0              733          1         733.0         733.0        733          733           0.0  cuMemPoolSetAttribute             
+      0.0              629          1         629.0         629.0        629          629           0.0  cuDeviceSetMemPool                
+
+Processing [out/nsight/rtf_report.sqlite] with [/opt/nvidia/nsight-systems/2024.5.1/host-linux-x64/reports/cuda_gpu_kern_sum.py]... 
+
+ ** CUDA GPU Kernel Summary (cuda_gpu_kern_sum):
+
+ Time (%)  Total Time (ns)  Instances    Avg (ns)      Med (ns)     Min (ns)    Max (ns)   StdDev (ns)                                                  Name                                                
+ --------  ---------------  ---------  ------------  ------------  ----------  ----------  -----------  ----------------------------------------------------------------------------------------------------
+     23.5    2,329,412,291         76  30,650,161.7  30,586,440.0  29,110,187  31,608,662    586,819.6  big_mapreduce_kernel(identity, add_sum, Float32, CartesianIndices<(long)4, Tuple<OneTo<Int64>, OneT…
+     10.5    1,039,198,257        360   2,886,661.8   1,647,239.0      82,371   4,692,203  1,698,614.8  maxwell_sgemm_128x64_nn                                                                             
+      7.0      698,297,713        160   4,364,360.7   4,485,394.0     218,858   5,489,037    992,022.1  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll4ELl1EE11BroadcastedI12CuArrayStyleILl4E12DeviceMe…
+      4.9      485,939,010        160   3,037,118.8   1,623,910.0      83,588   4,970,614  1,838,987.3  maxwell_sgemm_128x64_tn                                                                             
+      4.8      475,112,203        180   2,639,512.2   2,717,830.0     134,662   3,211,083    568,101.8  void cudnn::ops::softmax_fw_kernel<(int)2, float, float, (int)256, (int)1, (int)1, (int)0>(cudnnTen…
+      4.5      450,899,106        533     845,964.6     882,247.0      10,208   1,003,051    165,989.4  big_mapreduce_kernel(identity, add_sum, Float32, CartesianIndices<(long)3, Tuple<OneTo<Int64>, OneT…
+      4.1      407,490,141         80   5,093,626.8   5,254,531.5     256,843   6,427,669  1,145,360.6  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll4ELl1EE11BroadcastedI12CuArrayStyleILl4E12DeviceMe…
+      3.6      359,327,298        387     928,494.3     928,072.0     566,936   1,050,125     68,983.4  big_mapreduce_kernel(identity, add_sum, Float32, CartesianIndices<(long)3, Tuple<OneTo<Int64>, OneT…
+      3.5      345,389,466        340   1,015,851.4     257,435.5      12,097   4,224,407  1,366,468.8  rand_                                                                                               
+      3.4      341,833,156         80   4,272,914.5   4,401,982.0     214,826   5,380,711    966,157.0  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll4ELl1EE11BroadcastedI12CuArrayStyleILl4E12DeviceMe…
+      3.4      332,820,197        500     665,640.4     689,342.0      37,826     813,828    146,327.1  sgemm_32x32x32_TN_vec                                                                               
+      3.0      293,541,748        953     308,018.6     289,900.0      15,392     533,495     94,401.5  sgemm_32x32x32_NN_vec                                                                               
+      2.2      219,454,737        160   1,371,592.1   1,094,143.5      97,700   2,200,671    486,295.4  maxwell_sgemm_128x64_nt                                                                             
+      1.9      190,393,002        310     614,171.0     294,156.5       2,849   7,361,758  1,480,692.7  partial_mapreduce_grid(identity, add_sum, Float32, CartesianIndices<(long)2, Tuple<OneTo<Int64>, On…
+      1.9      185,544,888        216     859,004.1     872,981.5     473,620     990,603     95,258.4  big_mapreduce_kernel(identity, add_sum, Float32, CartesianIndices<(long)3, Tuple<OneTo<Int64>, OneT…
+      1.8      181,362,757      1,040     174,387.3     130,150.0       7,328     425,459     94,205.6  permutedims_kernel(CuKernelContext, CuDeviceArray<Float32, (long)1, (long)1>, CuDeviceArray<Float32…
+      1.5      149,060,926        720     207,029.1     210,793.5      12,641     265,836     45,711.2  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll3ELl1EE11BroadcastedI12CuArrayStyleILl3E12DeviceMe…
+      1.3      128,496,343        424     303,057.4     286,940.5      15,041     526,998     95,523.4  sgemm_32x32x32_NT_vec                                                                               
+      0.8       78,747,129        320     246,084.8     175,991.5       8,352     354,799     98,959.0  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll2ELl1EE11BroadcastedI12CuArrayStyleILl2E12DeviceMe…
+      0.8       78,232,030        610     128,249.2     209,145.0       3,712     264,780    105,081.6  partial_mapreduce_grid(identity, add_sum, Float32, CartesianIndices<(long)3, Tuple<OneTo<Int64>, On…
+      0.8       75,971,448        360     211,031.8     216,729.0      13,473     301,421     48,147.2  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll3ELl1EE11BroadcastedI12CuArrayStyleILl3E12DeviceMe…
+      0.7       65,433,995        260     251,669.2     260,620.0      16,448     308,717     55,055.1  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll3ELl1EE11BroadcastedI12CuArrayStyleILl3E12DeviceMe…
+      0.7       64,621,043        225     287,204.6     223,274.0      13,888     482,837    106,193.6  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll3ELl1EE11BroadcastedI12CuArrayStyleILl3E12DeviceMe…
+      0.7       64,523,941        260     248,169.0     252,411.0      15,169     344,751     54,731.2  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll4ELl1EE11BroadcastedI12CuArrayStyleILl4E12DeviceMe…
+      0.6       63,979,253        200     319,896.3     237,083.0      11,584   1,027,756    235,762.6  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll2ELl1EE11BroadcastedI12CuArrayStyleILl2E12DeviceMe…
+      0.6       56,485,381         45   1,255,230.7   1,284,311.0      80,099   1,571,268    272,036.8  sgemm_128x128x8_NN                                                                                  
+      0.6       55,916,350        225     248,517.1     254,059.0      15,329     312,782     51,907.0  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll3ELl1EE11BroadcastedI12CuArrayStyleILl3E12DeviceMe…
+      0.5       52,765,774        180     293,143.2     296,301.0      18,625     394,961     66,199.0  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll3ELl1EE11BroadcastedI12CuArrayStyleILl3E12DeviceMe…
+      0.5       51,898,933        172     301,738.0     297,949.0     230,410     357,903     19,768.9  sgemm_128x128x8_NN_vec                                                                              
+      0.5       45,767,556        400     114,418.9     119,237.5       6,304     130,277     22,890.1  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll2ELl1EE11BroadcastedI12CuArrayStyleILl2E12DeviceMe…
+      0.4       44,654,573        180     248,081.0     255,627.0      16,577     311,757     54,942.8  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll3ELl1EE11BroadcastedI12CuArrayStyleILl3E12DeviceMe…
+      0.4       43,481,753        125     347,854.0     206,473.0      12,416   1,033,709    307,660.8  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll2ELl1EE11BroadcastedI12CuArrayStyleILl2E12DeviceMe…
+      0.4       42,051,796        200     210,259.0     216,201.0      13,825     264,940     46,881.4  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll3ELl1EE11BroadcastedI12CuArrayStyleILl3E12DeviceMe…
+      0.4       38,294,425        125     306,355.4     269,324.0      12,000     508,310    105,800.1  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll2ELl1EE11BroadcastedI12CuArrayStyleILl2E12DeviceMe…
+      0.4       37,518,261        180     208,434.8     213,705.0      13,537     262,123     46,973.4  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll3ELl1EE11BroadcastedI12CuArrayStyleILl3E12DeviceMe…
+      0.4       37,488,915        180     208,271.8     213,497.5      13,376     262,572     47,000.9  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll3ELl1EE11BroadcastedI12CuArrayStyleILl3E12DeviceMe…
+      0.4       37,353,970        180     207,522.1     213,705.0      13,760     262,060     46,036.3  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll3ELl1EE11BroadcastedI12CuArrayStyleILl3E12DeviceMe…
+      0.3       34,016,959         20   1,700,847.9   1,756,444.5      95,876   2,132,444    393,349.2  sgemm_32x32x32_TN                                                                                   
+      0.3       32,660,934        160     204,130.8     210,201.5      14,080     257,707     45,054.5  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll3ELl1EE11BroadcastedI12CuArrayStyleILl3E12DeviceMe…
+      0.3       29,935,886        100     299,358.9     345,231.0      11,713     383,025     93,892.7  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll2ELl1EE11BroadcastedI12CuArrayStyleILl2E12DeviceMe…
+      0.3       29,903,087        180     166,128.3     171,111.0      10,528     208,841     36,956.3  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll3ELl1EE11BroadcastedI12CuArrayStyleILl3E12DeviceMe…
+      0.3       28,198,403         20   1,409,920.1   1,453,295.0      78,819   1,706,185    322,745.1  sgemm_32x32x32_NT                                                                                   
+      0.2       23,037,508        100     230,375.1     262,219.0       8,289     312,877     72,770.5  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll2ELl1EE11BroadcastedI12CuArrayStyleILl2E12DeviceMe…
+      0.2       22,776,275         76     299,687.8     295,629.0     287,053     355,152     14,983.7  sgemm_128x128x8_NT_vec                                                                              
+      0.1        8,891,516         80     111,143.9     116,533.0       7,072     118,181     23,990.6  void dot_kernel<float, (int)128, (int)0, cublasDotParams<cublasGemvTensor<const float>, cublasGemvT…
+      0.1        8,532,238         45     189,605.3     194,025.0      12,576     238,154     41,239.1  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll3ELl1EE11BroadcastedI12CuArrayStyleILl3E12DeviceMe…
+      0.1        6,096,008         45     135,466.8     139,877.0       8,865     164,904     28,934.1  void cudnn::ops::softmax_fw_kernel<(int)2, float, float, (int)256, (int)2, (int)1, (int)0>(cudnnTen…
+      0.1        6,044,166         45     134,314.8     137,478.0       8,224     168,712     29,338.8  gpu__gather_(CompilerMetadata<DynamicSize, DynamicCheck, void, CartesianIndices<(long)1, Tuple<OneT…
+      0.1        5,230,598         45     116,235.5     120,262.0       7,168     136,421     24,600.1  getindex_kernel(CuKernelContext, CuDeviceArray<Float32, (long)2, (long)1>, CuDeviceArray<Float32, (…
+      0.1        5,150,077         20     257,503.9     269,435.5      14,689     277,676     57,237.7  scatter_kernel_(_, CuDeviceArray<Float32, (long)2, (long)1>, CuDeviceArray<Float32, (long)2, (long)…
+      0.0        4,208,657         45      93,525.7      96,452.0       6,560     112,293     19,854.7  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll2ELl1EE11BroadcastedI12CuArrayStyleILl2E12DeviceMe…
+      0.0        3,540,596        184      19,242.4      10,368.0       7,680     414,898     59,077.5  partial_mapreduce_grid(identity, add_sum, Float32, CartesianIndices<(long)4, Tuple<OneTo<Int64>, On…
+      0.0        3,051,076          5     610,215.2     623,771.0     476,309     693,406     80,468.0  partial_mapreduce_grid(identity, reduction<isless>, Tuple<Float32, Int64>, CartesianIndices<(long)2…
+      0.0        2,570,128         20     128,506.4     133,174.0       8,256     150,982     28,820.9  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll2ELl1EE11BroadcastedI12CuArrayStyleILl2E12DeviceMe…
+      0.0        2,543,469         20     127,173.4     133,238.0       7,872     136,902     28,116.1  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll2ELl1EE11BroadcastedI12CuArrayStyleILl2E12DeviceMe…
+      0.0        1,903,150        560       3,398.5       2,752.0       2,464       8,800      1,436.5  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll2ELl1EE11BroadcastedI12CuArrayStyleILl2E12DeviceMe…
+      0.0        1,877,714         20      93,885.7      96,676.5       6,816     112,293     21,036.9  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll2ELl1EE11BroadcastedI12CuArrayStyleILl2E12DeviceMe…
+      0.0        1,704,317        560       3,043.4       2,624.0       2,272       6,816      1,073.4  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll2ELl1EE11BroadcastedI12CuArrayStyleILl2E12DeviceMe…
+      0.0        1,629,993        560       2,910.7       2,432.0       2,208       6,976        975.2  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll2ELl1EE11BroadcastedI12CuArrayStyleILl2E12DeviceMe…
+      0.0        1,600,661        405       3,952.2       3,905.0       3,232       4,640        222.6  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll3ELl1EE11BroadcastedI12CuArrayStyleILl3E12DeviceMe…
+      0.0        1,545,767        360       4,293.8       4,256.0       3,392       5,536        317.2  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll3ELl1EE11BroadcastedI12CuArrayStyleILl3E12DeviceMe…
+      0.0        1,477,663         20      73,883.1      75,699.5       5,888      92,612     16,823.0  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll2ELl1EE11BroadcastedI12CuArrayStyleILl2E12DeviceMe…
+      0.0          981,547        110       8,923.2       8,832.0       5,920      10,976        826.7  partial_scan(add_sum, CuDeviceArray<Int64, (long)1, (long)1>, CuDeviceArray<Bool, (long)1, (long)1>…
+      0.0          926,216        560       1,654.0       1,600.0       1,536       4,832        199.5  _Z3_3415CuKernelContext13CuDeviceArrayI7Float32Ll1ELl1EE11BroadcastedI12CuArrayStyleILl1E12DeviceMe…
+      0.0          757,539        560       1,352.7       1,312.0       1,216       6,240        233.1  _Z3_3415CuKernelContext13CuDeviceArrayI7Float32Ll1ELl1EE11BroadcastedI12CuArrayStyleILl1E12DeviceMe…
+      0.0          754,980        180       4,194.3       4,192.0       3,232       5,793        308.0  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll3ELl1EE11BroadcastedI12CuArrayStyleILl3E12DeviceMe…
+      0.0          742,112        560       1,325.2       1,312.0       1,215       1,856         98.1  _Z3_3415CuKernelContext13CuDeviceArrayI7Float32Ll1ELl1EE11BroadcastedI12CuArrayStyleILl1E12DeviceMe…
+      0.0          719,178        180       3,995.4       4,000.0       3,232       4,640        225.0  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll3ELl1EE11BroadcastedI12CuArrayStyleILl3E12DeviceMe…
+      0.0          678,269         18      37,681.6      37,889.5      34,913      38,178        755.5  _Z22partial_mapreduce_grid8identity7add_sum7Float3216CartesianIndicesILl3E5TupleI5OneToI5Int64ES4_I…
+      0.0          456,753         86       5,311.1       6,208.5       3,136       8,033      1,738.9  partial_mapreduce_grid(identity, _, Bool, CartesianIndices<(long)2, Tuple<OneTo<Int64>, OneTo<Int64…
+      0.0          380,818        110       3,462.0       3,616.0       1,760       4,416        434.0  scan                                                                                                
+      0.0          374,421         90       4,160.2       4,368.5       2,464       5,664        759.4  partial_mapreduce_grid(identity, _, Bool, CartesianIndices<(long)1, Tuple<OneTo<Int64>>>, Cartesian…
+      0.0          334,609         80       4,182.6       4,160.0       3,873       4,800        151.8  void reduce_1Block_kernel<float, (int)128, (int)7, cublasGemvTensorStridedBatched<float>, cublasGem…
+      0.0          320,011          9      35,556.8      35,809.0      32,577      36,193      1,136.1  partial_mapreduce_grid(identity, add_sum, Float32, CartesianIndices<(long)3, Tuple<OneTo<Int64>, On…
+      0.0          256,135        110       2,328.5       2,336.0       1,344       3,072        272.6  aggregate_partial_scan(add_sum, CuDeviceArray<Int64, (long)1, (long)1>, CuDeviceArray<Int64, (long)…
+      0.0          178,604        110       1,623.7       1,664.0       1,280       2,048        156.6  findall                                                                                             
+      0.0          163,017         65       2,508.0       2,753.0       1,568       3,297        488.3  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll2ELl1EE11BroadcastedI12CuArrayStyleILl2E12DeviceMe…
+      0.0          147,972        110       1,345.2       1,344.0       1,119       1,760        179.4  linear_copy_kernel_(CuKernelContext, CuDeviceArray<Int64, (long)1, (long)1>, Int64, SubArray<Int64,…
+      0.0          137,349        110       1,248.6       1,216.0         960       1,632        110.4  _6(CuKernelContext, CuDeviceArray<Int64, (long)1, (long)1>, Int64)                                  
+      0.0          135,361         90       1,504.0       1,535.5       1,184       1,856        131.2  _34(CuKernelContext, CuDeviceArray<Bool, (long)1, (long)1>, Broadcasted<CuArrayStyle<(long)1, Devic…
+      0.0          118,433         20       5,921.6       5,920.0       5,696       6,176        115.9  _Z3_3515CuKernelContext8SubArrayI7Float32Ll2E13CuDeviceArrayIS1_Ll2ELl1EE5TupleI5SliceI5OneToI5Int6…
+      0.0           84,355         45       1,874.6       1,888.0       1,472       2,272        170.8  getindex_kernel(CuKernelContext, CuDeviceArray<Int64, (long)1, (long)1>, CuDeviceArray<Int64, (long…
+      0.0           77,826         45       1,729.5       1,696.0       1,536       2,048         97.4  _34(CuKernelContext, CuDeviceArray<UInt32, (long)1, (long)1>, Broadcasted<CuArrayStyle<(long)1, Dev…
+      0.0           77,315         25       3,092.6       3,136.0       1,920       3,488        289.0  _34(CuKernelContext, CuDeviceArray<Bool, (long)1, (long)1>, Broadcasted<CuArrayStyle<(long)1, Devic…
+      0.0           61,571         20       3,078.6       3,136.5       1,856       3,424        306.4  _34(CuKernelContext, CuDeviceArray<Bool, (long)1, (long)1>, Broadcasted<CuArrayStyle<(long)1, Devic…
+      0.0           31,428         20       1,571.4       1,472.0       1,440       1,953        159.9  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll2ELl1EE11BroadcastedI12CuArrayStyleILl2E12DeviceMe…
+      0.0           18,624          5       3,724.8       3,776.0       3,040       4,128        408.9  _Z3_3515CuKernelContext13CuDeviceArrayI14CartesianIndexILl2EELl2ELl1EE11BroadcastedI12CuArrayStyleI…
+      0.0           14,944          5       2,988.8       3,040.0       2,464       3,328        322.1  _Z3_3515CuKernelContext13CuDeviceArrayI7Float32Ll2ELl1EE11BroadcastedI12CuArrayStyleILl2E12DeviceMe…
+      0.0            8,609          5       1,721.8       1,728.0       1,600       1,888        107.1  _34(CuKernelContext, CuDeviceArray<Int64, (long)1, (long)1>, Broadcasted<CuArrayStyle<(long)1, Devi…
+
+Processing [out/nsight/rtf_report.sqlite] with [/opt/nvidia/nsight-systems/2024.5.1/host-linux-x64/reports/cuda_gpu_mem_time_sum.py]... 
+
+ ** CUDA GPU MemOps Summary (by Time) (cuda_gpu_mem_time_sum):
+
+ Time (%)  Total Time (ns)  Count   Avg (ns)    Med (ns)  Min (ns)   Max (ns)    StdDev (ns)             Operation           
+ --------  ---------------  -----  -----------  --------  --------  -----------  ------------  ------------------------------
+     85.1    2,482,076,436    585  4,242,865.7   1,120.0       960  128,339,812  22,506,023.9  [CUDA memcpy Device-to-Host]  
+     14.7      427,715,485    126  3,394,567.3  28,961.0       320   22,837,115   8,029,265.1  [CUDA memcpy Host-to-Device]  
+      0.3        7,382,942    173     42,676.0   1,568.0       928      378,192     116,627.0  [CUDA memset]                 
+      0.0            3,456      1      3,456.0   3,456.0     3,456        3,456           0.0  [CUDA memcpy Device-to-Device]
+
+Processing [out/nsight/rtf_report.sqlite] with [/opt/nvidia/nsight-systems/2024.5.1/host-linux-x64/reports/cuda_gpu_mem_size_sum.py]... 
+
+ ** CUDA GPU MemOps Summary (by Size) (cuda_gpu_mem_size_sum):
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)            Operation           
+ ----------  -----  --------  --------  --------  --------  -----------  ------------------------------
+  3,449.764    585     5.897     0.000     0.000   160.854       28.592  [CUDA memcpy Device-to-Host]  
+  3,091.328    173    17.869     0.066     0.001   160.854       50.373  [CUDA memset]                 
+  3,083.229    126    24.470     0.329     0.001   160.854       57.704  [CUDA memcpy Host-to-Device]  
+      0.502      1     0.502     0.502     0.502     0.502        0.000  [CUDA memcpy Device-to-Device]
+
+Processing [out/nsight/rtf_report.sqlite] with [/opt/nvidia/nsight-systems/2024.5.1/host-linux-x64/reports/openmp_sum.py]... 
+SKIPPED: out/nsight/rtf_report.sqlite does not contain OpenMP event data.
+
+Processing [out/nsight/rtf_report.sqlite] with [/opt/nvidia/nsight-systems/2024.5.1/host-linux-x64/reports/opengl_khr_range_sum.py]... 
+SKIPPED: out/nsight/rtf_report.sqlite does not contain KHR Extension (KHR_DEBUG) data.
+
+Processing [out/nsight/rtf_report.sqlite] with [/opt/nvidia/nsight-systems/2024.5.1/host-linux-x64/reports/opengl_khr_gpu_range_sum.py]... 
+SKIPPED: out/nsight/rtf_report.sqlite does not contain GPU KHR Extension (KHR_DEBUG) data.
+
+Processing [out/nsight/rtf_report.sqlite] with [/opt/nvidia/nsight-systems/2024.5.1/host-linux-x64/reports/vulkan_marker_sum.py]... 
+SKIPPED: out/nsight/rtf_report.sqlite does not contain Vulkan Debug Extension (Vulkan Debug Util) data.
+
+Processing [out/nsight/rtf_report.sqlite] with [/opt/nvidia/nsight-systems/2024.5.1/host-linux-x64/reports/vulkan_gpu_marker_sum.py]... 
+SKIPPED: out/nsight/rtf_report.sqlite does not contain GPU Vulkan Debug Extension (GPU Vulkan Debug markers) data.
+
+Processing [out/nsight/rtf_report.sqlite] with [/opt/nvidia/nsight-systems/2024.5.1/host-linux-x64/reports/dx11_pix_sum.py]... 
+SKIPPED: out/nsight/rtf_report.sqlite does not contain DX11 CPU debug markers.
+
+Processing [out/nsight/rtf_report.sqlite] with [/opt/nvidia/nsight-systems/2024.5.1/host-linux-x64/reports/dx12_gpu_marker_sum.py]... 
+SKIPPED: out/nsight/rtf_report.sqlite does not contain DX12 GPU debug markers.
+
+Processing [out/nsight/rtf_report.sqlite] with [/opt/nvidia/nsight-systems/2024.5.1/host-linux-x64/reports/dx12_pix_sum.py]... 
+SKIPPED: out/nsight/rtf_report.sqlite does not contain DX12 CPU debug markers.
+
+Processing [out/nsight/rtf_report.sqlite] with [/opt/nvidia/nsight-systems/2024.5.1/host-linux-x64/reports/wddm_queue_sum.py]... 
+SKIPPED: out/nsight/rtf_report.sqlite does not contain WDDM context data.
+
+Processing [out/nsight/rtf_report.sqlite] with [/opt/nvidia/nsight-systems/2024.5.1/host-linux-x64/reports/um_sum.py]... 
+SKIPPED: out/nsight/rtf_report.sqlite does not contain CUDA Unified Memory CPU page faults data.
+
+Processing [out/nsight/rtf_report.sqlite] with [/opt/nvidia/nsight-systems/2024.5.1/host-linux-x64/reports/um_total_sum.py]... 
+SKIPPED: out/nsight/rtf_report.sqlite does not contain CUDA Unified Memory CPU page faults data.
+
+Processing [out/nsight/rtf_report.sqlite] with [/opt/nvidia/nsight-systems/2024.5.1/host-linux-x64/reports/um_cpu_page_faults_sum.py]... 
+SKIPPED: out/nsight/rtf_report.sqlite does not contain CUDA Unified Memory CPU page faults data.
+
+Processing [out/nsight/rtf_report.sqlite] with [/opt/nvidia/nsight-systems/2024.5.1/host-linux-x64/reports/openacc_sum.py]... 
+SKIPPED: out/nsight/rtf_report.sqlite does not contain OpenACC event data.
+
+Processing [out/nsight/rtf_report.sqlite] with [/opt/nvidia/nsight-systems/2024.5.1/host-linux-x64/reports/syscall_sum.py]... 
+SKIPPED: out/nsight/rtf_report.sqlite does not contain syscall data.
+
+[chans@kraken lincsv3]$ nsys analyze out/nsight/rtf_report.nsys-rep
+
+NOTICE: Existing SQLite export found: out/nsight/rtf_report.sqlite
+        It is assumed file was previously exported from: out/nsight/rtf_report.nsys-rep
+        Consider using --force-export=true if needed.
+
+Processing [out/nsight/rtf_report.sqlite] with [/opt/nvidia/nsight-systems/2024.5.1/host-linux-x64/rules/cuda_memcpy_async.py]... 
+
+ ** CUDA Async Memcpy with Pageable Memory (cuda_memcpy_async):
+
+The following APIs use PAGEABLE memory which causes asynchronous CUDA memcpy
+operations to block and be executed synchronously. This leads to low GPU
+utilization.
+
+Suggestion: If applicable, use PINNED memory instead.
+
+ Duration (ns)    Start (ns)     Src Kind  Dst Kind  Bytes (MB)    PID    Device ID  Context ID  Green Context ID  Stream ID        API Name       
+ -------------  ---------------  --------  --------  ----------  -------  ---------  ----------  ----------------  ---------  ---------------------
+         1,568  175,777,740,966  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+         1,536  178,331,028,953  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+         1,408  205,288,798,844  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+         1,312  194,156,598,083  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+         1,280  178,444,417,259  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+         1,249  198,331,029,284  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+         1,217  196,940,151,930  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+         1,217  206,679,018,898  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+         1,217  208,069,205,201  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+         1,217  209,459,703,824  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+         1,216  195,549,862,405  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+         1,216  199,718,396,235  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+         1,216  201,111,667,884  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+         1,216  202,503,218,149  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+         1,216  203,897,089,864  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+         1,216  210,849,966,900  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+         1,216  212,242,091,784  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+         1,216  213,642,994,727  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+         1,216  215,032,471,380  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+         1,216  216,423,789,265  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+         1,216  217,817,594,569  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+         1,119  209,609,007,443  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+         1,024  194,234,328,158  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+         1,024  194,310,128,935  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+         1,024  194,385,956,303  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+         1,024  197,014,208,761  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+         1,024  197,090,671,072  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+         1,024  206,904,857,546  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+         1,024  218,042,319,061  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+         1,024  218,512,873,568  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+         1,023  178,540,140,805  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+           993  217,966,632,932  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+           992  195,624,063,623  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+           992  195,699,707,720  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+           992  195,775,389,706  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+           992  197,166,915,229  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+           992  198,405,023,650  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+           992  198,480,598,115  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+           992  198,555,960,603  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+           992  199,793,595,900  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+           992  199,868,838,575  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+           992  199,944,440,690  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+           992  201,185,789,203  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+           992  201,260,448,211  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+           992  201,335,594,631  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+           992  202,577,188,963  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+           992  202,654,005,596  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+           992  202,731,361,900  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+           992  203,971,651,519  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+           992  204,048,512,218  Device    Pageable       0.000  295,800          0           1                           14  cudaMemcpyAsync_v3020
+
+Only the top 50 results are displayed. More data may be available.
+
+
+Processing [out/nsight/rtf_report.sqlite] with [/opt/nvidia/nsight-systems/2024.5.1/host-linux-x64/rules/cuda_memcpy_sync.py]... 
+
+ ** CUDA Synchronous Memcpy (cuda_memcpy_sync):
+
+There were no problems detected related to synchronous memcpy operations.
+
+Processing [out/nsight/rtf_report.sqlite] with [/opt/nvidia/nsight-systems/2024.5.1/host-linux-x64/rules/cuda_memset_sync.py]... 
+
+ ** CUDA Synchronous Memset (cuda_memset_sync):
+
+There were no problems detected related to synchronization APIs.
+
+Processing [out/nsight/rtf_report.sqlite] with [/opt/nvidia/nsight-systems/2024.5.1/host-linux-x64/rules/cuda_api_sync.py]... 
+
+ ** CUDA Synchronization APIs (cuda_api_sync):
+
+The following are synchronization APIs that block the host until all issued
+CUDA calls are complete.
+
+Suggestions:
+   1. Avoid excessive use of synchronization.
+   2. Use asynchronous CUDA event calls, such as cudaStreamWaitEvent() and
+cudaEventSynchronize(), to prevent host synchronization.
+
+ Duration (ns)    Start (ns)       PID      TID             API Name          
+ -------------  ---------------  -------  -------  ---------------------------
+        19,839  198,405,064,400  295,800  295,800  cudaStreamSynchronize_v3020
+        18,890  217,966,685,953  295,800  295,800  cudaStreamSynchronize_v3020
+        18,516  213,717,456,153  295,800  295,800  cudaStreamSynchronize_v3020
+        12,955  175,777,756,874  295,800  295,800  cudaStreamSynchronize_v3020
+        12,798  194,234,370,688  295,800  295,800  cudaStreamSynchronize_v3020
+        11,513  202,577,238,845  295,800  295,800  cudaStreamSynchronize_v3020
+        11,402  215,032,517,244  295,800  295,800  cudaStreamSynchronize_v3020
+        11,395  201,260,503,761  295,800  295,800  cudaStreamSynchronize_v3020
+        11,009  213,643,040,300  295,800  295,800  cudaStreamSynchronize_v3020
+        10,653  209,459,746,076  295,800  295,800  cudaStreamSynchronize_v3020
+        10,150  205,362,588,676  295,800  295,800  cudaStreamSynchronize_v3020
+         9,459  199,718,438,461  295,800  295,800  cudaStreamSynchronize_v3020
+         9,439  194,310,172,855  295,800  295,800  cudaStreamSynchronize_v3020
+         9,408  195,699,751,048  295,800  295,800  cudaStreamSynchronize_v3020
+         9,388  212,468,694,611  295,800  295,800  cudaStreamSynchronize_v3020
+         9,344  218,519,387,923  295,800  295,800  cudaStreamSynchronize_v3020
+         9,272  198,556,007,174  295,800  295,800  cudaStreamSynchronize_v3020
+         9,222  199,944,484,462  295,800  295,800  cudaStreamSynchronize_v3020
+         9,201  196,940,194,811  295,800  295,800  cudaStreamSynchronize_v3020
+         9,105  208,295,552,472  295,800  295,800  cudaStreamSynchronize_v3020
+         9,086  206,679,064,562  295,800  295,800  cudaStreamSynchronize_v3020
+         9,009  213,869,354,626  295,800  295,800  cudaStreamSynchronize_v3020
+         8,975  203,897,136,992  295,800  295,800  cudaStreamSynchronize_v3020
+         8,925  206,904,905,929  295,800  295,800  cudaStreamSynchronize_v3020
+         8,875  202,654,052,628  295,800  295,800  cudaStreamSynchronize_v3020
+         8,849  178,331,080,737  295,800  295,800  cudaStreamSynchronize_v3020
+         8,814  201,111,721,287  295,800  295,800  cudaStreamSynchronize_v3020
+         8,730  197,090,720,414  295,800  295,800  cudaStreamSynchronize_v3020
+         8,712  213,793,718,988  295,800  295,800  cudaStreamSynchronize_v3020
+         8,707  178,444,459,681  295,800  295,800  cudaStreamSynchronize_v3020
+         8,700  201,185,831,319  295,800  295,800  cudaStreamSynchronize_v3020
+         8,672  211,000,611,295  295,800  295,800  cudaStreamSynchronize_v3020
+         8,600  197,014,253,003  295,800  295,800  cudaStreamSynchronize_v3020
+         8,588  201,335,639,803  295,800  295,800  cudaStreamSynchronize_v3020
+         8,579  216,574,177,526  295,800  295,800  cudaStreamSynchronize_v3020
+         8,575  195,549,903,681  295,800  295,800  cudaStreamSynchronize_v3020
+         8,550  206,828,390,976  295,800  295,800  cudaStreamSynchronize_v3020
+         8,550  210,924,400,588  295,800  295,800  cudaStreamSynchronize_v3020
+         8,545  217,891,229,235  295,800  295,800  cudaStreamSynchronize_v3020
+         8,500  208,069,246,697  295,800  295,800  cudaStreamSynchronize_v3020
+         8,430  195,775,431,053  295,800  295,800  cudaStreamSynchronize_v3020
+         8,424  197,166,958,360  295,800  295,800  cudaStreamSynchronize_v3020
+         8,368  203,971,698,704  295,800  295,800  cudaStreamSynchronize_v3020
+         8,347  216,497,956,424  295,800  295,800  cudaStreamSynchronize_v3020
+         8,331  212,242,132,312  295,800  295,800  cudaStreamSynchronize_v3020
+         8,328  210,850,009,389  295,800  295,800  cudaStreamSynchronize_v3020
+         8,316  198,480,639,196  295,800  295,800  cudaStreamSynchronize_v3020
+         8,268  205,514,507,590  295,800  295,800  cudaStreamSynchronize_v3020
+         8,231  199,868,892,913  295,800  295,800  cudaStreamSynchronize_v3020
+         8,231  211,075,460,497  295,800  295,800  cudaStreamSynchronize_v3020
+
+Only the top 50 results are displayed. More data may be available.
+
+
+Processing [out/nsight/rtf_report.sqlite] with [/opt/nvidia/nsight-systems/2024.5.1/host-linux-x64/rules/gpu_gaps.py]... 
+
+ ** GPU Gaps (gpu_gaps):
+
+The following are ranges where a GPU is idle for more than 500ms. Addressing
+these gaps might improve application performance.
+
+Suggestions:
+   1. Use CPU sampling data, OS Runtime blocked state backtraces, and/or OS
+Runtime APIs related to thread synchronization to understand if a sluggish or
+blocked CPU is causing the gaps.
+   2. Add NVTX annotations to CPU code to understand the reason behind the gaps.
+
+ Row#  Duration (ns)     Start (ns)       PID    Device ID  Context ID
+ ----  --------------  ---------------  -------  ---------  ----------
+    1  64,407,253,978   64,982,762,815  295,800          0           1
+    2  19,166,927,242   45,815,567,273  295,800          0           1
+    3   4,165,088,586  219,143,105,624  295,800          0           1
+    4   3,825,665,002  155,994,389,743  295,800          0           1
+    5   3,382,408,489  181,223,950,794  295,800          0           1
+    6   2,795,796,887  187,743,679,035  295,800          0           1
+    7   2,795,583,872  150,655,377,432  295,800          0           1
+    8   2,781,239,340  146,336,044,800  295,800          0           1
+    9   2,577,171,899  160,388,491,543  295,800          0           1
+   10   2,303,377,841  166,590,666,364  295,800          0           1
+   11   2,134,357,606  175,799,482,509  295,800          0           1
+   12   1,969,760,198  164,619,361,396  295,800          0           1
+   13   1,904,761,492   40,927,060,117  295,800          0           1
+   14   1,353,635,630  171,401,618,863  295,800          0           1
+   15   1,218,827,921  129,997,985,082  295,800          0           1
+   16   1,204,752,000  140,479,483,975  295,800          0           1
+   17   1,098,054,959  225,088,565,737  295,800          0           1
+   18   1,064,184,416  172,814,965,093  295,800          0           1
+   19     918,578,995  223,308,813,661  295,800          0           1
+   20     897,846,926  131,217,091,703  295,800          0           1
+   21     894,242,685  173,884,635,761  295,800          0           1
+   22     870,387,458  184,851,450,680  295,800          0           1
+   23     861,471,912  142,197,936,467  295,800          0           1
+   24     861,167,577  224,227,395,120  295,800          0           1
+   25     842,599,221  170,558,860,691  295,800          0           1
+   26     831,633,374  192,947,457,307  295,800          0           1
+   27     825,669,979  143,798,418,204  295,800          0           1
+   28     810,702,312  145,525,340,632  295,800          0           1
+   29     786,789,196  186,019,329,817  295,800          0           1
+   30     771,136,814   43,135,070,880  295,800          0           1
+   31     758,370,085  139,721,110,626  295,800          0           1
+   32     756,017,963  132,816,256,435  295,800          0           1
+   33     741,794,178  178,558,765,606  295,800          0           1
+   34     726,913,336  186,911,486,758  295,800          0           1
+   35     692,467,189  212,604,347,290  295,800          0           1
+   36     689,989,872  216,784,695,787  295,800          0           1
+   37     686,916,162  201,468,734,377  295,800          0           1
+   38     686,795,550  214,003,199,007  295,800          0           1
+   39     686,650,746  197,298,854,879  295,800          0           1
+   40     686,612,339  202,865,848,450  295,800          0           1
+   41     686,379,606  211,209,416,496  295,800          0           1
+   42     685,780,708  208,428,852,332  295,800          0           1
+   43     685,703,164  200,079,619,490  295,800          0           1
+   44     685,648,300  215,394,196,973  295,800          0           1
+   45     685,626,506  205,649,080,485  295,800          0           1
+   46     685,365,049  207,039,175,141  295,800          0           1
+   47     685,294,581  209,819,876,191  295,800          0           1
+   48     684,684,364  194,520,212,305  295,800          0           1
+   49     684,058,562  204,257,218,745  295,800          0           1
+   50     683,435,584  195,909,650,892  295,800          0           1
+
+Only the top 50 results are displayed. More data may be available.
+
+
+Processing [out/nsight/rtf_report.sqlite] with [/opt/nvidia/nsight-systems/2024.5.1/host-linux-x64/rules/gpu_time_util.py]... 
+
+ ** GPU Time Utilization (gpu_time_util):
+
+The following are time regions with an average GPU utilization below 50%%.
+Addressing the gaps might improve application performance.
+
+Suggestions:
+   1. Use CPU sampling data, OS Runtime blocked state backtraces, and/or OS
+Runtime APIs related to thread synchronization to understand if a sluggish or
+blocked CPU is causing the gaps.
+   2. Add NVTX annotations to CPU code to understand the reason behind the gaps.
+
+ Row#  In-Use (%)   Duration (ns)     Start (ns)      PID    Device ID  Context ID
+ ----  ----------  ---------------  --------------  -------  ---------  ----------
+    1         6.9  186,654,528,597  40,927,016,371  295,800          0           1
+
+Processing [out/nsight/rtf_report.sqlite] with [/opt/nvidia/nsight-systems/2024.5.1/host-linux-x64/rules/dx12_mem_ops.py]... 
+SKIPPED: out/nsight/rtf_report.sqlite could not be analyzed because it does not contain the required DX12 data. Does the application use DX12 APIs?

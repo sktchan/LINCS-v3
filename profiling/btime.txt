@@ -1,0 +1,94 @@
+nvtx_rtf.jl
+23.610 s (1539376 allocations: 3.62 GiB)
+
+nvtx_rtf.jl but using pinned arrays for x/y train/test masked
+25.037 s (1537262 allocations: 3.61 GiB)
+
+nvtx_rtf.jl but 
+            end_idx = min(start_idx + batch_size - 1, size(X_test, 2))
+            
+            x_gpu = gpu(X_test_masked[:, start_idx:end_idx])
+            y_gpu = gpu(y_test_masked[:, start_idx:end_idx])
+            
+            logits = model(x_gpu) # (n_classes, seq_len, batch)
+            n_c, s_len, b_size = size(logits)
+            logits_flat = reshape(logits, n_c, :)
+            y_flat = vec(y_gpu)
+            
+            mask = y_flat .!= -100
+            if sum(mask) == 0 continue end
+            
+            logits_masked = logits_flat[:, mask] # (n_classes, n_masked)
+            y_masked = y_flat[mask]              # (n_masked)
+
+            NVTX.range_push(message="gpu rank calc")
+            indices = CartesianIndex.(y_masked, 1:length(y_masked))
+            true_scores = logits_masked[indices] # (n_masked,)
+            higher_score_count = sum(logits_masked .> reshape(true_scores, 1, :), dims=1)
+            
+            ranks = vec(higher_score_count) .+ 1
+            errors = ranks .- 1
+            NVTX.range_pop() 
+
+            NVTX.range_push(message="metrics to cpu")
+            append!(epoch_rank_errors, cpu(errors))
+            NVTX.range_pop()
+
+            isntead of         
+
+            end_idx = min(start_idx + batch_size - 1, size(X_test_masked, 2))
+
+            NVTX.range_push(message="cpu to gpu")
+            x_gpu = gpu(X_test_masked[:, start_idx:end_idx])
+            y_gpu = gpu(y_test_masked[:, start_idx:end_idx])
+            NVTX.range_pop()
+
+            NVTX.range_push(message="loss calc")
+            test_loss_val, logits_masked, y_masked = loss(model, x_gpu, y_gpu, "test")
+            push!(test_epoch_losses, test_loss_val)
+            NVTX.range_pop()
+
+            if isempty(y_masked) continue end
+
+            NVTX.range_push(message="gpu to cpu")
+            logits_cpu = cpu(logits_masked)
+            y_cpu = cpu(y_masked)
+            NVTX.range_pop()
+            
+            if epoch == n_epochs
+                NVTX.range_push(message="find indices")
+                y_cpu_batch = cpu(y_gpu)
+                masked_indices_cartesian = findall(y_cpu_batch .!= -100)
+                original_ranks_in_batch = [idx[1] for idx in masked_indices_cartesian]
+                NVTX.range_pop()
+            end
+
+            NVTX.range_push(message="get ranks/errors")
+            for i in 1:length(y_cpu)
+                true_gene_id = y_cpu[i]
+                prediction_logits = logits_cpu[:, i]
+                ranked_gene_ids = sortperm(prediction_logits, rev=true)
+                predicted_rank = findfirst(isequal(true_gene_id), ranked_gene_ids)
+                
+                if !isnothing(predicted_rank)
+                    error = predicted_rank - 1
+                    push!(epoch_rank_errors, error)
+                    
+                    if epoch == n_epochs
+                        original_rank = original_ranks_in_batch[i] - 1
+                        push!(all_original_ranks, original_rank)
+                        push!(all_prediction_errors, error)
+                    end
+                end
+            end
+            NVTX.range_pop()
+            
+            NVTX.range_push(message="onecold")
+            if epoch == n_epochs
+                predicted_ids = Flux.onecold(logits_masked)
+                append!(all_preds, cpu(predicted_ids))
+                append!(all_trues, y_cpu)
+            end
+            NVTX.range_pop()
+26.915 s (1203938 allocations: 3.19 GiB)
+but i think this has a different........ algo???????? look into more.........

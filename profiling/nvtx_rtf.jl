@@ -11,6 +11,7 @@ using Dates, JLD2
 using LincsProject
 using Flux, ProgressBars, CUDA, Statistics
 using NVTX, Zygote
+using BenchmarkTools
 
 Zygote.@adjoint function NVTX.range_push(args...; kwargs...)
     y = NVTX.range_push(args...; kwargs...)
@@ -251,6 +252,11 @@ all_trues = Int[]
 all_original_ranks = Int[]
 all_prediction_errors = Int[]
 
+# CUDA.pin(X_train_masked)
+# CUDA.pin(y_train_masked)
+# CUDA.pin(X_test_masked)
+# CUDA.pin(y_test_masked)
+
 function train_model(model, opt, X_train_masked, y_train_masked, X_test_masked, y_test_masked, n_epochs)
     for epoch in ProgressBar(1:n_epochs)
         epoch_losses = Float32[]
@@ -353,4 +359,4 @@ function train_model(model, opt, X_train_masked, y_train_masked, X_test_masked, 
     end
 end
 
-train_model(model, opt, X_train_masked, y_train_masked, X_test_masked, y_test_masked, n_epochs)
+@btime train_model(model, opt, X_train_masked, y_train_masked, X_test_masked, y_test_masked, n_epochs)
