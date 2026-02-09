@@ -1,8 +1,8 @@
 # dataset
-# data_path = "data/lincs_trt_untrt_data.jld2"
-# dataset = "trt"
-data_path = "data/lincs_untrt_data.jld2"
-dataset = "untrt"
+data_path = "data/lincs_trt_untrt_data.jld2"
+dataset = "trt"
+# data_path = "data/lincs_untrt_data.jld2"
+# dataset = "untrt"
 
 # params
 batch_size = 42
