@@ -5,7 +5,7 @@ dataset = "trt"
 # dataset = "untrt"
 
 # params
-batch_size = 42
+batch_size = 210
 n_epochs = 1
 embed_dim = 128
 drop_prob = 0.05
@@ -28,7 +28,7 @@ latent_3 = 246
 
 # notes
 gpu_info = "smaug"
-additional_notes = "profiling run"
+additional_notes = "testtesttest! first 1ep trt run of cls=pca :D"
 
 # matrix types
 const IntMatrix2DType = Union{Array{Int64}, CuArray{Int32, 2}, CuMatrix{Int64}, DenseCuMatrix{Int64}}

@@ -37,25 +37,27 @@ function split_data(X, test_ratio::Float64, y=nothing) # masking doesn't need y!
     end
 end
 
-function mask_input(X::Matrix, mask_ratio::Float64, mask, mask_id)
+function mask_input(X::Matrix, mask_ratio::Float64, mask, mask_id, offset::Bool=false)
     X_masked = copy(X)
-    mask_labels = fill((mask), size(X)) # -100 = ignore, this is not masked
+    mask_labels = fill(mask, size(X))
+    n_rows, n_samples = size(X)
+
+    if offset
+        idx = 2:n_rows
+        num_masked = ceil(Int, (n_rows - 1) * mask_ratio)
+    else
+        idx = 1:n_rows
+        num_masked = ceil(Int, n_rows * mask_ratio)
+    end
     
-    for j in 1:size(X,2) # per column, start at second row so we don't mask CLS token
-        num_masked = ceil(Int, (size(X,1) - 1) * mask_ratio)
-
-        if typeof(mask_id) == Int64
-            mask_positions_local = randperm(size(X,1) - 1)[1:num_masked]
-            mask_positions_global = mask_positions_local .+ 1 # also shifted for CLS token
-        elseif typeof(MASK_VALUE) == Float32
-            mask_positions_global = randperm(size(X,1))[1:num_masked]
-        end
-
-        for pos in mask_positions_global
-            mask_labels[pos, j] = X[pos, j] # original label
-            X_masked[pos, j] = mask_id # mask label
+    for j in 1:n_samples
+        mask_pos = shuffle(idx)[1:num_masked]
+        for pos in mask_pos
+            mask_labels[pos, j] = X[pos, j]
+            X_masked[pos, j] = mask_id 
         end
     end
+    
     return X_masked, mask_labels
 end
 
@@ -80,4 +82,16 @@ function convert_exp_to_rank(X_test, all_trues, all_preds)
         ranked_trues[i] = get_rank(true_val, reference_col)
     end
     return ranked_trues, ranked_preds
+end
+
+function batch_pca(masked_idx, pca_train, mask_id)
+    x = Float32.(masked_idx)
+    x[x .== mask_id] .= 0
+    pcatok = MultivariateStats.predict(pca_train, x)
+
+    μ = mean(pcatok, dims=2)
+    σ = std(pcatok, dims=2)
+    pcatok = (pcatok .- μ) ./ (σ .+ 1f-5)
+
+    return pcatok
 end

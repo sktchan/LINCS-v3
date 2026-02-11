@@ -54,12 +54,12 @@ function (pe::PosEnc)(input::Float32Matrix3DType)
 end
 
 ### transformer
-struct Transf{M, D, L, C}
-    mha::M
+struct Transf{A,D,N,M}
+    mha::A
     att_dropout::D
-    att_norm::L
-    mlp::C 
-    mlp_norm::L
+    att_norm::N
+    mlp::M 
+    mlp_norm::N
 end
 
 function Transf(
