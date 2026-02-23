@@ -20,44 +20,39 @@ raw_data = data.expr
 
 
 
-### pca exploration - i guess we can use ~ 50 cpts?
+# ### pca exploration - just to visualize, but we should
 
 
 
-max_cpts = 100
-init_pca = fit(PCA, raw_data; maxoutdim=max_cpts)
+# max_cpts = 100
+# init_pca = fit(PCA, raw_data; maxoutdim=max_cpts)
 
-vars = principalvars(init_pca)
-totalvar = tprincipalvar(init_pca) + tresidualvar(init_pca)
-ratio = vars ./ totalvar
-cum_ratio = cumsum(ratio)
+# vars = principalvars(init_pca)
+# totalvar = tprincipalvar(init_pca) + tresidualvar(init_pca)
+# ratio = vars ./ totalvar
+# cum_ratio = cumsum(ratio)
 
-begin
-    fig1 = Figure(size=(600,400))
-    ax1 = Axis(fig1[1,1])
-    barplot!(ax1, 1:length(cum_ratio), cum_ratio)
-    display(fig1)
-    # save("/home/golem/scratch/chans/lincsv3/plots/trt/pca/cumvar.png", fig1)
-end
+# begin
+#     fig1 = Figure(size=(400,200))
+#     ax1 = Axis(fig1[1,1],
+#         xlabel = "Number of components",
+#         ylabel = "Cumulative variance"
+#     )
+#     barplot!(ax1, 1:length(cum_ratio), cum_ratio)
+#     display(fig1)
+#     save("/home/golem/scratch/chans/lincsv3/plots/trt/pca/cumvar.png", fig1)
+# end
 
-begin
-    fig2 = Figure(size=(600,400))
-    ax2 = Axis(fig2[1,1])
-    barplot!(ax2, 1:length(ratio), ratio)
-    display(fig2)
-    # save("/home/golem/scratch/chans/lincsv3/plots/trt/pca/scree.png", fig2)
-end
-
-proj = predict(init_pca, raw_data)
-
-begin
-    fig3 = Figure(size=(600,400))
-    ax3 = Axis(fig3[1,1])
-    scatter!(ax3, proj[1,:], proj[2,:], markersize=2)
-    display(fig3)
-    # save("/home/golem/scratch/chans/lincsv3/plots/trt/pca/pcs.png", fig3)
-end
-
+# begin
+#     fig2 = Figure(size=(400,200))
+#     ax2 = Axis(fig2[1,1],
+#         xlabel = "Number of componentse",
+#         ylabel = "% variance explained"
+#     )
+#     scatterlines!(ax2, 1:length(ratio), ratio)
+#     display(fig2)
+#     save("/home/golem/scratch/chans/lincsv3/plots/trt/pca/scree.png", fig2)
+# end
 
 
 ### model structure
@@ -82,6 +77,7 @@ function PosEnc(embed_dim::Int, max_len::Int)
 end
 
 Flux.@functor PosEnc
+Flux.trainable(pe::PosEnc) = ()
 
 function (pe::PosEnc)(input::AbstractArray)
     seq_len = size(input,2)
@@ -233,12 +229,12 @@ X_train, X_test, train_indices, test_indices = split_data(X, 0.2)
 X_train_masked, y_train_masked = mask_input(X_train, mask_ratio, -100, MASK_ID, false)
 X_test_masked, y_test_masked = mask_input(X_test, mask_ratio, -100, MASK_ID, false)
 
-pca_train = fit(PCA, Float32.(X_train); maxoutdim=64)
+pca_train = fit(PCA, Float32.(X_train); maxoutdim=embed_dim)
 
 model = Model(
     input_size=n_features,
     embed_dim=embed_dim,
-    pca_dim=64,
+    pca_dim=embed_dim,
     n_layers=n_layers,
     n_classes=n_classes,
     n_heads=n_heads,
@@ -337,7 +333,7 @@ for epoch in ProgressBar(1:n_epochs)
 end
 
 timestamp = Dates.format(now(), "yyyy-mm-dd_HH-MM")
-save_dir = joinpath("plots", dataset, "pca_rank_tf", timestamp)
+save_dir = joinpath("plots", dataset, "rtf_v1", timestamp)
 mkpath(save_dir)
 
 plot_loss(n_epochs, train_losses, test_losses, save_dir, "logit-ce")

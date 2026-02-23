@@ -9,7 +9,7 @@ include("../src/fxns.jl")
 include("../src/plot.jl")
 include("../src/save.jl")
 
-CUDA.device!(0)
+CUDA.device!(3)
 
 start_time = now()
 data = load(data_path)["filtered_data"]

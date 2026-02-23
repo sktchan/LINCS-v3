@@ -5,12 +5,12 @@ dataset = "trt"
 # dataset = "untrt"
 
 # params
-batch_size = 210
+batch_size = 128
 n_epochs = 1
 embed_dim = 128
 drop_prob = 0.05
 lr = 0.001
-mask_ratio = 0.1
+mask_ratio = 0.15
 
 # tf
 hidden_dim = 256
@@ -28,7 +28,7 @@ latent_3 = 246
 
 # notes
 gpu_info = "smaug"
-additional_notes = "testtesttest! first 1ep trt run of cls=pca :D"
+additional_notes = "test run for how long rtf takes 1ep"
 
 # matrix types
 const IntMatrix2DType = Union{Array{Int64}, CuArray{Int32, 2}, CuMatrix{Int64}, DenseCuMatrix{Int64}}

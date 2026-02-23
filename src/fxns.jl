@@ -5,14 +5,14 @@ using Flux, CUDA, Random, OneHotArrays
 
 function rank_genes(expr, medians)
     n, m = size(expr)
-    data_ranked = Matrix{Int}(undef, size(expr)) # faster than fill(-1, size(expr))
+    data_ranked = Matrix{Int32}(undef, size(expr)) 
     normalized_col = Vector{Float32}(undef, n) 
-    sorted_ind_col = Vector{Int}(undef, n)
+    sorted_ind_col = Vector{Int32}(undef, n)
+    
     for j in 1:m
         unsorted_expr_col = view(expr, :, j)
         @. normalized_col = unsorted_expr_col / medians
         sortperm!(sorted_ind_col, unsorted_expr_col, rev=true)
-            # rev=true -> data[1, :] = index (into gene.expr) of highest expression value in experiment/column 1
         for i in 1:n
             data_ranked[i, j] = sorted_ind_col[i]
         end
@@ -37,9 +37,9 @@ function split_data(X, test_ratio::Float64, y=nothing) # masking doesn't need y!
     end
 end
 
-function mask_input(X::Matrix, mask_ratio::Float64, mask, mask_id, offset::Bool=false)
+function mask_input(X::Matrix, mask_ratio::Float64, mask_val, mask_id, offset::Bool=false)
     X_masked = copy(X)
-    mask_labels = fill(mask, size(X))
+    mask_labels = fill(Int32(mask_val), size(X)) 
     n_rows, n_samples = size(X)
 
     if offset
@@ -59,13 +59,6 @@ function mask_input(X::Matrix, mask_ratio::Float64, mask, mask_id, offset::Bool=
     end
     
     return X_masked, mask_labels
-end
-
-function get_rank(values, ref)
-    combined = vcat(values, ref)
-    p = sortperm(combined, rev=true)
-    ranks = invperm(p)
-    return ranks[1]
 end
 
 function convert_exp_to_rank(X_test, all_trues, all_preds)
@@ -89,9 +82,9 @@ function batch_pca(masked_idx, pca_train, mask_id)
     x[x .== mask_id] .= 0
     pcatok = MultivariateStats.predict(pca_train, x)
 
-    μ = mean(pcatok, dims=2)
-    σ = std(pcatok, dims=2)
-    pcatok = (pcatok .- μ) ./ (σ .+ 1f-5)
+    # avg = mean(pcatok, dims=2)
+    # stddev = std(pcatok, dims=2)
+    # pcatok = (pcatok .- avg) ./ (stddev .+ 1f-5)
 
     return pcatok
 end

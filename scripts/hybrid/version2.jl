@@ -13,15 +13,15 @@ include("../../src/plot.jl")
 include("../../src/save.jl")
 
 # cuz cant cahnge params file
-batch_size=42
-gpu_info="kraken"
-additional_notes = "testtesttest! first 1ep untrt run of cls.+pca :D"
-data_path = "data/lincs_untrt_data.jld2"
-dataset = "untrt"
+# batch_size=42
+# gpu_info="kraken"
+# additional_notes = "testtesttest! first 10ep untrt run of cls.+pca :D"
+# data_path = "data/lincs_untrt_data.jld2"
+# dataset = "untrt"
 
 
 CUDA.device!(0)
-
+start_time = now()
 
 
 ### model structure
@@ -45,7 +45,7 @@ function PosEnc(embed_dim::Int, max_len::Int)
     return PosEnc(pe_matrix)
 end
 
-Flux.@functor PosEnc
+Flux.@functor PosEnc # should this be ()?
 
 function (pe::PosEnc)(input::AbstractArray)
     seq_len = size(input,2)
@@ -142,28 +142,28 @@ end
 
 Flux.@functor Model
 
-function (model::Model)(input, input_pca)
-    embedded = model.embedding(input)
-    pca_embedded = model.pca_proj(input_pca)
-    cls_embedded = model.cls_token.weight
+function (model::Model)(input, input_pca) # input: n,b input_pca: p,b
+    embedded = model.embedding(input) # e,n,b
+    pca_embedded = model.pca_proj(input_pca) # e,b
+    cls_embedded = model.cls_token.weight # e,1
 
-    hybrid_emb = pca_embedded .+ cls_embedded
-    hybrid_reshaped = reshape(hybrid_emb, size(hybrid_emb, 1), 1, size(hybrid_emb, 2))
+    hybrid_emb = pca_embedded .+ cls_embedded # e,b
+    hybrid_reshaped = reshape(hybrid_emb, size(hybrid_emb, 1), 1, size(hybrid_emb, 2)) # e,1,b
 
     # pca_reshaped = reshape(pca_embedded, size(pca_embedded, 1), 1, size(pca_embedded, 2))
-    combined = cat(hybrid_reshaped, embedded, dims=2)
+    combined = cat(hybrid_reshaped, embedded, dims=2) # e,n+1,b
 
-    encoded = model.pos_encoder(combined)
-    encoded_dropped = model.pos_dropout(encoded)
+    encoded = model.pos_encoder(combined) # e,n+1,b
+    encoded_dropped = model.pos_dropout(encoded) # e,n+1,b
 
-    transformed = model.transformer(encoded_dropped)
+    transformed = model.transformer(encoded_dropped) # e,n+1,b
 
     # cls = transformed[:,1,:]
     # logits_output = model.classifier(cls)
 
-    logits_output = model.classifier(transformed)
+    logits_output = model.classifier(transformed) # n,n+1,b
     
-    return logits_output[:,2:end,:]
+    return logits_output[:,2:end,:] # n,n,b
 end
 
 function loss(model::Model, x, x_pca, y, mode::String)
@@ -308,7 +308,7 @@ for epoch in ProgressBar(1:n_epochs)
 end
 
 timestamp = Dates.format(now(), "yyyy-mm-dd_HH-MM")
-save_dir = joinpath("plots", dataset, "pca_rank_tf", timestamp)
+save_dir = joinpath("plots", dataset, "rtf_v2", timestamp)
 mkpath(save_dir)
 
 plot_loss(n_epochs, train_losses, test_losses, save_dir, "logit-ce")

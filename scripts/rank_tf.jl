@@ -27,18 +27,18 @@ CLS_VECTOR = fill(CLS_ID, (1, size(X, 2)))
 X = vcat(CLS_VECTOR, X)
 
 X_train, X_test, train_indices, test_indices = split_data(X, 0.2)
-X_train_masked, y_train_masked = mask_input(X_train, mask_ratio, -100, MASK_ID)
-X_test_masked, y_test_masked = mask_input(X_test, mask_ratio, -100, MASK_ID)
+X_train_masked, y_train_masked = mask_input(X_train, mask_ratio, -100, MASK_ID, true)
+X_test_masked, y_test_masked = mask_input(X_test, mask_ratio, -100, MASK_ID, true)
 
 
 ### model ###
 
 ### positional encoder
-struct PosEnc
-    pe_matrix::CuArray{Float32,2}
+struct PosEnc{A<:AbstractArray}
+    pe_matrix::A
 end
 
-function PosEnc(embed_dim::Int, max_len::Int) # max_len is usually maximum length of sequence but here it is just len(genes)
+function PosEnc(embed_dim::Int, max_len::Int)
     pe_matrix = Matrix{Float32}(undef, embed_dim, max_len)
     for pos in 1:max_len, i in 1:embed_dim
         angle = pos / (10000^(2*(div(i-1,2))/embed_dim))
@@ -48,28 +48,23 @@ function PosEnc(embed_dim::Int, max_len::Int) # max_len is usually maximum lengt
             pe_matrix[i,pos] = cos(angle) # even indices
         end
     end
-    return PosEnc(cu(pe_matrix))
+    return PosEnc(pe_matrix)
 end
-
-# function PosEnc(embed_dim::Int, max_len::Int)
-#     pe_matrix = zeros(Float32, embed_dim, max_len) 
-#     return PosEnc(cu(pe_matrix))
-# end
 
 Flux.@functor PosEnc
 
-function (pe::PosEnc)(input::Float32Matrix3DType)
+function (pe::PosEnc)(input::AbstractArray)
     seq_len = size(input,2)
-    return input .+ pe.pe_matrix[:,1:seq_len] # adds positional encoding to input embeddings
+    return input .+ @view(pe.pe_matrix[:, 1:seq_len]) # adds positional encoding to input embeddings
 end
 
 ### transformer
-struct Transf
-    mha::Flux.MultiHeadAttention
-    att_dropout::Flux.Dropout
-    att_norm::Flux.LayerNorm # this is the normalization aspect
-    mlp::Flux.Chain
-    mlp_norm::Flux.LayerNorm
+struct Transf{A,D,N,M}
+    mha::A
+    att_dropout::D
+    att_norm::N
+    mlp::M 
+    mlp_norm::N
 end
 
 function Transf(
@@ -97,7 +92,7 @@ end
 
 Flux.@functor Transf
 
-function (tf::Transf)(input::Float32Matrix3DType) # input shape: embed_dim × seq_len × batch_size
+function (tf::Transf)(input) # input shape: embed_dim × seq_len × batch_size
     normed = tf.att_norm(input)
     atted = tf.mha(normed, normed, normed)[1] # outputs a tuple (a, b)
     att_dropped = tf.att_dropout(atted)
@@ -112,12 +107,12 @@ function (tf::Transf)(input::Float32Matrix3DType) # input shape: embed_dim × se
 end
 
 ### full model as << ranked data --> token embedding --> position embedding --> transformer --> classifier head >>
-struct Model
-    embedding::Flux.Embedding
-    pos_encoder::PosEnc
-    pos_dropout::Flux.Dropout
-    transformer::Flux.Chain
-    classifier::Flux.Chain
+struct Model{E,P,D,T,C}
+    embedding::E
+    pos_encoder::P
+    pos_dropout::D
+    transformer::T
+    classifier::C
 end
 
 function Model(;
@@ -146,7 +141,7 @@ end
 
 Flux.@functor Model
 
-function (model::Model)(input::IntMatrix2DType)
+function (model::Model)(input)
     embedded = model.embedding(input)
     encoded = model.pos_encoder(embedded)
     encoded_dropped = model.pos_dropout(encoded)
@@ -191,6 +186,29 @@ function loss(model::Model, x, y, mode::String)
     end
 end
 
+# function loss(model::Model, x, y, mode::String)
+#     logits = model(x)  
+#     logits_flat = reshape(logits, size(logits, 1), :) 
+#     y_flat = vec(y) 
+    
+#     mask = y_flat .!= -100 
+    
+#     if mode == "train"
+#         y_safe = ifelse.(mask, y_flat, Int32(1)) 
+#         y_oh = Flux.onehotbatch(y_safe, 1:n_classes) 
+#         all_losses = Flux.logitcrossentropy(logits_flat, y_oh, agg=identity)
+#         mask_f32 = Float32.(mask)
+#         return sum(all_losses .* mask_f32) / (sum(mask_f32) + 1f-5)
+#     end
+    
+#     if mode == "test"
+#         logits_masked = logits_flat[:, mask]
+#         y_masked = y_flat[mask]
+#         y_oh = Flux.onehotbatch(y_masked, 1:n_classes)
+#         return Flux.logitcrossentropy(logits_masked, y_oh), logits_masked, y_masked
+#     end
+# end
+
 train_losses = Float32[]
 test_losses = Float32[]
 test_rank_errors = Float32[]
@@ -204,8 +222,9 @@ for epoch in ProgressBar(1:n_epochs)
     epoch_losses = Float32[]
     for start_idx in 1:batch_size:size(X_train_masked, 2)
         end_idx = min(start_idx + batch_size - 1, size(X_train_masked, 2))
-        x_gpu = gpu(X_train_masked[:, start_idx:end_idx])
-        y_gpu = gpu(y_train_masked[:, start_idx:end_idx])
+
+        x_gpu = gpu(Int32.(X_train_masked[:, start_idx:end_idx]))
+        y_gpu = gpu(Int32.(y_train_masked[:, start_idx:end_idx]))
         
         loss_val, grads = Flux.withgradient(model) do m
             loss(m, x_gpu, y_gpu, "train")
