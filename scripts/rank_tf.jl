@@ -10,6 +10,8 @@ include("../src/fxns.jl")
 include("../src/plot.jl")
 include("../src/save.jl")
 
+n_epochs = 50
+
 CUDA.device!(0)
 
 start_time = now()
@@ -18,17 +20,17 @@ data = load(data_path)["filtered_data"]
 gene_medians = vec(median(data.expr, dims=2)) .+ 1e-10
 X = rank_genes(data.expr, gene_medians)
 
-n_features = size(X, 1) + 2
+n_features = size(X, 1) + 1
 n_classes = size(X, 1)
 n_genes = size(X, 1)
 MASK_ID = (n_classes + 1)
-CLS_ID = n_genes + 2
-CLS_VECTOR = fill(CLS_ID, (1, size(X, 2)))
-X = vcat(CLS_VECTOR, X)
+# CLS_ID = n_genes + 2
+# CLS_VECTOR = fill(CLS_ID, (1, size(X, 2)))
+# X = vcat(CLS_VECTOR, X)
 
 X_train, X_test, train_indices, test_indices = split_data(X, 0.2)
-X_train_masked, y_train_masked = mask_input(X_train, mask_ratio, -100, MASK_ID, true)
-X_test_masked, y_test_masked = mask_input(X_test, mask_ratio, -100, MASK_ID, true)
+X_train_masked, y_train_masked = mask_input(X_train, mask_ratio, -100, MASK_ID, false)
+X_test_masked, y_test_masked = mask_input(X_test, mask_ratio, -100, MASK_ID, false)
 
 
 ### model ###
@@ -52,6 +54,7 @@ function PosEnc(embed_dim::Int, max_len::Int)
 end
 
 Flux.@functor PosEnc
+Flux.trainable(pe::PosEnc) = ()
 
 function (pe::PosEnc)(input::AbstractArray)
     seq_len = size(input,2)

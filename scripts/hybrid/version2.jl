@@ -12,13 +12,6 @@ include("../../src/fxns.jl")
 include("../../src/plot.jl")
 include("../../src/save.jl")
 
-# cuz cant cahnge params file
-# batch_size=42
-# gpu_info="kraken"
-# additional_notes = "testtesttest! first 10ep untrt run of cls.+pca :D"
-# data_path = "data/lincs_untrt_data.jld2"
-# dataset = "untrt"
-
 
 CUDA.device!(0)
 start_time = now()
@@ -45,7 +38,8 @@ function PosEnc(embed_dim::Int, max_len::Int)
     return PosEnc(pe_matrix)
 end
 
-Flux.@functor PosEnc # should this be ()?
+Flux.@functor PosEnc
+Flux.trainable(pe::PosEnc) = ()
 
 function (pe::PosEnc)(input::AbstractArray)
     seq_len = size(input,2)
@@ -104,10 +98,10 @@ function (tf::Transf)(input) # input shape: embed_dim × seq_len × batch_size
 end
 
 
-struct Model{E,J,L,P,D,T,C}
+struct Model{E,J,P,D,T,C}
     embedding::E
     pca_proj::J
-    cls_token::L
+    # cls_token::L
     pos_encoder::P
     pos_dropout::D
     transformer::T
@@ -126,8 +120,8 @@ function Model(;
     )
     embedding = Flux.Embedding(input_size => embed_dim)
     pca_proj = Flux.Dense(pca_dim => embed_dim)
-    cls_token = Flux.Embedding(1 => embed_dim)
-    pos_encoder = PosEnc(embed_dim, input_size + 1)
+    # cls_token = Flux.Embedding(1 => embed_dim)
+    pos_encoder = PosEnc(embed_dim, input_size)
     pos_dropout = Flux.Dropout(dropout_prob)
     transformer = Flux.Chain(
         [Transf(embed_dim, hidden_dim; n_heads, dropout_prob) for _ in 1:n_layers]...
@@ -137,7 +131,7 @@ function Model(;
         Flux.LayerNorm(embed_dim),
         Flux.Dense(embed_dim => n_classes)
         )
-    return Model(embedding, pca_proj, cls_token, pos_encoder, pos_dropout, transformer, classifier)
+    return Model(embedding, pca_proj, pos_encoder, pos_dropout, transformer, classifier)
 end
 
 Flux.@functor Model
@@ -145,13 +139,16 @@ Flux.@functor Model
 function (model::Model)(input, input_pca) # input: n,b input_pca: p,b
     embedded = model.embedding(input) # e,n,b
     pca_embedded = model.pca_proj(input_pca) # e,b
-    cls_embedded = model.cls_token.weight # e,1
+    # cls_embedded = model.cls_token.weight # e,1
 
-    hybrid_emb = pca_embedded .+ cls_embedded # e,b
-    hybrid_reshaped = reshape(hybrid_emb, size(hybrid_emb, 1), 1, size(hybrid_emb, 2)) # e,1,b
+    # hybrid_emb = pca_embedded .+ cls_embedded # e,b
+    # hybrid_reshaped = reshape(hybrid_emb, size(hybrid_emb, 1), 1, size(hybrid_emb, 2)) # e,1,b
 
     # pca_reshaped = reshape(pca_embedded, size(pca_embedded, 1), 1, size(pca_embedded, 2))
-    combined = cat(hybrid_reshaped, embedded, dims=2) # e,n+1,b
+    # combined = cat(hybrid_reshaped, embedded, dims=2) # e,n+1,b
+
+    pca_reshaped = reshape(pca_embedded, size(pca_embedded, 1), 1, size(pca_embedded, 2)) # e,1,b
+    combined = embedded .+ pca_reshaped # e,n,b
 
     encoded = model.pos_encoder(combined) # e,n+1,b
     encoded_dropped = model.pos_dropout(encoded) # e,n+1,b
@@ -163,7 +160,7 @@ function (model::Model)(input, input_pca) # input: n,b input_pca: p,b
 
     logits_output = model.classifier(transformed) # n,n+1,b
     
-    return logits_output[:,2:end,:] # n,n,b
+    return logits_output
 end
 
 function loss(model::Model, x, x_pca, y, mode::String)
