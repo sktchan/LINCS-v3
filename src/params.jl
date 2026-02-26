@@ -28,9 +28,9 @@ latent_3 = 246
 
 # notes
 gpu_info = "smaug"
-additional_notes = "test run for how long rtf takes 1ep"
+additional_notes = "50ep run!"
 
 # matrix types
-const IntMatrix2DType = Union{Array{Int64}, CuArray{Int32, 2}, CuMatrix{Int64}, DenseCuMatrix{Int64}}
-const Float32Matrix2DType = Union{Array{Float32}, CuArray{Float32, 2}}
-const Float32Matrix3DType = Union{Array{Float32}, CuArray{Float32, 3}}
+# const IntMatrix2DType = Union{Array{Int64}, CuArray{Int32, 2}, CuMatrix{Int64}, DenseCuMatrix{Int64}}
+# const Float32Matrix2DType = Union{Array{Float32}, CuArray{Float32, 2}}
+# const Float32Matrix3DType = Union{Array{Float32}, CuArray{Float32, 3}}

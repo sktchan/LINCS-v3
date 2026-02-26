@@ -14,6 +14,10 @@ include("../../src/save.jl")
 
 CUDA.device!(0)
 
+data_path = "data/lincs_untrt_data.jld2"
+dataset = "untrt"
+n_epochs = 10
+
 start_time = now()
 data = load(data_path)["filtered_data"]
 raw_data = data.expr

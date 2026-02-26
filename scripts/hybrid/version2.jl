@@ -14,6 +14,10 @@ include("../../src/save.jl")
 
 
 CUDA.device!(0)
+data_path = "data/lincs_untrt_data.jld2"
+dataset = "untrt"
+n_epochs = 10
+
 start_time = now()
 
 
@@ -192,7 +196,7 @@ data = load(data_path)["filtered_data"]
 gene_medians = vec(median(data.expr, dims=2)) .+ 1e-10
 X = rank_genes(data.expr, gene_medians)
 
-n_features = size(X, 1) + 2
+n_features = size(X, 1) + 1
 n_classes = size(X, 1)
 n_genes = size(X, 1)
 MASK_ID = (n_classes + 1)

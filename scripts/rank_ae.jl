@@ -11,6 +11,8 @@ include("../src/save.jl")
 
 CUDA.device!(0)
 
+n_epochs = 50
+
 start_time = now()
 data = load(data_path)["filtered_data"]
 
